@@ -1,11 +1,21 @@
+---
+import { getDir, getTranslations } from '../i18n/utils';
+import type { Locale } from '../i18n/translations';
+
+// Use Astro's currentLocale which is automatically available
+const locale = Astro.currentLocale as Locale || 'ar';
+const t = getTranslations(locale);
+const dir = getDir(locale);
+---
+
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang={locale} dir={dir}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>اعرف دينك - معرفة إسلامية</title>
+		<title>{t.title} - {t.subtitle}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">

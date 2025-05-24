@@ -9,5 +9,12 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), partytown()],
-  adapter: vercel()
+  adapter: vercel(),
+  i18n: {
+    defaultLocale: 'ar',
+    locales: ['ar', 'en', 'fr'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });

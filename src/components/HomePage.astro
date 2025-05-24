@@ -4,53 +4,67 @@ import aqidaIcon from '../assets/akida.png';
 import ibadatIcon from '../assets/ibadat.png';
 import seeraIcon from '../assets/seera.png';
 import tareekh from '../assets/tareekh.png';
+import { getTranslations, getDir } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import type { Locale } from '../i18n/translations';
+
+// Use Astro's currentLocale which is automatically available
+const locale = Astro.currentLocale as Locale || 'ar';
+const t = getTranslations(locale);
+const dir = getDir(locale);
 
 const topics = [
   {
     id: 'aqida',
-    nameAr: 'العقيدة',
+    nameAr: t.aqida,
     nameEn: 'Creed',
     icon: aqidaIcon,
-    description: 'أساسيات الإيمان والتوحيد'
+    description: t.aqidaDesc
   },
   {
     id: 'ibadat',
-    nameAr: 'العبادات',
+    nameAr: t.ibadat,
     nameEn: 'Worship',
     icon: ibadatIcon,
-    description: 'الصلاة والصوم والزكاة والحج'
+    description: t.ibadatDesc
   },
   {
     id: 'seera',
-    nameAr: 'السيرة',
+    nameAr: t.seera,
     nameEn: 'Biography',
     icon: seeraIcon,
-    description: 'سيرة النبي محمد صلى الله عليه وسلم'
+    description: t.seeraDesc
   },
   {
     id: 'tareekh',
-    nameAr: 'التاريخ',
+    nameAr: t.tareekh,
     nameEn: 'History',
     icon: tareekh,
-    description: 'تاريخ الإسلام والحضارة الإسلامية'
+    description: t.tareekhDesc
   }
 ];
+
+// Generate URLs for language switcher using Astro's i18n helpers
+const localeUrls = {
+  ar: getRelativeLocaleUrl('ar', ''),
+  en: getRelativeLocaleUrl('en', ''),
+  fr: getRelativeLocaleUrl('fr', '')
+};
 ---
 
 <div class="homepage-container">
   <!-- Header -->
   <header class="header">
     <div class="title-section">
-      <h1 class="main-title">اعرف دينك</h1>
-      <p class="subtitle">معرفة إسلامية شاملة</p>
+      <h1 class="main-title">{t.title}</h1>
+      <p class="subtitle">{t.subtitle}</p>
     </div>
     
     <div class="language-selector">
-      <select class="language-select" id="language-select">
-        <option value="العربية">العربية</option>
-        <option value="English">English</option>
-        <option value="Français">Français</option>
-        <option value="Español">Español</option>
+      <select class="language-select" id="language-select" data-current-locale={locale}>
+        <option value="ar" selected={locale === 'ar'} data-url={localeUrls.ar}>{t.arabic}</option>
+        <option value="en" selected={locale === 'en'} data-url={localeUrls.en}>{t.english}</option>
+        <option value="fr" selected={locale === 'fr'} data-url={localeUrls.fr}>{t.french}</option>
       </select>
     </div>
   </header>
@@ -81,24 +95,22 @@ const topics = [
     <!-- Description Section -->
     <section class="description-section">
       <div class="description-card">
-        <h2 class="section-title">مرحباً بك في موقع المعرفة الإسلامية</h2>
+        <h2 class="section-title">{t.welcomeTitle}</h2>
         <p class="description-text">
-          هذا الموقع يهدف إلى تقديم المعرفة الإسلامية الصحيحة والموثقة من الكتاب والسنة.
-          يمكنك تصفح المواضيع المختلفة لتعلم أساسيات الدين الإسلامي، من العقيدة والعبادات
-          إلى السيرة النبوية وتاريخ الإسلام.
+          {t.welcomeText}
         </p>
         <div class="features-list">
           <div class="feature-item">
             <span class="feature-icon">📚</span>
-            <span>محتوى معتمد من الكتاب والسنة</span>
+            <span>{t.feature1}</span>
           </div>
           <div class="feature-item">
             <span class="feature-icon">🎓</span>
-            <span>شرح مبسط ومفهوم للجميع</span>
+            <span>{t.feature2}</span>
           </div>
           <div class="feature-item">
             <span class="feature-icon">🌍</span>
-            <span>متاح بعدة لغات</span>
+            <span>{t.feature3}</span>
           </div>
         </div>
       </div>
@@ -139,6 +151,10 @@ const topics = [
 
   .title-section {
     text-align: right;
+  }
+
+  [dir="ltr"] .title-section {
+    text-align: left;
   }
 
   .main-title {
@@ -378,14 +394,18 @@ const topics = [
 </style>
 
 <script>
-  // Add language selection functionality
+  // Language selection using Astro's generated URLs
   const languageSelect = document.getElementById('language-select') as HTMLSelectElement;
   
   if (languageSelect) {
     languageSelect.addEventListener('change', (e) => {
       const target = e.target as HTMLSelectElement;
-      console.log('Language changed to:', target.value);
-      // Here you can add logic to change the language of the page
+      const selectedOption = target.options[target.selectedIndex];
+      const url = selectedOption.getAttribute('data-url');
+      
+      if (url) {
+        window.location.href = url;
+      }
     });
   }
 </script> 
