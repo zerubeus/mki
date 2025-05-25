@@ -26,7 +26,6 @@ export const translations = {
     // Language names
     arabic: 'العربية',
     english: 'English',
-    french: 'Français'
   },
   
   en: {
@@ -56,38 +55,7 @@ export const translations = {
     // Language names
     arabic: 'العربية',
     english: 'English',
-    french: 'Français'
   },
-  
-  fr: {
-    // Header
-    title: 'Connaissez Votre Religion',
-    subtitle: 'Connaissance Islamique Complète',
-    
-    // Topics
-    aqida: 'Croyance',
-    aqidaDesc: 'Fondements de la foi et du monothéisme',
-    ibadat: 'Adoration',
-    ibadatDesc: 'Prière, jeûne, charité et pèlerinage',
-    seera: 'Biographie',
-    seeraDesc: 'Biographie du Prophète Muhammad (PSL)',
-    tareekh: 'Histoire',
-    tareekhDesc: 'Histoire et civilisation islamiques',
-    
-    // Description
-    welcomeTitle: 'Bienvenue sur le site de Connaissance Islamique',
-    welcomeText: 'Ce site vise à fournir des connaissances islamiques authentiques et documentées du Coran et de la Sunnah. Vous pouvez parcourir différents sujets pour apprendre les bases de l\'Islam, de la croyance et de l\'adoration à la biographie du Prophète et à l\'histoire islamique.',
-    
-    // Features
-    feature1: 'Contenu basé sur le Coran et la Sunnah',
-    feature2: 'Explications simples pour tous',
-    feature3: 'Disponible en plusieurs langues',
-    
-    // Language names
-    arabic: 'العربية',
-    english: 'English',
-    french: 'Français'
-  }
 } as const;
 
 export type Locale = keyof typeof translations; 

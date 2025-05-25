@@ -16,9 +16,9 @@ export function getLangFromUrl(url: URL): Locale {
   const segments = url.pathname.split('/').filter(Boolean);
   const firstSegment = segments[0];
   
-  if (firstSegment && ['en', 'fr', 'ar'].includes(firstSegment)) {
+  if (firstSegment && ['en', 'ar'].includes(firstSegment)) {
     return firstSegment as Locale;
   }
   
-  return 'ar'; // default locale
+  return 'ar';
 } 
