@@ -6,11 +6,11 @@ export interface GeoCoordinates {
 export type EventEra = "Pre-Prophethood" | "Meccan" | "Medinan";
 
 export interface HistoricalEvent {
-  id: number; // Assuming numeric IDs from your example
-  year: string; // e.g., "570 CE", "c. 595 CE"
+  id: number;
+  year: string;
   title: string;
   description: string;
   locationName: string;
   coordinates: GeoCoordinates;
   era: EventEra;
-} 
+}

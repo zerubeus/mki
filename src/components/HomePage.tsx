@@ -5,14 +5,13 @@ import seeraIcon from "../assets/seera.png";
 import tareekhIcon from "../assets/tareekh.png";
 import type { translations } from "../i18n/translations";
 
-// Define a type for one language's translations more generically
 type TranslationObject = (typeof translations)[keyof typeof translations];
 
 interface HomePageProps {
   locale: "ar" | "en";
   arabicUrl: string;
   englishUrl: string;
-  t: TranslationObject; // Translations object prop
+  t: TranslationObject;
 }
 
 const HomePage: React.FC<HomePageProps> = ({
@@ -75,15 +74,15 @@ const HomePage: React.FC<HomePageProps> = ({
       `}</style>
 
       <div
+        data-component="home-page"
         className="min-h-screen p-8 relative overflow-hidden"
         style={{
           background:
             "linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #667eea 75%, #764ba2 100%)",
-          direction: isArabic ? "rtl" : "ltr",
         }}
       >
-        {/* Background overlay */}
         <div
+          data-component="background-overlay"
           className="absolute inset-0 pointer-events-none"
           style={{
             background: `
@@ -94,8 +93,8 @@ const HomePage: React.FC<HomePageProps> = ({
           }}
         />
 
-        {/* Header */}
         <header
+          data-component="header"
           className={`flex justify-between items-center mb-12 relative z-10 flex-col md:flex-row gap-8 md:gap-0 text-center ${isArabic ? "md:text-right" : "md:text-left"}`}
         >
           <div className={`order-2 ${isArabic ? "md:order-1" : "md:order-1"}`}>
@@ -118,6 +117,7 @@ const HomePage: React.FC<HomePageProps> = ({
             className={`relative order-1 ${isArabic ? "md:order-2" : "md:order-2"}`}
           >
             <select
+              data-component="language-selector"
               value={locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               className="px-6 py-4 border-none rounded-full bg-white/95 backdrop-blur-sm text-gray-800 font-semibold cursor-pointer shadow-xl transition-all duration-300 hover:bg-white hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400/30 appearance-none min-w-[140px]"
@@ -133,11 +133,12 @@ const HomePage: React.FC<HomePageProps> = ({
           </div>
         </header>
 
-        {/* Main Content */}
-        <main className="relative z-10">
-          {/* Topics Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <main data-component="main-content" className="relative z-10">
+          <section data-component="topics-section" className="mb-16">
+            <div
+              data-component="topics-grid"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+            >
               {topicsData.map((topic) => (
                 <a
                   key={topic.id}
@@ -149,7 +150,6 @@ const HomePage: React.FC<HomePageProps> = ({
                     backdropFilter: "blur(25px)",
                   }}
                 >
-                  {/* Top border gradient */}
                   <div
                     className="absolute top-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
@@ -184,8 +184,7 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
           </section>
 
-          {/* Description Section */}
-          <section>
+          <section data-component="description-section">
             <div
               className="bg-white/95 backdrop-blur-md rounded-3xl p-16 shadow-2xl border-2 border-white/40 text-center relative overflow-hidden"
               style={{
