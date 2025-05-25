@@ -25,8 +25,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ event, isSelected, onSelect
 
   return (
     <div 
-      className="timeline-item-wrapper flex flex-col items-center flex-shrink-0 w-40 sm:w-48 mx-1 sm:mx-2 relative group cursor-pointer" 
-      style={{ height: '140px' }}
+      className={`flex flex-col items-center flex-shrink-0 w-40 sm:w-48 mx-1 sm:mx-2 relative group cursor-pointer h-[140px] ${isFirst ? 'ml-4' : ''} ${isLast ? 'mr-4' : ''}`}
       onClick={() => onSelect(event.id)}
     >
       {/* Connector Line */}
@@ -35,30 +34,20 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ event, isSelected, onSelect
       )}
       
       {/* Event Dot */} 
-      <div className={`relative z-10 w-5 h-5 rounded-full ${eraColorClasses} border-2 border-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform mb-3`}>
+      <div className={`relative z-10 w-5 h-5 rounded-full ${eraColorClasses} border-2 border-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform mb-3 flex-shrink-0`}>
         {isSelected && <div className="w-2 h-2 bg-white rounded-full"></div>}
       </div>
 
-      {/* Event Card with fixed height */} 
+      {/* Event Card with fixed height using Tailwind */} 
       <div 
-        className={`rounded-lg shadow-lg w-full transition-all duration-200 ease-in-out ${isSelected ? 'bg-blue-600 text-white scale-105 shadow-xl' : 'bg-white text-gray-700 group-hover:shadow-xl'}`}
-        style={{ height: '100px' }}
+        className={`rounded-lg shadow-lg w-full h-[100px] transition-all duration-200 ease-in-out ${isSelected ? 'bg-blue-600 text-white scale-105 shadow-xl' : 'bg-white text-gray-700 group-hover:shadow-xl'}`}
       >
         <div className="p-2 sm:p-3 flex flex-col h-full">
-          <p className={`font-semibold text-xs ${isSelected ? 'text-blue-100' : 'text-gray-500'}`}>
+          <p className={`font-semibold text-xs flex-shrink-0 ${isSelected ? 'text-blue-100' : 'text-gray-500'}`}>
             {event.year}
           </p>
           <div className="flex-grow flex items-center mt-1 overflow-hidden">
-            <h4 
-              className={`text-xs sm:text-sm font-bold text-center w-full leading-tight ${isSelected ? 'text-white' : 'text-gray-800'}`}
-              style={{ 
-                display: '-webkit-box',
-                WebkitLineClamp: 3,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis'
-              }}
-            >
+            <h4 className={`text-xs sm:text-sm font-bold text-center w-full leading-tight line-clamp-3 ${isSelected ? 'text-white' : 'text-gray-800'}`}>
               {event.title}
             </h4>
           </div>
