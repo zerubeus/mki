@@ -24,21 +24,45 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ event, isSelected, onSelect
   const eraColorClasses = getEraColors(event.era, isSelected);
 
   return (
-    <div className="flex flex-col items-center flex-shrink-0 w-48 mx-2 relative pb-8 group cursor-pointer" onClick={() => onSelect(event.id)}>
-      {/* Connector Line - simplified: active if current item is selected. More complex logic would be in parent. */}
+    <div 
+      className="timeline-item-wrapper flex flex-col items-center flex-shrink-0 w-40 sm:w-48 mx-1 sm:mx-2 relative group cursor-pointer" 
+      style={{ height: '140px' }}
+      onClick={() => onSelect(event.id)}
+    >
+      {/* Connector Line */}
       {!isLast && (
         <div className={`absolute top-[10px] left-1/2 h-[3px] w-full ${isSelected ? 'bg-blue-500' : 'bg-gray-300'} z-0`} />
       )}
       
       {/* Event Dot */} 
-      <div className={`relative z-10 w-5 h-5 rounded-full ${eraColorClasses} border-2 border-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform`}>
+      <div className={`relative z-10 w-5 h-5 rounded-full ${eraColorClasses} border-2 border-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform mb-3`}>
         {isSelected && <div className="w-2 h-2 bg-white rounded-full"></div>}
       </div>
 
-      {/* Event Card */} 
-      <div className={`mt-3 p-3 rounded-lg shadow-lg w-full text-center transition-all duration-200 ease-in-out ${isSelected ? 'bg-blue-600 text-white scale-105' : 'bg-white text-gray-700 group-hover:shadow-xl' }`}>
-        <p className={`font-semibold text-xs ${isSelected ? 'text-blue-100' : 'text-gray-500'}`}>{event.year}</p>
-        <h4 className={`mt-1 text-sm font-bold ${isSelected ? 'text-white' : 'text-gray-800'}`}>{event.title}</h4>
+      {/* Event Card with fixed height */} 
+      <div 
+        className={`rounded-lg shadow-lg w-full transition-all duration-200 ease-in-out ${isSelected ? 'bg-blue-600 text-white scale-105 shadow-xl' : 'bg-white text-gray-700 group-hover:shadow-xl'}`}
+        style={{ height: '100px' }}
+      >
+        <div className="p-2 sm:p-3 flex flex-col h-full">
+          <p className={`font-semibold text-xs ${isSelected ? 'text-blue-100' : 'text-gray-500'}`}>
+            {event.year}
+          </p>
+          <div className="flex-grow flex items-center mt-1 overflow-hidden">
+            <h4 
+              className={`text-xs sm:text-sm font-bold text-center w-full leading-tight ${isSelected ? 'text-white' : 'text-gray-800'}`}
+              style={{ 
+                display: '-webkit-box',
+                WebkitLineClamp: 3,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis'
+              }}
+            >
+              {event.title}
+            </h4>
+          </div>
+        </div>
       </div>
     </div>
   );
