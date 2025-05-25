@@ -1,18 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import type { Locale } from '../i18n/translations';
 ---
 
 <Layout>
-	<div style="padding: 40px; text-align: center; max-width: 800px; margin: 0 auto;">
-		<h1 style="color: #2c3e50; margin-bottom: 20px;">العبادات - Worship</h1>
-		<p style="color: #7f8c8d; font-size: 1.2rem; line-height: 1.6;">
-			This section is currently under development. We're working on bringing you comprehensive content about Islamic worship and rituals.
-		</p>
-		<p style="color: #7f8c8d; margin-top: 20px;">
-			يجري العمل على تطوير هذا القسم. نحن نعمل على تقديم محتوى شامل عن العبادات الإسلامية.
-		</p>
-		<a href="/" style="display: inline-block; margin-top: 30px; padding: 12px 24px; background: #3498db; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s ease;">
-			← Back to Home / العودة للرئيسية
-		</a>
-	</div>
-</Layout> 
+  <div
+    style="padding: 40px; text-align: center; max-width: 800px; margin: 0 auto;"
+  >
+    <h1 style="color: #2c3e50; margin-bottom: 20px;">
+      العبادات - Acts of Worship
+    </h1>
+    <p style="color: #7f8c8d; font-size: 1.2rem; line-height: 1.6;">
+      This section is currently under development. We are compiling information
+      and resources on various acts of worship in Islam.
+    </p>
+    <p style="color: #7f8c8d; margin-top: 20px;">
+      يجري العمل على تطوير هذا القسم. نحن نعمل على جمع المعلومات والمصادر حول
+      مختلف العبادات في الإسلام.
+    </p>
+    <a
+      href={getRelativeLocaleUrl((Astro.currentLocale as Locale) || 'ar', '')}
+      style="display: inline-block; margin-top: 30px; padding: 12px 24px; background: #3498db; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s ease;"
+    >
+      ← Back to Home / العودة للرئيسية
+    </a>
+  </div>
+</Layout>
+

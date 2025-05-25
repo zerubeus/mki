@@ -1,42 +1,69 @@
-import React, { useState } from "react";
+import React from "react";
 import aqidaIcon from "../assets/akida.png";
 import ibadatIcon from "../assets/ibadat.png";
 import seeraIcon from "../assets/seera.png";
-import tareekh from "../assets/tareekh.png";
+import tareekhIcon from "../assets/tareekh.png";
+import type { translations } from "../i18n/translations"; // Import the type of a translation object
 
-const HomePage = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("العربية");
+// Define a type for one language's translations
+type TranslationObject = typeof translations.en; // or typeof translations.ar, they have the same keys
 
-  const topics = [
+interface HomePageProps {
+  locale: "ar" | "en";
+  arabicUrl: string;
+  englishUrl: string;
+  t: TranslationObject; // Translations object prop
+}
+
+const HomePage: React.FC<HomePageProps> = ({
+  locale,
+  arabicUrl,
+  englishUrl,
+  t,
+}) => {
+  const topicsData = [
     {
       id: "aqida",
-      nameAr: "العقيدة",
-      nameEn: "Creed",
       icon: aqidaIcon,
-      description: "أساسيات الإيمان والتوحيد",
+      nameKey: "aqida" as keyof TranslationObject, // Key for topic name
+      descKey: "aqidaDesc" as keyof TranslationObject, // Key for topic description
     },
     {
       id: "ibadat",
-      nameAr: "العبادات",
-      nameEn: "Worship",
       icon: ibadatIcon,
-      description: "الصلاة والصوم والزكاة والحج",
+      nameKey: "ibadat" as keyof TranslationObject,
+      descKey: "ibadatDesc" as keyof TranslationObject,
     },
     {
       id: "seera",
-      nameAr: "السيرة",
-      nameEn: "Biography",
       icon: seeraIcon,
-      description: "سيرة النبي محمد صلى الله عليه وسلم",
+      nameKey: "seera" as keyof TranslationObject,
+      descKey: "seeraDesc" as keyof TranslationObject,
     },
     {
-      id: "tareekh",
-      nameAr: "التاريخ",
-      nameEn: "History",
-      icon: tareekh,
-      description: "تاريخ الإسلام والحضارة الإسلامية",
+      id: "history", // id used for page linking
+      icon: tareekhIcon,
+      nameKey: "tareekh" as keyof TranslationObject, // translation key is 'tareekh'
+      descKey: "tareekhDesc" as keyof TranslationObject, // translation key is 'tareekhDesc'
     },
   ];
+
+  const handleLanguageChange = (newLocale: string) => {
+    if (newLocale === "en") {
+      window.location.href = englishUrl;
+    } else {
+      window.location.href = arabicUrl;
+    }
+  };
+
+  const isArabic = locale === "ar";
+
+  const getTopicLink = (topicId: string) => {
+    if (isArabic) {
+      return `/${topicId}`;
+    }
+    return `/en/${topicId}`;
+  };
 
   return (
     <>
@@ -52,6 +79,7 @@ const HomePage = () => {
         style={{
           background:
             "linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #667eea 75%, #764ba2 100%)",
+          direction: isArabic ? "rtl" : "ltr",
         }}
       >
         {/* Background overlay */}
@@ -67,8 +95,10 @@ const HomePage = () => {
         />
 
         {/* Header */}
-        <header className="flex justify-between items-center mb-12 relative z-10 flex-col md:flex-row gap-8 md:gap-0 text-center md:text-right">
-          <div className="order-2 md:order-1">
+        <header
+          className={`flex justify-between items-center mb-12 relative z-10 flex-col md:flex-row gap-8 md:gap-0 text-center ${isArabic ? "md:text-right" : "md:text-left"}`}
+        >
+          <div className={`order-2 ${isArabic ? "md:order-1" : "md:order-1"}`}>
             <h1
               className="text-4xl md:text-6xl font-extrabold text-white m-0 bg-gradient-to-r from-yellow-400 via-white to-yellow-400 bg-clip-text text-transparent"
               style={{
@@ -77,17 +107,19 @@ const HomePage = () => {
                 animation: "titleGlow 3s ease-in-out infinite alternate",
               }}
             >
-              اعرف دينك
+              {t.title} {/* Use translation key */}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 mt-2 font-semibold tracking-wide">
-              معرفة إسلامية شاملة
+              {t.subtitle} {/* Use translation key */}
             </p>
           </div>
 
-          <div className="relative order-1 md:order-2">
+          <div
+            className={`relative order-1 ${isArabic ? "md:order-2" : "md:order-2"}`}
+          >
             <select
-              value={selectedLanguage}
-              onChange={(e) => setSelectedLanguage(e.target.value)}
+              value={locale}
+              onChange={(e) => handleLanguageChange(e.target.value)}
               className="px-6 py-4 border-none rounded-full bg-white/95 backdrop-blur-sm text-gray-800 font-semibold cursor-pointer shadow-xl transition-all duration-300 hover:bg-white hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-yellow-400/30 appearance-none min-w-[140px]"
               style={{
                 background:
@@ -95,8 +127,9 @@ const HomePage = () => {
                 backdropFilter: "blur(15px)",
               }}
             >
-              <option value="العربية">العربية</option>
-              <option value="English">English</option>
+              {/* Options can also be driven by t object if needed, but static is fine here */}
+              <option value="ar">العربية</option>
+              <option value="en">English</option>
             </select>
           </div>
         </header>
@@ -106,9 +139,10 @@ const HomePage = () => {
           {/* Topics Grid */}
           <section className="mb-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-              {topics.map((topic) => (
-                <div
+              {topicsData.map((topic) => (
+                <a
                   key={topic.id}
+                  href={getTopicLink(topic.id)}
                   className="bg-white/95 backdrop-blur-md rounded-3xl p-10 text-center shadow-xl border-2 border-white/40 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:scale-105 relative overflow-hidden group"
                   style={{
                     background:
@@ -134,19 +168,19 @@ const HomePage = () => {
                   >
                     <img
                       src={topic.icon.src}
-                      alt={topic.nameAr}
+                      alt={t[topic.nameKey]} // Use translation key for alt text
                       width={50}
                       height={50}
                       className="object-contain brightness-110 contrast-110 relative z-10"
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-4 tracking-wide">
-                    {topic.nameAr}
+                    {t[topic.nameKey]} {/* Use translation key */}
                   </h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    {topic.description}
+                    {t[topic.descKey]} {/* Use translation key */}
                   </p>
-                </div>
+                </a>
               ))}
             </div>
           </section>
@@ -171,26 +205,23 @@ const HomePage = () => {
               />
 
               <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent tracking-wide">
-                مرحباً بك في موقع المعرفة الإسلامية
+                {t.welcomeTitle} {/* Use translation key */}
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto font-medium">
-                هذا الموقع يهدف إلى تقديم المعرفة الإسلامية الصحيحة والموثقة من
-                الكتاب والسنة. يمكنك تصفح المواضيع المختلفة لتعلم أساسيات الدين
-                الإسلامي، من العقيدة والعبادات إلى السيرة النبوية وتاريخ
-                الإسلام.
+                {t.welcomeText} {/* Use translation key */}
               </p>
               <div className="flex justify-center gap-10 flex-wrap">
                 <div className="flex items-center gap-3 bg-blue-100/50 px-8 py-4 rounded-2xl font-semibold text-gray-800 transition-all duration-300 hover:bg-blue-200/50 hover:-translate-y-1 border border-blue-200/50">
                   <span className="text-2xl">📚</span>
-                  <span>محتوى معتمد من الكتاب والسنة</span>
+                  <span>{t.feature1}</span> {/* Use translation key */}
                 </div>
                 <div className="flex items-center gap-3 bg-blue-100/50 px-8 py-4 rounded-2xl font-semibold text-gray-800 transition-all duration-300 hover:bg-blue-200/50 hover:-translate-y-1 border border-blue-200/50">
                   <span className="text-2xl">🎓</span>
-                  <span>شرح مبسط ومفهوم للجميع</span>
+                  <span>{t.feature2}</span> {/* Use translation key */}
                 </div>
                 <div className="flex items-center gap-3 bg-blue-100/50 px-8 py-4 rounded-2xl font-semibold text-gray-800 transition-all duration-300 hover:bg-blue-200/50 hover:-translate-y-1 border border-blue-200/50">
                   <span className="text-2xl">🌍</span>
-                  <span>متاح بعدة لغات</span>
+                  <span>{t.feature3}</span> {/* Use translation key */}
                 </div>
               </div>
             </div>

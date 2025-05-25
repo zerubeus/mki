@@ -1,8 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import HomePage from '../../components/HomePage.astro';
+import HomePage from '../../components/HomePage.tsx';
+import type { Locale } from '../../i18n/translations';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getTranslations } from '../../i18n/utils';
+
+const currentLocale = (Astro.currentLocale as Locale) || 'ar';
+const arHomepageUrl = getRelativeLocaleUrl('ar', '');
+const enHomepageUrl = getRelativeLocaleUrl('en', '');
+const t = getTranslations(currentLocale);
 ---
 
 <Layout>
-	<HomePage />
-</Layout> 
+  <HomePage
+    locale={currentLocale}
+    arabicUrl={arHomepageUrl}
+    englishUrl={enHomepageUrl}
+    t={t}
+  />
+</Layout>
