@@ -27,6 +27,27 @@ export const translations = {
     // Language names
     arabic: "ar",
     english: "en",
+
+    // Page specific translations
+    backToHome: "العودة للرئيسية",
+
+    aqidaPageTitle: "العقيدة",
+    aqidaPageDesc1:
+      "يجري العمل على تطوير هذا القسم. نحن نعمل على تقديم محتوى شامل عن العقيدة الإسلامية.",
+
+    ibadatPageTitle: "العبادات",
+    ibadatPageDesc1:
+      "يجري العمل على تطوير هذا القسم. نحن نعمل على جمع المعلومات والمصادر حول مختلف العبادات في الإسلام.",
+
+    seeraPageTitle: "السيرة النبوية",
+    seeraPageDesc1:
+      "يجري العمل على تطوير هذا القسم. نحن نعمل على تقديم معلومات مفصلة عن حياة النبي محمد (صلى الله عليه وسلم).",
+
+    // SeerahJourney.tsx specific translations
+    seerahJourneyTitle: "مسار النبي ﷺ",
+    seerahJourneySubtitle: "رحلة تفاعلية عبر السيرة",
+    seerahJourneyFooter:
+      "بيانات الخريطة © مساهمو OpenStreetMap © CartoDB. تم تجميع معلومات الحدث لأغراض تعليمية.",
   },
 
   en: {
@@ -57,6 +78,27 @@ export const translations = {
     // Language names
     arabic: "ar",
     english: "en",
+
+    // Page specific translations
+    backToHome: "Back to Home",
+
+    aqidaPageTitle: "Creed",
+    aqidaPageDesc1:
+      "This section is currently under development. We\'re working on bringing you comprehensive content about Islamic creed and theology.",
+
+    ibadatPageTitle: "Acts of Worship",
+    ibadatPageDesc1:
+      "This section is currently under development. We are compiling information and resources on various acts of worship in Islam.",
+
+    seeraPageTitle: "Prophetic Biography",
+    seeraPageDesc1:
+      "This section is currently under development. We are dedicated to providing detailed information about the life of Prophet Muhammad (peace be upon him).",
+
+    // SeerahJourney.tsx specific translations
+    seerahJourneyTitle: "The Prophet's Path ﷺ",
+    seerahJourneySubtitle: "An Interactive Journey Through Seerah",
+    seerahJourneyFooter:
+      "Map data © OpenStreetMap contributors © CartoDB. Event information compiled for educational purposes.",
   },
 } as const;
 

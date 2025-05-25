@@ -3,10 +3,10 @@ import aqidaIcon from "../assets/akida.png";
 import ibadatIcon from "../assets/ibadat.png";
 import seeraIcon from "../assets/seera.png";
 import tareekhIcon from "../assets/tareekh.png";
-import type { translations } from "../i18n/translations"; // Import the type of a translation object
+import type { translations } from "../i18n/translations";
 
-// Define a type for one language's translations
-type TranslationObject = typeof translations.en; // or typeof translations.ar, they have the same keys
+// Define a type for one language's translations more generically
+type TranslationObject = (typeof translations)[keyof typeof translations];
 
 interface HomePageProps {
   locale: "ar" | "en";
@@ -25,8 +25,8 @@ const HomePage: React.FC<HomePageProps> = ({
     {
       id: "aqida",
       icon: aqidaIcon,
-      nameKey: "aqida" as keyof TranslationObject, // Key for topic name
-      descKey: "aqidaDesc" as keyof TranslationObject, // Key for topic description
+      nameKey: "aqida" as keyof TranslationObject,
+      descKey: "aqidaDesc" as keyof TranslationObject,
     },
     {
       id: "ibadat",
@@ -41,10 +41,10 @@ const HomePage: React.FC<HomePageProps> = ({
       descKey: "seeraDesc" as keyof TranslationObject,
     },
     {
-      id: "history", // id used for page linking
+      id: "history",
       icon: tareekhIcon,
-      nameKey: "tareekh" as keyof TranslationObject, // translation key is 'tareekh'
-      descKey: "tareekhDesc" as keyof TranslationObject, // translation key is 'tareekhDesc'
+      nameKey: "tareekh" as keyof TranslationObject,
+      descKey: "tareekhDesc" as keyof TranslationObject,
     },
   ];
 
@@ -107,10 +107,10 @@ const HomePage: React.FC<HomePageProps> = ({
                 animation: "titleGlow 3s ease-in-out infinite alternate",
               }}
             >
-              {t.title} {/* Use translation key */}
+              {t.title}
             </h1>
             <p className="text-xl md:text-2xl text-white/95 mt-2 font-semibold tracking-wide">
-              {t.subtitle} {/* Use translation key */}
+              {t.subtitle}
             </p>
           </div>
 
@@ -127,7 +127,6 @@ const HomePage: React.FC<HomePageProps> = ({
                 backdropFilter: "blur(15px)",
               }}
             >
-              {/* Options can also be driven by t object if needed, but static is fine here */}
               <option value="ar">العربية</option>
               <option value="en">English</option>
             </select>
@@ -168,17 +167,17 @@ const HomePage: React.FC<HomePageProps> = ({
                   >
                     <img
                       src={topic.icon.src}
-                      alt={t[topic.nameKey]} // Use translation key for alt text
+                      alt={t[topic.nameKey]}
                       width={50}
                       height={50}
                       className="object-contain brightness-110 contrast-110 relative z-10"
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-4 tracking-wide">
-                    {t[topic.nameKey]} {/* Use translation key */}
+                    {t[topic.nameKey]}
                   </h3>
                   <p className="text-gray-600 leading-relaxed font-medium">
-                    {t[topic.descKey]} {/* Use translation key */}
+                    {t[topic.descKey]}
                   </p>
                 </a>
               ))}
@@ -205,23 +204,23 @@ const HomePage: React.FC<HomePageProps> = ({
               />
 
               <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 bg-clip-text text-transparent tracking-wide">
-                {t.welcomeTitle} {/* Use translation key */}
+                {t.welcomeTitle}
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto font-medium">
-                {t.welcomeText} {/* Use translation key */}
+                {t.welcomeText}
               </p>
               <div className="flex justify-center gap-10 flex-wrap">
                 <div className="flex items-center gap-3 bg-blue-100/50 px-8 py-4 rounded-2xl font-semibold text-gray-800 transition-all duration-300 hover:bg-blue-200/50 hover:-translate-y-1 border border-blue-200/50">
                   <span className="text-2xl">📚</span>
-                  <span>{t.feature1}</span> {/* Use translation key */}
+                  <span>{t.feature1}</span>
                 </div>
                 <div className="flex items-center gap-3 bg-blue-100/50 px-8 py-4 rounded-2xl font-semibold text-gray-800 transition-all duration-300 hover:bg-blue-200/50 hover:-translate-y-1 border border-blue-200/50">
                   <span className="text-2xl">🎓</span>
-                  <span>{t.feature2}</span> {/* Use translation key */}
+                  <span>{t.feature2}</span>
                 </div>
                 <div className="flex items-center gap-3 bg-blue-100/50 px-8 py-4 rounded-2xl font-semibold text-gray-800 transition-all duration-300 hover:bg-blue-200/50 hover:-translate-y-1 border border-blue-200/50">
                   <span className="text-2xl">🌍</span>
-                  <span>{t.feature3}</span> {/* Use translation key */}
+                  <span>{t.feature3}</span>
                 </div>
               </div>
             </div>

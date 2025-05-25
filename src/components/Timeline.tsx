@@ -1,6 +1,6 @@
-import React from 'react';
-import type { HistoricalEvent } from '../types'; // Adjusted path
-import TimelineItem from './TimelineItem'; // To be created
+import React from "react";
+import type { HistoricalEvent } from "../types"; // Adjusted path
+import TimelineItem from "./TimelineItem.tsx"; // Added .tsx extension
 
 interface TimelineProps {
   events: HistoricalEvent[];
@@ -8,15 +8,21 @@ interface TimelineProps {
   onEventSelect: (eventId: number) => void;
 }
 
-const Timeline: React.FC<TimelineProps> = ({ events, selectedEventId, onEventSelect }) => {
+const Timeline: React.FC<TimelineProps> = ({
+  events,
+  selectedEventId,
+  onEventSelect,
+}) => {
   return (
     <div className="px-4 py-2 bg-white shadow-inner rounded-lg">
-      <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">Timeline of Events</h3>
-      <div 
-        className="flex overflow-x-auto py-4 items-center min-h-[160px] scroll-smooth gap-0"
+      <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">
+        Timeline of Events
+      </h3>
+      <div
+        className="flex overflow-x-auto py-4 items-start scroll-smooth gap-0"
         style={{
-          scrollbarWidth: 'thin',
-          scrollbarColor: '#9ca3af #f3f4f6'
+          scrollbarWidth: "thin",
+          scrollbarColor: "#9ca3af #f3f4f6",
         }}
       >
         {events.map((event, index) => (
@@ -34,4 +40,4 @@ const Timeline: React.FC<TimelineProps> = ({ events, selectedEventId, onEventSel
   );
 };
 
-export default Timeline; 
+export default Timeline;

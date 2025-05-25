@@ -1,5 +1,5 @@
-import React from 'react';
-import type { HistoricalEvent } from '../types'; // Adjusted path
+import React from "react";
+import type { HistoricalEvent, EventEra } from "../types"; // Adjust path if needed, assuming types.ts is in src/
 
 interface TimelineItemProps {
   event: HistoricalEvent;
@@ -7,54 +7,94 @@ interface TimelineItemProps {
   onSelect: (eventId: number) => void;
   isFirst: boolean;
   isLast: boolean;
-  // selectedEventId?: number | null; // Added to receive actual selected ID if needed for advanced connector
 }
 
-const getEraColors = (era: string, isSelected: boolean) => {
-  if (isSelected) return 'bg-blue-600 border-blue-700';
-  switch (era) {
-    case 'Pre-Prophethood': return 'bg-sky-400 border-sky-500';
-    case 'Meccan': return 'bg-amber-400 border-amber-500';
-    case 'Medinan': return 'bg-emerald-400 border-emerald-500';
-    default: return 'bg-gray-400 border-gray-500';
-  }
+const getEraColors = (era: EventEra, isSelected: boolean): string => {
+  const baseColors: Record<EventEra, string> = {
+    "Pre-Prophethood": "border-sky-500 bg-sky-100 text-sky-700",
+    Meccan: "border-amber-500 bg-amber-100 text-amber-700",
+    Medinan: "border-emerald-500 bg-emerald-100 text-emerald-700",
+  };
+  const selectedColors: Record<EventEra, string> = {
+    "Pre-Prophethood":
+      "border-sky-700 bg-sky-500 text-white ring-2 ring-sky-300",
+    Meccan: "border-amber-700 bg-amber-500 text-white ring-2 ring-amber-300",
+    Medinan:
+      "border-emerald-700 bg-emerald-500 text-white ring-2 ring-emerald-300",
+  };
+  return isSelected ? selectedColors[era] : baseColors[era];
 };
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ event, isSelected, onSelect, isFirst, isLast }) => {
-  const eraColorClasses = getEraColors(event.era, isSelected);
+const getDotEraColors = (era: EventEra, isSelected: boolean): string => {
+  const baseColors: Record<EventEra, string> = {
+    "Pre-Prophethood": "bg-sky-500",
+    Meccan: "bg-amber-500",
+    Medinan: "bg-emerald-500",
+  };
+  const selectedColors: Record<EventEra, string> = {
+    "Pre-Prophethood": "bg-sky-700 ring-4 ring-sky-300",
+    Meccan: "bg-amber-700 ring-4 ring-amber-300",
+    Medinan: "bg-emerald-700 ring-4 ring-emerald-300",
+  };
+  return isSelected ? selectedColors[era] : baseColors[era];
+};
+
+const TimelineItem: React.FC<TimelineItemProps> = ({
+  event,
+  isSelected,
+  onSelect,
+  isFirst,
+  isLast,
+}) => {
+  const eraColors = event.era
+    ? getEraColors(event.era, isSelected)
+    : "border-gray-500 bg-gray-100 text-gray-700";
+  const dotEraColors = event.era
+    ? getDotEraColors(event.era, isSelected)
+    : "bg-gray-500";
 
   return (
-    <div 
-      className={`flex flex-col items-center flex-shrink-0 w-40 sm:w-48 mx-1 sm:mx-2 relative group cursor-pointer h-[140px] ${isFirst ? 'ml-4' : ''} ${isLast ? 'mr-4' : ''}`}
-      onClick={() => onSelect(event.id)}
-    >
-      {/* Connector Line */}
-      {!isLast && (
-        <div className={`absolute top-[10px] left-1/2 h-[3px] w-full ${isSelected ? 'bg-blue-500' : 'bg-gray-300'} z-0`} />
+    <div className="flex items-center flex-shrink-0 group">
+      {/* Timeline Line - Left */}
+      {!isFirst && (
+        <div
+          className={`w-8 h-1 ${isSelected ? "bg-gray-500" : "bg-gray-300"}`}
+        ></div>
       )}
-      
-      {/* Event Dot */} 
-      <div className={`relative z-10 w-5 h-5 rounded-full ${eraColorClasses} border-2 border-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform mb-3 flex-shrink-0`}>
-        {isSelected && <div className="w-2 h-2 bg-white rounded-full"></div>}
-      </div>
 
-      {/* Event Card with fixed height using Tailwind */} 
-      <div 
-        className={`rounded-lg shadow-lg w-full h-[100px] transition-all duration-200 ease-in-out ${isSelected ? 'bg-blue-600 text-white scale-105 shadow-xl' : 'bg-white text-gray-700 group-hover:shadow-xl'}`}
-      >
-        <div className="p-2 sm:p-3 flex flex-col h-full">
-          <p className={`font-semibold text-xs flex-shrink-0 ${isSelected ? 'text-blue-100' : 'text-gray-500'}`}>
+      {/* Dot and Card Container */}
+      <div className="flex flex-col items-center">
+        {/* Dot */}
+        <button
+          onClick={() => onSelect(event.id)}
+          className={`w-6 h-6 rounded-full ${dotEraColors} border-2 border-white shadow-md z-10 flex items-center justify-center transition-all duration-200 ease-in-out transform group-hover:scale-110`}
+          aria-label={`Select event: ${event.title}`}
+        >
+          {isSelected && <div className="w-2 h-2 bg-white rounded-full"></div>}
+        </button>
+
+        {/* Event Card */}
+        <button
+          onClick={() => onSelect(event.id)}
+          className={`mt-4 p-3 w-48 min-h-[100px] rounded-lg shadow-lg border text-left transition-all duration-200 ease-in-out transform group-hover:-translate-y-1 ${eraColors} ${isSelected ? "scale-105" : "hover:shadow-xl"}`}
+        >
+          <p className={`font-bold text-sm ${isSelected ? "text-white" : ""}`}>
             {event.year}
           </p>
-          <div className="flex-grow flex items-center mt-1 overflow-hidden">
-            <h4 className={`text-xs sm:text-sm font-bold text-center w-full leading-tight line-clamp-3 ${isSelected ? 'text-white' : 'text-gray-800'}`}>
-              {event.title}
-            </h4>
-          </div>
-        </div>
+          <p className={`text-xs mt-1 ${isSelected ? "text-gray-100" : ""}`}>
+            {event.title}
+          </p>
+        </button>
       </div>
+
+      {/* Timeline Line - Right */}
+      {!isLast && (
+        <div
+          className={`w-8 h-1 ${isSelected ? "bg-gray-500" : "bg-gray-300"}`}
+        ></div>
+      )}
     </div>
   );
 };
 
-export default TimelineItem; 
+export default TimelineItem;
