@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* You can add other global styles here if needed, AFTER the tailwindcss import */
+
+/* Custom Leaflet Popup Styling to work with Tailwind */
+/* These might need to be adjusted if Tailwind is now processing them differently */
+/* For example, @apply might not be needed if Tailwind handles these classes globally */
+.leaflet-popup-content-wrapper {
+  /* bg-white rounded-lg shadow-lg p-0; */ /* Let Tailwind handle this via classes in component if possible */
+}
+.leaflet-popup-content {
+  /* text-sm text-gray-700 p-3; */
+  /* margin: 0 !important; */
+}
+/* .leaflet-popup-tip-container { */
+  /* display: none; */ 
+/* } */
+
+/* Ensure map container has a defined size if not set by inline styles */
+/* #leaflet-map {
+  min-height: 400px; 
+} */ 

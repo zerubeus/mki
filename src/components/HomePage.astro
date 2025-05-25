@@ -80,7 +80,7 @@ const localeUrls = {
     <section class="topics-section">
       <div class="topics-grid">
         {topics.map((topic) => (
-          <div class="topic-card">
+          <div class="topic-card" data-topic-id={topic.id}>
             <div class="icon-container">
               <Image 
                 src={topic.icon} 
@@ -557,4 +557,42 @@ const localeUrls = {
       }
     });
   }
+
+  // Topic card navigation
+  const topicCards = document.querySelectorAll('.topic-card');
+  
+  topicCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const topicId = card.getAttribute('data-topic-id');
+      
+      // Define navigation routes for each topic
+      const routes: Record<string, string> = {
+        'tareekh': '/history',
+        'aqida': '/aqida',
+        'ibadat': '/ibadat',
+        'seera': '/seera'
+      };
+      
+      if (topicId && routes[topicId]) {
+        // Add a small delay for visual feedback
+        (card as HTMLElement).style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          window.location.href = routes[topicId];
+        }, 150);
+      }
+    });
+    
+    // Add keyboard support for accessibility
+    card.addEventListener('keydown', (e) => {
+      const keyEvent = e as KeyboardEvent;
+      if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+        keyEvent.preventDefault();
+        (card as HTMLElement).click();
+      }
+    });
+    
+    // Make cards focusable for keyboard navigation
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+  });
 </script> 

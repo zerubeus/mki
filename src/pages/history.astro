@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SeerahJourney from '../components/SeerahJourney.tsx';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<head>
+		{/* Leaflet CSS is in the main Layout.astro, no need to repeat here */}
+		{/* Ensure Leaflet JS is loaded if InteractiveMap.tsx uses window.L (e.g., in Layout.astro) */}
+		
+		{/* Tailwind (ensure this is set up in your astro.config.mjs and global CSS) */}
+
+		{/* Font for ﷺ symbol if needed and not global */}
+		<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap" rel="stylesheet">
+	</head>
+	<SeerahJourney client:only="react" />
+</Layout>
