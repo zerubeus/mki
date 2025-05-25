@@ -48,10 +48,19 @@ const HomePage: React.FC<HomePageProps> = ({
   ];
 
   const handleLanguageChange = (newLocale: string) => {
-    if (newLocale === "en") {
-      window.location.href = englishUrl;
+    console.log("Language change requested:", newLocale);
+    console.log("English URL:", englishUrl);
+    console.log("Arabic URL:", arabicUrl);
+
+    const targetUrl = newLocale === "en" ? englishUrl : arabicUrl;
+    console.log("Target URL:", targetUrl);
+
+    // Ensure we have a proper URL
+    if (targetUrl) {
+      // Use window.location.assign for better compatibility
+      window.location.assign(targetUrl);
     } else {
-      window.location.href = arabicUrl;
+      console.error("Target URL is empty or undefined");
     }
   };
 

@@ -3,7 +3,7 @@ import InteractiveMap from "./InteractiveMap"; // This will be InteractiveMapRea
 import Timeline from "./Timeline";
 import SelectedEventDisplay from "./SelectedEventDisplay";
 import {
-  HISTORICAL_EVENTS,
+  getLocalizedEvents,
   MAP_INITIAL_CENTER,
   MAP_INITIAL_ZOOM,
   MAP_EVENT_ZOOM,
@@ -14,28 +14,28 @@ import type { translations } from "../i18n/translations"; // Import translations
 // Define a type for one language's translations
 type TranslationObject = (typeof translations)[keyof typeof translations];
 
-// Define props for the component, including 't'
+// Define props for the component, including 't' and locale
 interface SeerahJourneyProps {
   t: TranslationObject;
+  locale?: "ar" | "en";
   // Define other props if SeerahJourney is ever used without client:only and needs SSR props
 }
 
-const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t }) => {
+const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
   const [selectedEventId, setSelectedEventId] = useState<number | null>(null);
   const [mapCenter, setMapCenter] =
     useState<[number, number]>(MAP_INITIAL_CENTER);
   const [mapZoom, setMapZoom] = useState<number>(MAP_INITIAL_ZOOM);
 
-  const sortedEvents = useMemo(
-    () =>
-      [...HISTORICAL_EVENTS].sort((a, b) => {
-        const yearA = parseInt(a.year.match(/\d+/)?.[0] || "0");
-        const yearB = parseInt(b.year.match(/\d+/)?.[0] || "0");
-        if (yearA !== yearB) return yearA - yearB;
-        return a.id - b.id;
-      }),
-    [],
-  );
+  const sortedEvents = useMemo(() => {
+    const events = getLocalizedEvents(locale);
+    return [...events].sort((a, b) => {
+      const yearA = parseInt(a.year.match(/\d+/)?.[0] || "0");
+      const yearB = parseInt(b.year.match(/\d+/)?.[0] || "0");
+      if (yearA !== yearB) return yearA - yearB;
+      return a.id - b.id;
+    });
+  }, [locale]);
 
   const handleEventSelect = useCallback(
     (eventId: number) => {

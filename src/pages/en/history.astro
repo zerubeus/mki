@@ -26,6 +26,6 @@ const t = getTranslations(currentLocale);
       rel="stylesheet"
     />
   </head>
-  <SeerahJourney client:only="react" t={t} />
+  <SeerahJourney client:load t={t} locale={currentLocale} />
   {/* Pass t object as a prop */}
 </Layout>
