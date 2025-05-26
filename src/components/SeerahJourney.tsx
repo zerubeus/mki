@@ -26,6 +26,7 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
   const [mapCenter, setMapCenter] =
     useState<[number, number]>(MAP_INITIAL_CENTER);
   const [mapZoom, setMapZoom] = useState<number>(MAP_INITIAL_ZOOM);
+  const [currentYear, setCurrentYear] = useState<number>(622); // Default to Hijra year
 
   const sortedEvents = useMemo(() => {
     const events = getLocalizedEvents(locale);
@@ -52,6 +53,17 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
   const selectedEvent = useMemo(() => {
     return sortedEvents.find((event) => event.id === selectedEventId) || null;
   }, [selectedEventId, sortedEvents]);
+  
+  // Extract year from selected event
+  useEffect(() => {
+    if (selectedEvent) {
+      // Extract year from the event's year string (e.g., "622 CE" or "624 CE (2 AH)")
+      const yearMatch = selectedEvent.year.match(/^(\d+)/);
+      if (yearMatch && yearMatch[1]) {
+        setCurrentYear(parseInt(yearMatch[1]));
+      }
+    }
+  }, [selectedEvent]);
 
   // Select the first event by default after sorting
   useEffect(() => {
@@ -84,6 +96,7 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
             onMarkerClick={handleEventSelect}
             center={mapCenter}
             zoom={mapZoom}
+            year={currentYear}
           />
         </div>
 
