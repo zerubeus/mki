@@ -12,21 +12,5 @@ const t = getTranslations(currentLocale);
 ---
 
 <Layout>
-  <head>
-    {/* Leaflet CSS is in the main Layout.astro, no need to repeat here */}
-    {
-      /* Ensure Leaflet JS is loaded if InteractiveMap.tsx uses window.L (e.g., in Layout.astro) */
-    }
-
-    {
-      /* Tailwind (ensure this is set up in your astro.config.mjs and global CSS) */
-    }
-
-    {/* Font for ﷺ symbol if needed and not global */}
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap"
-      rel="stylesheet"
-    />
-  </head>
   <SeerahJourney client:load t={t} locale={currentLocale} />
 </Layout>

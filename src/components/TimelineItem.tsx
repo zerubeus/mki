@@ -11,30 +11,30 @@ interface TimelineItemProps {
 
 const getEraColors = (era: EventEra, isSelected: boolean): string => {
   const baseColors: Record<EventEra, string> = {
-    "Pre-Prophethood": "border-sky-500 bg-sky-100 text-sky-700",
-    Meccan: "border-amber-500 bg-amber-100 text-amber-700",
-    Medinan: "border-emerald-500 bg-emerald-100 text-emerald-700",
+    "Pre-Prophethood": "border-sky-500 bg-sky-100/90 text-sky-800",
+    Meccan: "border-amber-500 bg-amber-100/90 text-amber-800",
+    Medinan: "border-emerald-500 bg-emerald-100/90 text-emerald-800",
   };
   const selectedColors: Record<EventEra, string> = {
     "Pre-Prophethood":
-      "border-sky-700 bg-sky-500 text-white ring-2 ring-sky-300",
-    Meccan: "border-amber-700 bg-amber-500 text-white ring-2 ring-amber-300",
+      "border-sky-700 bg-sky-500/90 text-white ring-2 ring-sky-300",
+    Meccan: "border-amber-700 bg-amber-500/90 text-white ring-2 ring-amber-300",
     Medinan:
-      "border-emerald-700 bg-emerald-500 text-white ring-2 ring-emerald-300",
+      "border-emerald-700 bg-emerald-500/90 text-white ring-2 ring-emerald-300",
   };
   return isSelected ? selectedColors[era] : baseColors[era];
 };
 
 const getDotEraColors = (era: EventEra, isSelected: boolean): string => {
   const baseColors: Record<EventEra, string> = {
-    "Pre-Prophethood": "bg-sky-500",
-    Meccan: "bg-amber-500",
-    Medinan: "bg-emerald-500",
+    "Pre-Prophethood": "bg-sky-500/90",
+    Meccan: "bg-amber-500/90",
+    Medinan: "bg-emerald-500/90",
   };
   const selectedColors: Record<EventEra, string> = {
-    "Pre-Prophethood": "bg-sky-700 ring-4 ring-sky-300",
-    Meccan: "bg-amber-700 ring-4 ring-amber-300",
-    Medinan: "bg-emerald-700 ring-4 ring-emerald-300",
+    "Pre-Prophethood": "bg-sky-700 ring-4 ring-sky-300/50",
+    Meccan: "bg-amber-700 ring-4 ring-amber-300/50",
+    Medinan: "bg-emerald-700 ring-4 ring-emerald-300/50",
   };
   return isSelected ? selectedColors[era] : baseColors[era];
 };
@@ -48,17 +48,17 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 }) => {
   const eraColors = event.era
     ? getEraColors(event.era, isSelected)
-    : "border-gray-500 bg-gray-100 text-gray-700";
+    : "border-gray-500 bg-gray-100/90 text-gray-800";
   const dotEraColors = event.era
     ? getDotEraColors(event.era, isSelected)
-    : "bg-gray-500";
+    : "bg-gray-500/90";
 
   return (
     <div className="flex items-center flex-shrink-0 group">
       {/* Timeline Line - Left */}
       {!isFirst && (
         <div
-          className={`w-8 h-1 ${isSelected ? "bg-gray-500" : "bg-gray-300"}`}
+          className={`w-8 h-1 ${isSelected ? "bg-gray-500/90" : "bg-gray-300/70"}`}
         ></div>
       )}
 
@@ -76,12 +76,12 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         {/* Event Card */}
         <button
           onClick={() => onSelect(event.id)}
-          className={`mt-4 p-3 w-48 min-h-[100px] rounded-lg shadow-lg border text-left transition-all duration-200 ease-in-out transform group-hover:-translate-y-1 ${eraColors} ${isSelected ? "scale-105" : "hover:shadow-xl"}`}
+          className={`mt-4 p-3 w-48 min-h-[100px] rounded-lg shadow-lg border text-left transition-all duration-200 ease-in-out transform group-hover:-translate-y-1 backdrop-blur-sm ${eraColors} ${isSelected ? "scale-105" : "hover:shadow-xl"}`}
         >
-          <p className={`font-bold text-sm ${isSelected ? "text-white" : ""}`}>
+          <p className={`font-bold text-sm ${isSelected ? "text-white" : "text-gray-900"}`}>
             {event.year}
           </p>
-          <p className={`text-xs mt-1 ${isSelected ? "text-gray-100" : ""}`}>
+          <p className={`text-xs mt-1 ${isSelected ? "text-gray-100" : "text-gray-700"}`}>
             {event.title}
           </p>
         </button>
@@ -90,7 +90,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       {/* Timeline Line - Right */}
       {!isLast && (
         <div
-          className={`w-8 h-1 ${isSelected ? "bg-gray-500" : "bg-gray-300"}`}
+          className={`w-8 h-1 ${isSelected ? "bg-gray-500/90" : "bg-gray-300/70"}`}
         ></div>
       )}
     </div>

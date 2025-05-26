@@ -14,8 +14,8 @@ const Timeline: React.FC<TimelineProps> = ({
   onEventSelect,
 }) => {
   return (
-    <div className="px-4 py-2 bg-white shadow-inner rounded-lg">
-      <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">
+    <div className="px-4 py-2 bg-white/90 backdrop-blur-sm shadow-inner rounded-lg">
+      <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
         Timeline of Events
       </h3>
       <div

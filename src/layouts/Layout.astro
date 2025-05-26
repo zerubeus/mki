@@ -24,23 +24,9 @@ const dir = getDir(locale);
 		<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 		<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap" rel="stylesheet">
 	</head>
-	<body>
+	<body class="min-h-screen w-full m-0 p-0 font-['Cairo'] text-white bg-gradient-to-br from-[#1e3c72] via-[#2a5298] via-[#667eea] to-[#764ba2]">
+		<div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.15),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.1),transparent_60%),radial-gradient(circle_at_40%_40%,rgba(255,215,0,0.1),transparent_40%)] pointer-events-none"></div>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		font-family: 'Cairo', sans-serif;
-		background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-		min-height: 100vh;
-	}
-	
-	* {
-		box-sizing: border-box;
-	}
-</style>

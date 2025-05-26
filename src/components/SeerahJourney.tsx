@@ -61,19 +61,19 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
   }, [sortedEvents, selectedEventId, handleEventSelect]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-100 flex flex-col p-4 md:p-8 space-y-6">
-      <header className="text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+    <div className="min-h-screen flex flex-col p-4 md:p-8 space-y-6">
+      <header className="text-center text-white">
+        <h1 className="text-3xl md:text-4xl font-bold text-white">
           {t.seerahJourneyTitle || "The Prophet's Path"}{" "}
           <span style={{ fontFamily: "'Amiri Quran', serif" }}>ﷺ</span>
         </h1>
-        <p className="text-sm md:text-md text-gray-600 mt-1">
+        <p className="text-sm md:text-md text-gray-200 mt-1">
           {t.seerahJourneySubtitle || "An Interactive Journey Through Seerah"}
         </p>
       </header>
 
-      <main className="flex-grow flex flex-col space-y-6 w-full max-w-5xl mx-auto">
-        <div className="bg-white p-4 md:p-6 rounded-xl shadow-xl">
+      <main className="flex-grow flex flex-col space-y-6 w-full max-w-5xl mx-auto text-gray-800">
+        <div className="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-xl">
           <SelectedEventDisplay event={selectedEvent} />
         </div>
 
@@ -96,7 +96,7 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
         </div>
       </main>
 
-      <footer className="text-center text-xs text-gray-500 py-4">
+      <footer className="text-center text-xs text-gray-300 py-4">
         {t.seerahJourneyFooter ||
           "Map data &copy; OpenStreetMap contributors &copy; CartoDB. Event information compiled for educational purposes."}
       </footer>
