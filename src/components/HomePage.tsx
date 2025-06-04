@@ -85,22 +85,7 @@ const HomePage: React.FC<HomePageProps> = ({
       <div
         data-component="home-page"
         className="min-h-screen p-8 relative overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(135deg, #1e3c72 0%, #2a5298 25%, #667eea 75%, #764ba2 100%)",
-        }}
       >
-        <div
-          data-component="background-overlay"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: `
-              radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 60%),
-              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
-              radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.1) 0%, transparent 40%)
-            `,
-          }}
-        />
 
         <header
           data-component="header"
