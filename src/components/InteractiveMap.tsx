@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { HistoricalEvent } from "../types";
-import {
-  getGeoJsonForYear,
-  getYearRange,
-} from "../data/geojson/historicalTerritories";
+import { getGeoJsonForYear } from "../data/geojson/historicalTerritories";
 
 interface InteractiveMapProps {
   events: HistoricalEvent[];
@@ -28,8 +25,7 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
   const geoJsonLayerRef = useRef<any>(null); // To store the GeoJSON layer
   const [mapReady, setMapReady] = useState<boolean>(false);
   const [manualYear, setManualYear] = useState<number>(year);
-  const [showTimeSlider, setShowTimeSlider] = useState<boolean>(false);
-  const yearRange = getYearRange(); // Get min and max years from historical data
+  const [showTimeSlider] = useState<boolean>(false);
 
   const getIconHtml = (isSelected: boolean, era: string) => {
     let bgColor = "bg-gray-500"; // Default
@@ -155,15 +151,7 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
     if (leafletMapRef.current) {
       leafletMapRef.current.flyTo(center, zoom);
     }
-  }, [center, zoom]); // Update map view when center or zoom props change
-
-  const handleYearChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setManualYear(parseInt(e.target.value));
-  };
-
-  const toggleTimeSlider = () => {
-    setShowTimeSlider(!showTimeSlider);
-  };
+  }, [center, zoom]);
 
   return (
     <div className="relative">
@@ -171,40 +159,6 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
         ref={mapRef}
         className="h-[400px] md:h-[500px] w-full rounded-lg shadow-md z-0"
       />
-
-      {/* Time control button */}
-      <button
-        onClick={toggleTimeSlider}
-        className="absolute top-2 right-2 bg-white/80 hover:bg-white p-2 rounded-md shadow-md z-10 text-xs font-medium"
-      >
-        {showTimeSlider ? "Hide Time Control" : "Show Time Control"}
-      </button>
-
-      {/* Time slider */}
-      {showTimeSlider && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md z-10 w-4/5 max-w-md">
-          <div className="flex flex-col space-y-2">
-            <div className="flex justify-between text-xs text-gray-600">
-              <span>{yearRange.min} CE</span>
-              <span className="font-semibold text-sm text-gray-800">
-                {manualYear} CE
-              </span>
-              <span>{yearRange.max} CE</span>
-            </div>
-            <input
-              type="range"
-              min={yearRange.min}
-              max={yearRange.max}
-              value={manualYear}
-              onChange={handleYearChange}
-              className="w-full"
-            />
-            <div className="text-xs text-center text-gray-500">
-              Drag to see historical boundaries change over time
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

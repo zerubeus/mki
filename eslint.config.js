@@ -1,12 +1,26 @@
-import eslintPluginAstro from 'eslint-plugin-astro';
+import eslintPluginAstro from "eslint-plugin-astro";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsparser from "@typescript-eslint/parser";
+
 export default [
-  // add more generic rule sets here, such as:
-  // js.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
   {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsparser,
+    },
+    plugins: {
+      "@typescript-eslint": tseslint,
+    },
     rules: {
-      // override/add rules settings here, such as:
-      // "astro/no-set-html-directive": "error"
-    }
-  }
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error",
+    },
+  },
+  {
+    files: ["**/*.js", "**/*.jsx"],
+    rules: {
+      "no-unused-vars": "error",
+    },
+  },
 ];

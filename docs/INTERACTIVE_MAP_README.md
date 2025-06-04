@@ -7,6 +7,7 @@ This is a comprehensive interactive historical map system built with Astro and R
 ## Features
 
 ### 🗺️ Interactive Map
+
 - **SVG-based map rendering** with smooth hover effects
 - **Dynamic territory coloring** based on selected time period
 - **Hover tooltips** showing territory information
@@ -14,6 +15,7 @@ This is a comprehensive interactive historical map system built with Astro and R
 - **Responsive design** that works on all devices
 
 ### ⏰ Timeline Control
+
 - **Interactive slider** to navigate through years (749-1821 CE)
 - **Major tick marks** for century navigation
 - **Quick jump buttons** for important historical events
@@ -21,6 +23,7 @@ This is a comprehensive interactive historical map system built with Astro and R
 - **Real-time year display** with visual indicators
 
 ### 📊 Data Structure
+
 - **Flexible territory definitions** with start/end years
 - **Color-coded empires and kingdoms**
 - **Regional mapping** to SVG paths
@@ -44,17 +47,22 @@ src/
 ## Components
 
 ### InteractiveMap.astro
+
 Main Astro component that combines the map viewer and timeline control.
 
 ### MapViewer.tsx
+
 React component handling:
+
 - SVG map rendering
 - Territory visualization
 - Hover interactions
 - Year-based filtering
 
 ### TimelineControl.tsx
+
 React component managing:
+
 - Timeline slider functionality
 - Year navigation
 - Quick jump features
@@ -63,14 +71,15 @@ React component managing:
 ## Data Structure
 
 ### Territory Interface
+
 ```typescript
 interface Territory {
-  id: string;           // Unique identifier
-  name: string;         // Display name
-  startYear: number;    // Start of control
-  endYear: number;      // End of control
-  color: string;        // Display color
-  regions: string[];    // SVG path IDs
+  id: string; // Unique identifier
+  name: string; // Display name
+  startYear: number; // Start of control
+  endYear: number; // End of control
+  color: string; // Display color
+  regions: string[]; // SVG path IDs
   description?: string; // Optional description
 }
 ```
@@ -93,6 +102,7 @@ The system includes these pre-configured territories:
 ### Adding New Territories
 
 1. **Update historicalData.ts**:
+
 ```typescript
 {
   id: 'new-territory',
@@ -106,17 +116,19 @@ The system includes these pre-configured territories:
 ```
 
 2. **Add SVG regions** in MapViewer.tsx:
+
 ```typescript
 const mapRegions = {
-  'region-1': "M 100 100 L 200 100 L 200 200 L 100 200 Z",
+  "region-1": "M 100 100 L 200 100 L 200 200 L 100 200 Z",
   // ... existing regions
 };
 ```
 
 3. **Add label positioning**:
+
 ```typescript
 const labelPositions = {
-  'new-territory': { x: 150, y: 150 },
+  "new-territory": { x: 150, y: 150 },
   // ... existing positions
 };
 ```
@@ -154,7 +166,7 @@ The `MapStyles.css` file contains all styling. Key areas to customize:
 
 ```astro
 ---
-import InteractiveMap from '../components/InteractiveMap.astro';
+import InteractiveMap from "../components/InteractiveMap.astro";
 ---
 
 <Layout>
@@ -167,64 +179,9 @@ import InteractiveMap from '../components/InteractiveMap.astro';
 You can extend the components to accept custom historical data:
 
 ```tsx
-<MapViewer 
-  selectedYear={1453} 
-  customTerritories={myTerritories}
-/>
+<MapViewer selectedYear={1453} customTerritories={myTerritories} />
 ```
 
-## Performance Considerations
+## Tools and Libraries
 
-- **SVG optimization** - Keep path complexity reasonable
-- **Data filtering** - Only load relevant territories per year
-- **Event handling** - Debounce rapid timeline changes
-- **Image optimization** - Use compressed backgrounds if adding raster images
-
-## Future Enhancements
-
-### Technical
-- [ ] Add animation between time periods
-- [ ] Implement territory transition effects
-- [ ] Add export functionality (PNG, PDF)
-- [ ] Include print-friendly styling
-
-### Historical
-- [ ] Add population data visualization
-- [ ] Include trade route overlays
-- [ ] Show cultural and religious boundaries
-- [ ] Add economic indicators
-
-### User Experience
-- [ ] Multi-language support
-- [ ] Accessibility improvements
-- [ ] Mobile gesture controls
-- [ ] Fullscreen mode
-
-## Browser Support
-
-- Chrome/Chromium 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## Dependencies
-
-- **Astro** - Static site generation
-- **React** - Interactive components
-- **TypeScript** - Type safety
-- **CSS3** - Modern styling features
-
-## Development
-
-```bash
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
-The map system is now ready for customization and extension based on your specific historical research needs! 
+I use https://geojson.io/#map=4.25/22.76/41.42 to create and edit SVG paths. This tool allows for easy manipulation of geographical data and exporting it as SVG, which can then be integrated into the React components.
