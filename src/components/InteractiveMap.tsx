@@ -49,14 +49,13 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
         maxZoom: 10,
       }).setView(center, zoom);
 
-      // Add a simple light background tile layer
+      // Use GEBCO (ocean/bathymetry) tiles which show only physical features
       window.L.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+        "https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_basemap_NCEI/MapServer/tile/{z}/{y}/{x}",
         {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          subdomains: "abcd",
+          attribution: '&copy; GEBCO',
           maxZoom: 10,
+          minZoom: 0,
         },
       ).addTo(map);
 
@@ -84,29 +83,32 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
     const yearToUse = showTimeSlider ? manualYear : year;
     const geoJsonData = getGeoJsonForYear(yearToUse);
 
-    // Add GeoJSON layer to the map
-    geoJsonLayerRef.current = window.L.geoJSON(geoJsonData, {
-      style: (feature: GeoJSON.Feature) => ({
-        fillColor: feature?.properties?.color || "#cccccc",
-        weight: 1,
-        opacity: 0.8,
-        color: "#666",
-        fillOpacity: 0.35,
-      }),
-      onEachFeature: (feature: GeoJSON.Feature, layer: any) => {
-        if (feature.properties && feature.properties.name) {
-          layer.bindTooltip(
-            `<div class="font-semibold">${feature.properties.name}</div>
-             <div class="text-xs">${feature.properties.description || ""}</div>`,
-            { sticky: true },
-          );
-        }
-      },
-    }).addTo(leafletMapRef.current);
+    // Only add GeoJSON if there are features to display
+    if (geoJsonData.features.length > 0) {
+      // Add GeoJSON layer to the map
+      geoJsonLayerRef.current = window.L.geoJSON(geoJsonData, {
+        style: (feature: GeoJSON.Feature) => ({
+          fillColor: feature?.properties?.color || "#cccccc",
+          weight: 2,
+          opacity: 1,
+          color: "#333",
+          fillOpacity: 0.4,
+        }),
+        onEachFeature: (feature: GeoJSON.Feature, layer: any) => {
+          if (feature.properties && feature.properties.name) {
+            layer.bindTooltip(
+              `<div class="font-semibold">${feature.properties.name}</div>
+               <div class="text-xs">${feature.properties.description || ""}</div>`,
+              { sticky: true },
+            );
+          }
+        },
+      }).addTo(leafletMapRef.current);
 
-    // Send GeoJSON layer to back so markers appear on top
-    if (geoJsonLayerRef.current) {
-      geoJsonLayerRef.current.bringToBack();
+      // Send GeoJSON layer to back so markers appear on top
+      if (geoJsonLayerRef.current) {
+        geoJsonLayerRef.current.bringToBack();
+      }
     }
   }, [mapReady, year]);
 

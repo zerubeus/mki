@@ -2,6 +2,11 @@
 
 /* You can add other global styles here if needed, AFTER the tailwindcss import */
 
+/* Ensure your GeoJSON overlays are fully visible and prominent */
+.leaflet-overlay-pane {
+  opacity: 1;
+}
+
 /* Custom Leaflet Popup Styling to work with Tailwind */
 /* These might need to be adjusted if Tailwind is now processing them differently */
 /* For example, @apply might not be needed if Tailwind handles these classes globally */
