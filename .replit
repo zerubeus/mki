@@ -12,3 +12,7 @@ publicDir = "dist"
 [[ports]]
 localPort = 4321
 externalPort = 3000
+
+[[ports]]
+localPort = 4322
+externalPort = 80

@@ -1,4 +1,3 @@
-
 // @ts-check
 import { defineConfig } from 'astro/config';
 
@@ -19,10 +18,11 @@ export default defineConfig({
     server: {
       host: '0.0.0.0',
       port: 4321,
-      allowedHosts: ['all'],
+      // Allow Replit preview domains
+      allowedHosts: ['.replit.dev'],
+      // Ensure HMR connects over HTTPS through Replit's proxy
       hmr: {
-        host: '0.0.0.0',
-        port: 4321
+        clientPort: 443
       }
     }
   },
