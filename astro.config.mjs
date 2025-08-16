@@ -18,7 +18,8 @@ export default defineConfig({
     plugins: [tailwindcss()],
     server: {
       host: '0.0.0.0',
-      port: 4321
+      port: 4321,
+      allowedHosts: ['all']
     }
   },
   i18n: {
