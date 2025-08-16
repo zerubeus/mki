@@ -7,7 +7,22 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), partytown()],
+  integrations: [
+    react(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+        resolveUrl: function(url, location) {
+          if (url.hostname === location.hostname) {
+            const proxyUrl = new URL('https://replit.dev/__proxy');
+            proxyUrl.searchParams.append('url', url.href);
+            return proxyUrl;
+          }
+          return url;
+        }
+      }
+    })
+  ],
   output: 'static',
   server: {
     host: '0.0.0.0',
