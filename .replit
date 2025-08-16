@@ -12,4 +12,3 @@ publicDir = "dist"
 [[ports]]
 localPort = 4321
 externalPort = 3000
-exposeLocalhost = true
