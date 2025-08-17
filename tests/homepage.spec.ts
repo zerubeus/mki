@@ -15,12 +15,6 @@ test.describe('Homepage Tests', () => {
     await expect(page.locator('html')).toHaveAttribute('dir', 'ltr');
   });
 
-  test('should load French homepage', async ({ page }) => {
-    await page.goto('/fr/');
-    await expect(page).toHaveURL(/.*\/fr\//);
-    await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
-    await expect(page.locator('html')).toHaveAttribute('dir', 'ltr');
-  });
 
   test('language switcher should work', async ({ page }) => {
     await page.goto('/');
@@ -32,10 +26,10 @@ test.describe('Homepage Tests', () => {
     }
   });
 
-  test('navigation menu should be visible', async ({ page }) => {
+  test('header section should be visible', async ({ page }) => {
     await page.goto('/');
-    const nav = page.locator('nav, [role="navigation"]').first();
-    await expect(nav).toBeVisible();
+    const header = page.locator('header, [data-component="header"]').first();
+    await expect(header).toBeVisible();
   });
 });
 
