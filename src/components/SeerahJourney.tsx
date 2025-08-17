@@ -8,7 +8,7 @@ import {
   MAP_INITIAL_ZOOM,
   MAP_EVENT_ZOOM,
 } from "../data/seerahEvents"; // Adjusted path
-import type { HistoricalEvent } from "../types"; // Adjusted path
+
 import type { translations } from "../i18n/translations"; // Import translations type
 
 // Define a type for one language's translations
@@ -53,7 +53,7 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
   const selectedEvent = useMemo(() => {
     return sortedEvents.find((event) => event.id === selectedEventId) || null;
   }, [selectedEventId, sortedEvents]);
-  
+
   // Extract year from selected event
   useEffect(() => {
     if (selectedEvent) {
@@ -76,8 +76,7 @@ const SeerahJourney: React.FC<SeerahJourneyProps> = ({ t, locale = "en" }) => {
     <div className="min-h-screen flex flex-col p-4 md:p-8 space-y-6">
       <header className="text-center text-white">
         <h1 className="text-3xl md:text-4xl font-bold text-white">
-          {t.seerahJourneyTitle || "The Prophet's Path"}{" "}
-          <span style={{ fontFamily: "'Amiri Quran', serif" }}>ﷺ</span>
+          {t.seerahJourneyTitle}
         </h1>
         <p className="text-sm md:text-md text-gray-200 mt-1">
           {t.seerahJourneySubtitle || "An Interactive Journey Through Seerah"}
