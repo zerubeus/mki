@@ -6,17 +6,19 @@ interface TimelineProps {
   events: HistoricalEvent[];
   selectedEventId: number | null;
   onEventSelect: (eventId: number) => void;
+  title?: string;
 }
 
 const Timeline: React.FC<TimelineProps> = ({
   events,
   selectedEventId,
   onEventSelect,
+  title = "Timeline of Events",
 }) => {
   return (
     <div className="px-4 py-2 bg-white/90 backdrop-blur-sm shadow-inner rounded-lg">
       <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">
-        Timeline of Events
+        {title}
       </h3>
       <div
         className="flex overflow-x-auto py-4 items-start scroll-smooth gap-0"

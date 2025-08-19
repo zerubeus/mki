@@ -48,6 +48,7 @@ export const translations = {
     seerahJourneySubtitle: "رحلة تفاعلية عبر السيرة",
     seerahJourneyFooter:
       "بيانات الخريطة © مساهمو OpenStreetMap © CartoDB. تم تجميع معلومات الحدث لأغراض تعليمية.",
+    timelineTitle: "الخط الزمني للأحداث",
   },
 
   en: {
@@ -99,6 +100,7 @@ export const translations = {
     seerahJourneySubtitle: "An Interactive Journey Through Seerah",
     seerahJourneyFooter:
       "Map data © OpenStreetMap contributors © CartoDB. Event information compiled for educational purposes.",
+    timelineTitle: "Timeline of Events",
   },
 } as const;
 

@@ -7,11 +7,13 @@ import { MAP_EVENT_ZOOM } from "../data/seerahEvents";
 interface SeerahInteractivityProps {
   sortedEvents: HistoricalEvent[];
   initialEventId: number | null;
+  timelineTitle: string;
 }
 
 const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
   sortedEvents,
   initialEventId,
+  timelineTitle,
 }) => {
   const [selectedEventId, setSelectedEventId] = useState<number | null>(initialEventId);
   const [mapCenter, setMapCenter] = useState<[number, number]>(() => {
@@ -107,6 +109,7 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
           events={sortedEvents}
           selectedEventId={selectedEventId}
           onEventSelect={handleEventSelect}
+          title={timelineTitle}
         />
       </div>
     </div>
