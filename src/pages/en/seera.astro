@@ -1,7 +1,6 @@
 ---
-// src/pages/en/seera.astro
 import Layout from '../../layouts/Layout.astro';
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import SeerahJourney from '../../components/SeerahJourney.astro';
 import type { Locale } from '../../i18n/translations';
 import { getTranslations } from '../../i18n/utils';
 
@@ -10,23 +9,5 @@ const t = getTranslations(currentLocale);
 ---
 
 <Layout>
-  <div
-    style="padding: 40px; text-align: center; max-width: 800px; margin: 0 auto;"
-    dir={currentLocale === 'ar' ? 'rtl' : 'ltr'}
-  >
-    <h1 style="color: #2c3e50; margin-bottom: 20px;">
-      {t.seeraPageTitle || 'Biography - Default'}
-    </h1>
-    <p style="color: #7f8c8d; font-size: 1.2rem; line-height: 1.6;">
-      {t.seeraPageDesc1 || 'Description placeholder'}
-    </p>
-    <a
-      href={getRelativeLocaleUrl(currentLocale, '')}
-      style="display: inline-block; margin-top: 30px; padding: 12px 24px; background: #3498db; color: white; text-decoration: none; border-radius: 8px; transition: background 0.3s ease;"
-    >
-      {currentLocale === 'ar' ? '←' : ''}
-      {t.backToHome || 'Back to Home - Default'}
-      {currentLocale === 'en' ? '→' : ''}
-    </a>
-  </div>
+  <SeerahJourney t={t} locale={currentLocale} />
 </Layout>
