@@ -25,7 +25,7 @@ export const territoryColors = {
   bedouin: '#daa520',     // Goldenrod - Bedouin tribes
   yemen: '#cd853f',       // Peru - Yemen region
   najd: '#deb887',        // Burlywood - Najd region
-  hijaz: '#f4a460',       // Sandy brown - Hijaz region
+  hijaz: '#B22222',       // Firebrick red - Early Islamic State/Hijaz region
 };
 
 export const territories: Territory[] = [
@@ -49,12 +49,12 @@ export const territories: Territory[] = [
   },
   {
     id: 'hijaz',
-    name: 'Hijaz Region',
-    startYear: 550,
-    endYear: 650,
+    name: 'Hijaz',
+    startYear: 622,
+    endYear: 632,
     color: territoryColors.hijaz,
     regions: ['hijaz-region'],
-    description: 'Hijaz region including Mecca and Medina'
+    description: 'Hijaz region under Prophet Muhammad\'s control (622-632 CE)'
   },
   {
     id: 'najd',

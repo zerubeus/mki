@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { HistoricalEvent } from "../types";
-import { getGeoJsonForYear } from "../data/geojson/historicalTerritories";
+import { getGeoJsonForYear } from "../data/territoryManager";
 
 interface InteractiveMapProps {
   events: HistoricalEvent[];
