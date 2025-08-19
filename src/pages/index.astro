@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HomePage from '../components/HomePage.tsx';
+import HomePage from '../components/HomePage.astro';
 import type { Locale } from '../i18n/translations';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getTranslations } from '../i18n/utils';
@@ -16,7 +16,6 @@ const t = getTranslations(currentLocale);
 
 <Layout>
   <HomePage
-    client:load
     locale={currentLocale}
     arabicUrl={arHomepageUrl}
     englishUrl={enHomepageUrl}
