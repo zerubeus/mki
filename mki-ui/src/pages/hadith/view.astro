@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HadithDetailView from '../../components/HadithDetailView';
+import type { Locale } from '../../i18n/translations';
+import { getTranslations } from '../../i18n/utils';
+
+const currentLocale = (Astro.currentLocale as Locale) || 'ar';
+const t = getTranslations(currentLocale);
+---
+
+<Layout>
+  <HadithDetailView client:load locale={currentLocale} t={t} />
+</Layout>
