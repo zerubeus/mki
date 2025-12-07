@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomePage from '../components/HomePage.astro';
+import type { Locale } from '../i18n/translations';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { getTranslations } from '../i18n/utils';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const currentLocale = (Astro.currentLocale as Locale) || 'ar';
+const arHomepageUrl = getRelativeLocaleUrl('ar', '');
+const enHomepageUrl = getRelativeLocaleUrl('en', '');
+const t = getTranslations(currentLocale);
+---
+
+<Layout>
+  <HomePage
+    locale={currentLocale}
+    arabicUrl={arHomepageUrl}
+    englishUrl={enHomepageUrl}
+    t={t}
+  />
+</Layout>

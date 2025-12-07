@@ -1,0 +1,19 @@
+---
+import MapTestInteractive from './MapTestInteractive.tsx';
+---
+
+<div class="min-h-screen p-4 md:p-8">
+  <header class="text-center text-white mb-6">
+    <h1 class="text-3xl md:text-4xl font-bold">GeoJSON Map Tester</h1>
+    <p class="text-sm md:text-md text-gray-200 mt-1">
+      Test different GeoJSON files and historical periods
+    </p>
+  </header>
+
+  <main class="max-w-7xl mx-auto">
+    <div id="map-test-container" class="bg-white/90 backdrop-blur-sm rounded-xl shadow-xl p-4">
+      <!-- Map will be loaded here -->
+      <MapTestInteractive client:load />
+    </div>
+  </main>
+</div>

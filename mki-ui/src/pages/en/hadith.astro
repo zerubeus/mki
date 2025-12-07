@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HadithBrowser from '../../components/HadithBrowser';
+import type { Locale } from '../../i18n/translations';
+
+const currentLocale = (Astro.currentLocale as Locale) || 'en';
+---
+
+<Layout>
+  <HadithBrowser client:load locale={currentLocale} />
+</Layout>

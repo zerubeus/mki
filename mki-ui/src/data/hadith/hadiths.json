@@ -1,0 +1,83 @@
+[
+  {
+    "id": "jannah-ummahat",
+    "textAr": "الجنة تحت أقدام الأمهات",
+    "textEn": "Paradise is under the feet of mothers",
+    "topicAr": "بر الوالدين",
+    "topic": "Honoring Parents",
+    "analysisAr": "هذا الحديث ضعيف لا يصح عن النبي ﷺ بهذا اللفظ.\n\nعلة الحديث:\n• منصور بن المهاجر: مجهول العين، لم يوثقه أحد من أهل العلم\n• أبو النضر الأبار: مجهول، قال ابن طاهر: \"منصور وأبو النضر لا يُعرفان\"\n\nالخلاصة: الإسناد ضعيف جداً لجهالة راويين متتاليين في السند.\n\nملاحظة: الحديث الصحيح في هذا الباب هو حديث معاوية بن جاهمة السلمي أنه جاء إلى النبي ﷺ يستأذنه في الجهاد، فقال له النبي ﷺ: \"أحية أمك؟\" قال: نعم. قال: \"الزم رجلها فثَمَّ الجنة\" - رواه النسائي وابن ماجه بإسناد صحيح.",
+    "analysisEn": "This hadith is weak and not authentically attributed to the Prophet ﷺ with this wording.\n\nDefects in the chain:\n• Mansur ibn al-Muhajir: Unknown narrator, not authenticated by any scholar\n• Abu al-Nadr al-Abbar: Unknown narrator. Ibn Tahir said: \"Mansur and Abu al-Nadr are not known\"\n\nConclusion: The chain is very weak due to two consecutive unknown narrators.\n\nNote: The authentic hadith on this topic is the hadith of Muawiya ibn Jahima al-Sulami who came to the Prophet ﷺ asking permission for jihad. The Prophet ﷺ asked: \"Is your mother alive?\" He said: Yes. The Prophet said: \"Stay by her feet, for there is Paradise\" - Narrated by al-Nasa'i and Ibn Majah with an authentic chain.",
+    "chains": [
+      {
+        "id": "chain-weak",
+        "grade": "daif",
+        "source": "Al-Khatib al-Baghdadi",
+        "sourceAr": "الخطيب البغدادي",
+        "narrators": ["khatib_baghdadi", "mansur_muhajir", "abu_nadr_abbar", "anas", "prophet"],
+        "referenceNumber": "تاريخ بغداد"
+      }
+    ]
+  },
+  {
+    "id": "moon-splitting",
+    "textAr": "انشق القمر على عهد رسول الله ﷺ فِلْقَتَيْن، فلقة فوق الجبل وفلقة دونه، فقال رسول الله ﷺ: اشهدوا",
+    "textEn": "The moon was split into two parts during the time of the Prophet ﷺ - one part above the mountain and one below it. The Prophet ﷺ said: 'Bear witness'",
+    "topicAr": "معجزات النبي ﷺ",
+    "topic": "Miracles of the Prophet ﷺ",
+    "analysisAr": "هذا الحديث صحيح متواتر، رواه جمع من الصحابة منهم:\n• عبد الله بن مسعود\n• أنس بن مالك\n• عبد الله بن عباس\n• جبير بن مطعم\n• عبد الله بن عمر\n\nوقد أخرجه البخاري ومسلم في صحيحيهما من طرق متعددة.\n\nقال الله تعالى: ﴿اقْتَرَبَتِ السَّاعَةُ وَانشَقَّ الْقَمَرُ﴾ [القمر: 1]\n\nإسناد البخاري:\nجميع رواة هذا الإسناد ثقات أثبات:\n• الأعمش: ثقة حافظ\n• إبراهيم النخعي: ثقة إمام فقيه\n• أبو معمر: ثقة\n• مسروق: ثقة عابد من كبار التابعين\n• عبد الله بن مسعود: صحابي جليل من السابقين الأولين\n\nالخلاصة: الحديث صحيح بلا ريب، وانشقاق القمر معجزة ثابتة للنبي ﷺ بالقرآن والسنة المتواترة.",
+    "analysisEn": "This hadith is authentic and mutawatir (mass-transmitted), narrated by multiple companions including:\n• Abdullah ibn Mas'ud\n• Anas ibn Malik\n• Abdullah ibn Abbas\n• Jubayr ibn Mut'im\n• Abdullah ibn Umar\n\nIt was recorded by both al-Bukhari and Muslim in their Sahih collections through multiple chains.\n\nAllah says: \"The Hour has drawn near and the moon has split\" [Al-Qamar: 1]\n\nAl-Bukhari's Chain:\nAll narrators in this chain are trustworthy and reliable:\n• Al-A'mash: Trustworthy hafiz\n• Ibrahim al-Nakha'i: Trustworthy imam and jurist\n• Abu Ma'mar: Trustworthy\n• Masruq: Trustworthy worshipper, senior successor\n• Abdullah ibn Mas'ud: Noble companion, one of the earliest converts\n\nConclusion: The hadith is authentic without doubt, and the splitting of the moon is a confirmed miracle of the Prophet ﷺ established by the Quran and mutawatir Sunnah.",
+    "chains": [
+      {
+        "id": "chain-ibn-masud",
+        "grade": "sahih",
+        "source": "Sahih al-Bukhari",
+        "sourceAr": "صحيح البخاري",
+        "narrators": ["bukhari", "waki", "amash", "ibrahim_nakhai", "masruq", "ibn_masud", "prophet"],
+        "referenceNumber": "3636"
+      },
+      {
+        "id": "chain-anas",
+        "grade": "sahih",
+        "source": "Sahih al-Bukhari",
+        "sourceAr": "صحيح البخاري",
+        "narrators": ["bukhari", "sufyan_uyayna", "amash", "ibrahim_nakhai", "anas_splitting", "prophet"],
+        "referenceNumber": "3638"
+      },
+      {
+        "id": "chain-ibn-abbas",
+        "grade": "sahih",
+        "source": "Sahih Muslim",
+        "sourceAr": "صحيح مسلم",
+        "narrators": ["muslim", "waki", "sufyan_uyayna", "amash", "ibn_abbas", "prophet"],
+        "referenceNumber": "2802"
+      }
+    ]
+  },
+  {
+    "id": "actions-by-intentions",
+    "textAr": "إنما الأعمال بالنيات، وإنما لكل امرئ ما نوى، فمن كانت هجرته إلى الله ورسوله فهجرته إلى الله ورسوله، ومن كانت هجرته لدنيا يصيبها أو امرأة ينكحها فهجرته إلى ما هاجر إليه",
+    "textEn": "Actions are judged by intentions, and everyone will be rewarded according to what they intended. So whoever emigrated for Allah and His Messenger, his emigration was for Allah and His Messenger. And whoever emigrated for worldly benefits or to marry a woman, his emigration was for what he emigrated for.",
+    "topic": "Intention",
+    "topicAr": "النية",
+    "analysisAr": "هذا الحديث من أصول الإسلام وقواعد الدين العظيمة.\n\nقال الإمام الشافعي: \"هذا الحديث ثلث العلم\"\nقال الإمام أحمد: \"أصول الإسلام على ثلاثة أحاديث: حديث إنما الأعمال بالنيات، وحديث من أحدث في أمرنا، وحديث الحلال بيّن والحرام بيّن\"\n\nالمدار: يحيى بن سعيد الأنصاري\nتفرد به عن محمد بن إبراهيم التيمي، ورواه عنه الجم الغفير.",
+    "analysisEn": "This hadith is one of the foundations of Islam and the great principles of the religion.\n\nImam al-Shafi'i said: \"This hadith is one-third of knowledge\"\nImam Ahmad said: \"The foundations of Islam are based on three hadiths: the hadith of 'Actions are by intentions', the hadith of 'Whoever introduces something new', and the hadith of 'The lawful is clear and the unlawful is clear'\"\n\nCommon Link: Yahya ibn Sa'id al-Ansari\nHe alone narrated it from Muhammad ibn Ibrahim al-Taymi, and a large number narrated from him.",
+    "chains": [
+      {
+        "id": "bukhari-1-chain-1",
+        "grade": "sahih",
+        "source": "Sahih al-Bukhari",
+        "sourceAr": "صحيح البخاري",
+        "narrators": ["bukhari", "humaidi", "sufyan_uyayna", "yahya_ansari", "muhammad_ibrahim_taymi", "alqama_waqqas", "umar", "prophet"],
+        "referenceNumber": "1"
+      },
+      {
+        "id": "muslim-1907-chain-1",
+        "grade": "sahih",
+        "source": "Sahih Muslim",
+        "sourceAr": "صحيح مسلم",
+        "narrators": ["muslim", "qutayba", "malik", "yahya_ansari", "muhammad_ibrahim_taymi", "alqama_waqqas", "umar", "prophet"],
+        "referenceNumber": "1907"
+      }
+    ]
+  }
+]
