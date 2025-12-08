@@ -5,6 +5,7 @@ import {
   resolveChain,
   type BookKey,
   type ImportedHadith,
+  type EnrichedNarrator,
 } from "../data/hadith/books";
 import {
   hadiths as curatedHadiths,
@@ -380,41 +381,42 @@ function ChainLegend({ locale }: { locale: "ar" | "en" }) {
   );
 }
 
-// Generate Mermaid diagram from structured sanad array
-function generateSanadMermaidDiagram(sanad: string[]): string {
+// Generate Mermaid diagram from enriched narrator array
+function generateSanadMermaidDiagram(sanad: EnrichedNarrator[], locale: "ar" | "en" = "ar"): string {
   if (sanad.length === 0) return "";
 
   const lines: string[] = ["flowchart TB"];
 
-  // Style definitions
-  lines.push("classDef narrator fill:#1a1f2e,stroke:#6b7280,color:#fff,stroke-width:2px");
+  // Style definitions - using actual narrator status
   lines.push("classDef prophet fill:#9333ea,stroke:#a855f7,color:#fff,stroke-width:3px");
   lines.push("classDef companion fill:#14b8a6,stroke:#2dd4bf,color:#fff,stroke-width:2px");
+  lines.push("classDef trustworthy fill:#22c55e,stroke:#4ade80,color:#fff,stroke-width:2px");
+  lines.push("classDef truthful fill:#4ade80,stroke:#86efac,color:#fff,stroke-width:2px");
+  lines.push("classDef unknown fill:#f97316,stroke:#fb923c,color:#fff,stroke-width:2px");
+  lines.push("classDef weak fill:#ef4444,stroke:#f87171,color:#fff,stroke-width:2px");
   lines.push("classDef collector fill:#d97706,stroke:#f59e0b,color:#fff,stroke-width:2px");
 
-  // Add nodes
-  sanad.forEach((narratorName, index) => {
-    // Clean the label for Mermaid - escape special chars
-    const label = narratorName
+  // Add nodes with biographical info
+  sanad.forEach((narrator, index) => {
+    // Clean the label for Mermaid
+    const name = narrator.nameAr
       .replace(/"/g, "'")
       .replace(/\[/g, "(")
       .replace(/\]/g, ")")
       .replace(/[<>]/g, "");
 
+    // Build label with death year if available
+    let label = name;
+    if (narrator.deathYear && narrator.status !== "prophet") {
+      const deathPrefix = locale === "ar" ? "ت." : "d.";
+      label += `<br/><small>${deathPrefix}${narrator.deathYear}</small>`;
+    }
+
     lines.push(`  n${index}["${label}"]`);
 
-    // Try to identify special narrators
-    if (narratorName.includes("رسول الله") || narratorName.includes("النبي") || narratorName.includes("ﷺ") || narratorName.includes("محمد")) {
-      lines.push(`  class n${index} prophet`);
-    } else if (index === 0) {
-      // First narrator is usually the collector/author
-      lines.push(`  class n${index} collector`);
-    } else if (index === sanad.length - 1 || index === sanad.length - 2) {
-      // Last or second to last is often a companion (before Prophet)
-      lines.push(`  class n${index} companion`);
-    } else {
-      lines.push(`  class n${index} narrator`);
-    }
+    // Use actual status from biographical data
+    const status = narrator.status || "unknown";
+    lines.push(`  class n${index} ${status}`);
   });
 
   // Add edges (chain flows from collector down to source)
@@ -431,12 +433,12 @@ function ImportedSanadDiagram({
   sanadLength,
   locale,
 }: {
-  sanad: string[];
+  sanad: EnrichedNarrator[];
   sanadLength?: number;
   locale: "ar" | "en";
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const diagramCode = useMemo(() => generateSanadMermaidDiagram(sanad), [sanad]);
+  const diagramCode = useMemo(() => generateSanadMermaidDiagram(sanad, locale), [sanad, locale]);
 
   useEffect(() => {
     const renderDiagram = async () => {
@@ -520,7 +522,7 @@ export default function HadithDetailView({
 }: HadithDetailViewProps) {
   const [importedHadith, setImportedHadith] = useState<ImportedHadith | null>(null);
   const [curatedHadith, setCuratedHadith] = useState<Hadith | null>(null);
-  const [resolvedSanad, setResolvedSanad] = useState<string[] | null>(null);
+  const [resolvedSanad, setResolvedSanad] = useState<EnrichedNarrator[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedNarrator, setSelectedNarrator] = useState<Narrator | null>(null);

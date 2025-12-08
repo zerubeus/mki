@@ -24,7 +24,7 @@ BOOK_MAPPINGS = {
 
 # Paths
 SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent  # mki-etl -> mki
 DATASET_PATH = PROJECT_ROOT / "datasets" / "sanadset.csv"
 HADITH_DATA_DIR = PROJECT_ROOT / "public" / "data" / "hadith"
 

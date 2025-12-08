@@ -213,14 +213,26 @@ export function clearCache(): void {
   chainsCache = null;
 }
 
+// Enriched narrator from narrators.json
+export interface EnrichedNarrator {
+  id: number;
+  nameAr: string;
+  nameEn: string;
+  status: 'prophet' | 'companion' | 'trustworthy' | 'truthful' | 'unknown' | 'weak' | 'collector';
+  generation: 'prophet' | 'sahaba' | 'tabieen' | 'atba_tabieen' | 'later';
+  grade: string;
+  birthYear?: number;
+  deathYear?: number;
+}
+
 // Cache for narrators and chains (normalized data)
-let narratorsCache: string[] | null = null;
+let narratorsCache: EnrichedNarrator[] | null = null;
 let chainsCache: Record<string, number[]> | null = null;
 
 /**
  * Load narrators array from narrators.json
  */
-export async function loadNarrators(): Promise<string[]> {
+export async function loadNarrators(): Promise<EnrichedNarrator[]> {
   if (narratorsCache) {
     return narratorsCache;
   }
@@ -252,9 +264,9 @@ export async function loadChains(): Promise<Record<string, number[]>> {
 }
 
 /**
- * Resolve a chain ID to an array of narrator names
+ * Resolve a chain ID to an array of enriched narrators
  */
-export async function resolveChain(chainId: string): Promise<string[] | null> {
+export async function resolveChain(chainId: string): Promise<EnrichedNarrator[] | null> {
   const [narrators, chains] = await Promise.all([
     loadNarrators(),
     loadChains(),
@@ -265,5 +277,14 @@ export async function resolveChain(chainId: string): Promise<string[] | null> {
     return null;
   }
 
-  return narratorIds.map(id => narrators[id]);
+  return narratorIds.map(id => narrators[id]).filter(Boolean);
+}
+
+/**
+ * Resolve a chain ID to an array of narrator names (for simple display)
+ */
+export async function resolveChainNames(chainId: string): Promise<string[] | null> {
+  const chain = await resolveChain(chainId);
+  if (!chain) return null;
+  return chain.map(n => n.nameAr);
 }
