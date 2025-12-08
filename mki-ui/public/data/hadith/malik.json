@@ -340,7 +340,9 @@
     "bookId": 7,
     "chapterId": 1,
     "hadithNumber": 23,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-24",
@@ -413,7 +415,9 @@
     "bookId": 7,
     "chapterId": 1,
     "hadithNumber": 28,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57454",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن يزيد ('Abdullah bin Yazid) ← أبو سلمة بن عبد الرحمن (Abu Salama bin 'Abdur Rahman) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-29",
@@ -441,7 +445,9 @@
     "bookId": 7,
     "chapterId": 1,
     "hadithNumber": 30,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57448",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-31",
@@ -589,7 +595,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 40,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57449",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-41",
@@ -692,7 +700,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 47,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57452",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man)"
   },
   {
     "id": "malik-48",
@@ -780,7 +790,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 53,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57466",
+    "chain": "مالك (Imam Maalik) ← علي بن أبي طالب (Ali ibn Abi Talib) ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-54",
@@ -973,7 +985,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 66,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c1",
+    "chain": "مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-67",
@@ -1016,7 +1030,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 69,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57451",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← جابر بن عبد الله الأنصاري (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-70",
@@ -1104,7 +1120,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 75,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57457",
+    "chain": "مالك (Imam Maalik) ← سعيد بن عبد الرحمن بن رقيش (S'aid bin 'Abdur Rahman bin Raqaysh) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-76",
@@ -1267,7 +1285,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 86,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57455",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← أسلم (Abu Rafi') ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-87",
@@ -1385,7 +1405,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 94,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57458",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-95",
@@ -1458,7 +1480,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 99,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57456",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-100",
@@ -1846,7 +1870,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 125,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57460",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-126",
@@ -1874,7 +1900,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 127,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57461",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبيد الله بن عبد الله بن عمر ('Ubaidullah bin 'Abdullah bin 'Umar) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-128",
@@ -1887,7 +1915,9 @@
     "bookId": 7,
     "chapterId": 2,
     "hadithNumber": 128,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57501",
+    "chain": "مالك (Imam Maalik) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby) ← سليمان بن يسار (Sulayman ibn Yasar)"
   },
   {
     "id": "malik-129",
@@ -2230,7 +2260,9 @@
     "bookId": 7,
     "chapterId": 3,
     "hadithNumber": 151,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57465",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن عبد الله بن عبد الرحمن بن أبي صعصعة الأنصاري المازني ← عبد الله بن عبد الرحمن بن أبي صعصعة ('Abdullah bin 'Abdur Rahman b. Abi Sa'sa) ← أبو سعيد الخدري (Abu Sa'id al-Khudri)"
   },
   {
     "id": "malik-152",
@@ -2468,7 +2500,9 @@
     "bookId": 7,
     "chapterId": 3,
     "hadithNumber": 167,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57458",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-168",
@@ -2751,7 +2785,9 @@
     "bookId": 7,
     "chapterId": 3,
     "hadithNumber": 186,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57462",
+    "chain": "مالك (Imam Maalik) ← أبو نعيم (al-Fadl bin Dakayn, Abu Na'eem) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-187",
@@ -3274,7 +3310,9 @@
     "bookId": 7,
     "chapterId": 3,
     "hadithNumber": 221,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57468",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن أبي بكر ('Abdullah bin Abi Bakr) ← رجل"
   },
   {
     "id": "malik-222",
@@ -3287,7 +3325,9 @@
     "bookId": 7,
     "chapterId": 4,
     "hadithNumber": 222,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57463",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبو سلمة بن عبد الرحمن بن عوف (Abu Salama bin 'Abdur Rahman) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-223",
@@ -3435,7 +3475,9 @@
     "bookId": 7,
     "chapterId": 5,
     "hadithNumber": 232,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57464",
+    "chain": "مالك (Imam Maalik) ← أبو النضر (Abu al-Nadr al-Mazny) ← مالك بن أبي عامر (Malik bin Abi 'Amir) ← عثمان بن عفان ('Uthman ibn 'Affaan)"
   },
   {
     "id": "malik-233",
@@ -3448,7 +3490,9 @@
     "bookId": 7,
     "chapterId": 5,
     "hadithNumber": 233,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-234",
@@ -3461,7 +3505,9 @@
     "bookId": 7,
     "chapterId": 5,
     "hadithNumber": 234,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57470",
+    "chain": "مالك (Imam Maalik) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-235",
@@ -3714,7 +3760,9 @@
     "bookId": 7,
     "chapterId": 6,
     "hadithNumber": 251,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57469",
+    "chain": "مالك (Imam Maalik) ← محمد بن يوسف (Muhammad bin Yusuf B. 'Abdullah al-Kundi) ← السائب بن يزيد (al-Sa'ib bin Yazid bin Akht Namr) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-252",
@@ -3847,7 +3895,9 @@
     "bookId": 7,
     "chapterId": 7,
     "hadithNumber": 260,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57467",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← أبيه ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-261",
@@ -3860,7 +3910,9 @@
     "bookId": 7,
     "chapterId": 7,
     "hadithNumber": 261,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57470",
+    "chain": "مالك (Imam Maalik) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-262",
@@ -4023,7 +4075,9 @@
     "bookId": 7,
     "chapterId": 7,
     "hadithNumber": 272,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57476",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-273",
@@ -4321,7 +4375,9 @@
     "bookId": 7,
     "chapterId": 8,
     "hadithNumber": 292,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57472",
+    "chain": "مالك (Imam Maalik) ← أبو النضر (Abu al-Nadr al-Mazny) ← بسر بن سعيد (Basr bin Sa'id al-Madni) ← زيد بن ثابت (Zayd ibn Thabit)"
   },
   {
     "id": "malik-293",
@@ -4334,7 +4390,9 @@
     "bookId": 7,
     "chapterId": 8,
     "hadithNumber": 293,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57471",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد الرحمن بن حرملة الأسلمي ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-294",
@@ -4617,7 +4675,9 @@
     "bookId": 7,
     "chapterId": 8,
     "hadithNumber": 312,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57478",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن يزيد المدني ('Abdullah bin Yazid) ← أبو سلمة بن عبد الرحمن (Abu Salama bin 'Abdur Rahman) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-313",
@@ -4675,7 +4735,9 @@
     "bookId": 7,
     "chapterId": 8,
     "hadithNumber": 316,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57473",
+    "chain": "مالك (Imam Maalik) ← داود بن الحصين (Da'ud bin al-Husain al-Amwy) ← ابن يربوع المخزومي ← زيد بن ثابت (Zayd ibn Thabit)"
   },
   {
     "id": "malik-317",
@@ -4748,7 +4810,9 @@
     "bookId": 7,
     "chapterId": 8,
     "hadithNumber": 321,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57474",
+    "chain": "مالك (Imam Maalik) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-322",
@@ -4776,7 +4840,9 @@
     "bookId": 7,
     "chapterId": 8,
     "hadithNumber": 323,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57474",
+    "chain": "مالك (Imam Maalik) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-324",
@@ -4924,7 +4990,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 333,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-334",
@@ -5072,7 +5140,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 343,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57458",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-344",
@@ -5370,7 +5440,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 363,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57475",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-364",
@@ -5413,7 +5485,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 366,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57485",
+    "chain": "مالك (Imam Maalik) ← أبو النضر (Abu al-Nadr al-Mazny) ← بسر بن سعيد (Basr bin Sa'id al-Madni) ← أبو جهيم"
   },
   {
     "id": "malik-367",
@@ -5426,7 +5500,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 367,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57477",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar) ← كعب الأحبار (Ka'b al-Ahbar)"
   },
   {
     "id": "malik-368",
@@ -5454,7 +5530,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 369,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-370",
@@ -5692,7 +5770,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 385,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57479",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-386",
@@ -5825,7 +5905,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 394,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57481",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-395",
@@ -6183,7 +6265,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 418,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57480",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← أبيه ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-419",
@@ -6226,7 +6310,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 421,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57482",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← محمود بن الربيع الأنصاري ← عتبان بن مالك ('Itban bin Malik bin 'Amr)"
   },
   {
     "id": "malik-422",
@@ -6239,7 +6325,9 @@
     "bookId": 7,
     "chapterId": 9,
     "hadithNumber": 422,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57483",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عباد بن تميم ('Abbad bin Tameem Mazni) ← عمه"
   },
   {
     "id": "malik-423",
@@ -6402,7 +6490,9 @@
     "bookId": 7,
     "chapterId": 10,
     "hadithNumber": 433,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-434",
@@ -6625,7 +6715,9 @@
     "bookId": 7,
     "chapterId": 11,
     "hadithNumber": 448,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-449",
@@ -7028,7 +7120,9 @@
     "bookId": 7,
     "chapterId": 14,
     "hadithNumber": 475,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57486",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمرو ('Amr bin al-'Aas)"
   },
   {
     "id": "malik-476",
@@ -7401,7 +7495,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 500,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57484",
+    "chain": "مالك (Imam Maalik) ← أبو عبيد (Abu 'Ubaid bin Mas'ud  al-Thaqafi) ← عطاء بن يزيد الليثي (Ata'a bin Yazid al-Laithi al-Junda'i) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-501",
@@ -7459,7 +7555,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 504,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57479",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-505",
@@ -7472,7 +7570,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 505,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-506",
@@ -7485,7 +7585,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 506,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57487",
+    "chain": "مالك (Imam Maalik) ← أبي الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبي هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-507",
@@ -7498,7 +7600,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 507,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57488",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبو عبيد (Abu 'Ubaid bin Mas'ud  al-Thaqafi) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-508",
@@ -7736,7 +7840,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 523,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57494",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← أبيه"
   },
   {
     "id": "malik-524",
@@ -7809,7 +7915,9 @@
     "bookId": 7,
     "chapterId": 15,
     "hadithNumber": 528,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57490",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← السائب بن يزيد (al-Sa'ib bin Yazid bin Akht Namr)"
   },
   {
     "id": "malik-529",
@@ -7927,7 +8035,9 @@
     "bookId": 7,
     "chapterId": 16,
     "hadithNumber": 536,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57489",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← حميد بن عبد الرحمن بن عوف (Hameed bin 'Abdur Rahman bin Awf) ← عبد الله بن عمرو بن العاص (Abdullah ibn Amr ibn al-As)"
   },
   {
     "id": "malik-537",
@@ -7970,7 +8080,9 @@
     "bookId": 7,
     "chapterId": 16,
     "hadithNumber": 539,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57496",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa)"
   },
   {
     "id": "malik-540",
@@ -8028,7 +8140,9 @@
     "bookId": 7,
     "chapterId": 16,
     "hadithNumber": 543,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57491",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سعيد بن المسيب (Sa'id ibn al-Musayyib) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-544",
@@ -8071,7 +8185,9 @@
     "bookId": 7,
     "chapterId": 16,
     "hadithNumber": 546,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57493",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← سعيد بن أبي سعيد المقبري (Kaysan Abu Sa'id al-Muqbari) ← أبيه ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-547",
@@ -8474,7 +8590,9 @@
     "bookId": 7,
     "chapterId": 16,
     "hadithNumber": 573,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57495",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← أبو الرجال محمد بن عبد الرحمن ← عمرة بنت عبد الرحمن ('Umarh bint 'Abdur Rahman)"
   },
   {
     "id": "malik-574",
@@ -8637,7 +8755,9 @@
     "bookId": 7,
     "chapterId": 16,
     "hadithNumber": 584,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57492",
+    "chain": "مالك (Imam Maalik) ← محمد بن عمرو بن حلحلة الديلي (Muhammad bin 'Amr bin Halhala) ← معبد بن كعب بن مالك (Ma'bad bin Ka'b bin Malik) ← أبي قتادة بن ربعي (Abu Qatada ibn Rab'i)"
   },
   {
     "id": "malik-585",
@@ -8755,7 +8875,9 @@
     "bookId": 7,
     "chapterId": 17,
     "hadithNumber": 592,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57498",
+    "chain": "مالك (Imam Maalik) ← عمر بن حسين ('Umar bin Husayn bin Abd) ← عائشة بنت قدامة ('Ai'sha bint Qudamah bin Maz'un) ← قدامة (Qudamah bin Maz'un)"
   },
   {
     "id": "malik-593",
@@ -8873,7 +8995,9 @@
     "bookId": 7,
     "chapterId": 17,
     "hadithNumber": 600,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-601",
@@ -8916,7 +9040,9 @@
     "bookId": 7,
     "chapterId": 17,
     "hadithNumber": 603,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57505",
+    "chain": "مالك (Imam Maalik) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-604",
@@ -9049,7 +9175,9 @@
     "bookId": 7,
     "chapterId": 17,
     "hadithNumber": 612,
-    "narrator": "Yahya related to me from Malik that he had read what Umar ibn al-\nKhattab had written about zakat, and in it he found:"
+    "narrator": "Yahya related to me from Malik that he had read what Umar ibn al-\nKhattab had written about zakat, and in it he found:",
+    "chainId": "c57497",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-613",
@@ -9720,7 +9848,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 657,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57500",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← أبو حازم بن دينار ← سهل بن سعد الساعدي (Sahl bin Sa'd bin Malik)"
   },
   {
     "id": "malik-658",
@@ -9778,7 +9908,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 661,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57507",
+    "chain": "مالك (Imam Maalik) ← عبد ربه بن سعيد (Abd Rbh bin S'aid Mwla) ← أبو بكر بن عبد الرحمن بن الحارث بن هشام (Abu Bakr bin 'Abdur Rahman) ← عائشة ('Aisha bint Abi Bakr) ← أم سلمة (Umm Salamah)"
   },
   {
     "id": "malik-662",
@@ -9791,7 +9923,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 662,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57504",
+    "chain": "مالك (Imam Maalik) ← سمي ← أبو بكر بن عبد الرحمن بن الحارث بن هشام (Abu Bakr bin 'Abdur Rahman) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-663",
@@ -9909,7 +10043,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 670,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57499",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة بن الزبير ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-671",
@@ -9922,7 +10058,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 671,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57503",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar) ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-672",
@@ -10055,7 +10193,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 680,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57502",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← حميد بن عبد الرحمن بن عوف (Hameed bin 'Abdur Rahman bin Awf) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-681",
@@ -10068,7 +10208,9 @@
     "bookId": 7,
     "chapterId": 18,
     "hadithNumber": 681,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57510",
+    "chain": "مالك (Imam Maalik) ← عطاء بن عبد الله الخراساني ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-682",
@@ -11009,7 +11151,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 744,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57509",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← أسلم (Abu Rafi') ← عبد الله بن عمر (ibn Umar) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-745",
@@ -11187,7 +11331,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 756,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57518",
+    "chain": "مالك (Imam Maalik) ← الصلت بن زييد ← غير واحد ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-757",
@@ -11260,7 +11406,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 761,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57506",
+    "chain": "مالك (Imam Maalik) ← الثقة ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-762",
@@ -11813,7 +11961,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 798,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-799",
@@ -12006,7 +12156,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 811,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-812",
@@ -12484,7 +12636,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 843,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57508",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-844",
@@ -12587,7 +12741,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 850,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57513",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik)"
   },
   {
     "id": "malik-851",
@@ -12675,7 +12831,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 856,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57512",
+    "chain": "مالك (Imam Maalik) ← أبو الزبير المكي ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-857",
@@ -12763,7 +12921,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 862,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57516",
+    "chain": "مالك (Imam Maalik) ← أبو الزبير المكي ← عبد الله ('Abdullah bin Abi Salah al-Saman) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-863",
@@ -12821,7 +12981,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 866,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-867",
@@ -12999,7 +13161,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 878,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-879",
@@ -13282,7 +13446,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 897,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57537",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عمر بن الخطاب ('Umar ibn al-Khattab) ← علي بن أبي طالب (Ali ibn Abi Talib) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-898",
@@ -13850,7 +14016,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 935,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-936",
@@ -13878,7 +14046,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 937,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57515",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-938",
@@ -13951,7 +14121,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 942,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57514",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-943",
@@ -14159,7 +14331,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 956,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57521",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة بن الزبير ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-957",
@@ -14217,7 +14391,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 960,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-961",
@@ -14230,7 +14406,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 961,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57530",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن القاسم ('Abdur Rahman bin al-Qasim) ← القاسم (al-Qasim ibn Muhammad)"
   },
   {
     "id": "malik-962",
@@ -14648,7 +14826,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 989,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-990",
@@ -14736,7 +14916,9 @@
     "bookId": 7,
     "chapterId": 20,
     "hadithNumber": 995,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57524",
+    "chain": "مالك (Imam Maalik) ← محمد بن عمرو بن حلحلة الديلي (Muhammad bin 'Amr bin Halhala) ← محمد بن عمران الأنصاري (Muhammad bin 'Imran al-Ansari) ← عمران الأنصاري ('Imran al-Ansari) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-996",
@@ -14899,7 +15081,9 @@
     "bookId": 7,
     "chapterId": 21,
     "hadithNumber": 1006,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57517",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عبادة بن الوليد بن عبادة بن الصامت ('Ubada bin al-Waleed bin 'Ubada) ← الوليد بن عبادة بن الصامت (al-Walid bin 'Ubada bin As-Samit) ← عبادة بن الصامت ('Ubada bin As-Samit)"
   },
   {
     "id": "malik-1007",
@@ -15212,7 +15396,9 @@
     "bookId": 7,
     "chapterId": 21,
     "hadithNumber": 1027,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57519",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عبد الله بن المغيرة بن أبي بردة الكناني"
   },
   {
     "id": "malik-1028",
@@ -15315,7 +15501,9 @@
     "bookId": 7,
     "chapterId": 21,
     "hadithNumber": 1034,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57520",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن أبي سعيد المقبري (Kaysan Abu Sa'id al-Muqbari) ← عبد الله بن أبي قتادة ('Abdullah bin Abi Qatada Ibn Rab'i) ← أبو قتادة (Abu Qatada ibn Rab'i)"
   },
   {
     "id": "malik-1035",
@@ -15328,7 +15516,9 @@
     "bookId": 7,
     "chapterId": 21,
     "hadithNumber": 1035,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57532",
+    "chain": "مالك (Imam Maalik) ← أبو النضر (Abu al-Nadr al-Mazny) ← أبو بكر الصديق (Abu Bakr As-Siddique)"
   },
   {
     "id": "malik-1036",
@@ -15356,7 +15546,9 @@
     "bookId": 7,
     "chapterId": 21,
     "hadithNumber": 1037,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57523",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1038",
@@ -15579,7 +15771,9 @@
     "bookId": 7,
     "chapterId": 21,
     "hadithNumber": 1052,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57522",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← حميد بن عبد الرحمن بن عوف (Hameed bin 'Abdur Rahman bin Awf) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1053",
@@ -15802,7 +15996,9 @@
     "bookId": 7,
     "chapterId": 22,
     "hadithNumber": 1067,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57526",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← سهيل بن أبي صالح (Suhayl bin Abi Salah) ← أبي صالح (Abu Salah al-Ash'ry) ← أبي هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1068",
@@ -15890,7 +16086,9 @@
     "bookId": 7,
     "chapterId": 22,
     "hadithNumber": 1073,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57525",
+    "chain": "مالك (Imam Maalik) ← عثمان بن حفص بن عمر بن خلدة ← ابن شهاب (al-Zuhri) ← أبو لبابة بن عبد المنذر (Abu Lubaba bin 'Abdul Mundhir)"
   },
   {
     "id": "malik-1074",
@@ -15903,7 +16101,9 @@
     "bookId": 7,
     "chapterId": 22,
     "hadithNumber": 1074,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57531",
+    "chain": "مالك (Imam Maalik) ← أيوب بن موسى (Ayoub bin Musa Abu al-Ys') ← منصور بن عبد الرحمن الحجبي ← أمه ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1075",
@@ -15961,7 +16161,9 @@
     "bookId": 7,
     "chapterId": 23,
     "hadithNumber": 1078,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57527",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← بشير بن يسار (Bashayr bin al-Yasar al-Harithi al-Ansar) ← أبو بردة بن نيار (Abu Burda bin Niyar)"
   },
   {
     "id": "malik-1079",
@@ -16004,7 +16206,9 @@
     "bookId": 7,
     "chapterId": 23,
     "hadithNumber": 1081,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57543",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن أبي بكر ('Abdullah bin Abi Bakr) ← عمرة بنت عبد الرحمن ('Umarh bint 'Abdur Rahman) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1082",
@@ -16047,7 +16251,9 @@
     "bookId": 7,
     "chapterId": 23,
     "hadithNumber": 1084,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57528",
+    "chain": "مالك (Imam Maalik) ← عمارة بن صياد ← عطاء بن يسار ('Ata ibn Yasar) ← أبو أيوب الأنصاري (Abu Ayyub al-Ansari)"
   },
   {
     "id": "malik-1085",
@@ -16090,7 +16296,9 @@
     "bookId": 7,
     "chapterId": 23,
     "hadithNumber": 1087,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1088",
@@ -16148,7 +16356,9 @@
     "bookId": 7,
     "chapterId": 24,
     "hadithNumber": 1091,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57529",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← رجل ← معاذ بن سعد أو سعد بن معاذ (Mua'dh bin Sa'd Aw)"
   },
   {
     "id": "malik-1092",
@@ -16221,7 +16431,9 @@
     "bookId": 7,
     "chapterId": 24,
     "hadithNumber": 1096,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57481",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1097",
@@ -16264,7 +16476,9 @@
     "bookId": 7,
     "chapterId": 25,
     "hadithNumber": 1099,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57538",
+    "chain": "مالك (Imam Maalik) ← القاسم بن محمد (al-Qasim ibn Muhammad)"
   },
   {
     "id": "malik-1100",
@@ -16322,7 +16536,9 @@
     "bookId": 7,
     "chapterId": 25,
     "hadithNumber": 1103,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1104",
@@ -16440,7 +16656,9 @@
     "bookId": 7,
     "chapterId": 25,
     "hadithNumber": 1111,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57533",
+    "chain": "مالك (Imam Maalik) ← إسماعيل بن أبي حكيم (Isma'il bin Abi Hkym) ← عبيدة بن سفيان الحضرمي ← أبي هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1112",
@@ -16466,7 +16684,9 @@
     "bookId": 7,
     "chapterId": 25,
     "hadithNumber": 1113,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57536",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عبيد الله بن عبد الله بن عتبة بن مسعود ('Ubaydullah bin 'Abdullah bin 'Utba) ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1114",
@@ -16479,7 +16699,9 @@
     "bookId": 7,
     "chapterId": 25,
     "hadithNumber": 1114,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57534",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← ابن وعلة المصري ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1115",
@@ -16711,7 +16933,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1130,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57555",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← معاوية بن أبي سفيان (Mu'awiya ibn Abu Sufyan) ← زيد بن ثابت (Zayd ibn Thabit)"
   },
   {
     "id": "malik-1131",
@@ -16724,7 +16948,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1131,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57535",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← قبيصة بن ذؤيب (Qubaysa bin Zuwayb) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1132",
@@ -16737,7 +16963,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1132,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57548",
+    "chain": "مالك (Imam Maalik) ← سليمان بن يسار (Sulayman ibn Yasar)"
   },
   {
     "id": "malik-1133",
@@ -16780,7 +17008,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1135,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57541",
+    "chain": "مالك (Imam Maalik) ← عبد ربه بن سعيد (Abd Rbh bin S'aid Mwla) ← أبو بكر بن عبد الرحمن بن الحارث بن هشام (Abu Bakr bin 'Abdur Rahman)"
   },
   {
     "id": "malik-1136",
@@ -16793,7 +17023,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1136,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57523",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1137",
@@ -16879,7 +17111,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1142,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57539",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← علي بن حسين بن علي بن أبي طالب"
   },
   {
     "id": "malik-1143",
@@ -16937,7 +17171,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1146,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57547",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man) ← غير واحد"
   },
   {
     "id": "malik-1147",
@@ -16950,7 +17186,9 @@
     "bookId": 7,
     "chapterId": 27,
     "hadithNumber": 1147,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57540",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عروة بن الزبير ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-1148",
@@ -16993,7 +17231,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1150,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57530",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن القاسم ('Abdur Rahman bin al-Qasim) ← القاسم (al-Qasim ibn Muhammad)"
   },
   {
     "id": "malik-1151",
@@ -17036,7 +17276,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1153,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57550",
+    "chain": "مالك (Imam Maalik) ← القاسم بن محمد (al-Qasim ibn Muhammad) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby)"
   },
   {
     "id": "malik-1154",
@@ -17064,7 +17306,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1155,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57542",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← أبي حازم بن دينار ← سهل بن سعد الساعدي (Sahl bin Sa'd bin Malik)"
   },
   {
     "id": "malik-1156",
@@ -17107,7 +17351,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1158,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57556",
+    "chain": "مالك (Imam Maalik) ← عمر بن عبد العزيز ('Umar bin ‘Abdul-‘Aziz)"
   },
   {
     "id": "malik-1159",
@@ -17120,7 +17366,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1159,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57545",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن المسيب (Sa'id ibn al-Musayyib) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1160",
@@ -17178,7 +17426,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1163,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57544",
+    "chain": "مالك (Imam Maalik) ← حميد الطويل (Hameed bin Abi Hameed) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1164",
@@ -17221,7 +17471,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1166,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57546",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← القاسم بن محمد (al-Qasim ibn Muhammad) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1167",
@@ -17339,7 +17591,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1174,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57551",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن القاسم ('Abdur Rahman bin al-Qasim) ← القاسم بن محمد (al-Qasim ibn Muhammad) ← عبد الرحمن ('Abdur Rahman bin Sakran bin 'Amr) ← خنساء بنت خدام الأنصارية"
   },
   {
     "id": "malik-1175",
@@ -17352,7 +17606,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1175,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57554",
+    "chain": "مالك (Imam Maalik) ← أبو الزبير المكي ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1176",
@@ -17485,7 +17741,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1184,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57549",
+    "chain": "مالك (Imam Maalik) ← الزبير بن العوام (Zubayr ibn al-Awwam)"
   },
   {
     "id": "malik-1185",
@@ -17513,7 +17771,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1186,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57553",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن المجبر ('Abdur Rahman bin al-Mjbr)"
   },
   {
     "id": "malik-1187",
@@ -17541,7 +17801,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1188,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57552",
+    "chain": "مالك (Imam Maalik) ← إبراهيم بن أبي عبلة (Ibrahim bin Abi Ablh) ← عبد الملك بن مروان ('Abdul Malik bin Mrwan)"
   },
   {
     "id": "malik-1189",
@@ -17569,7 +17831,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1190,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57448",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1191",
@@ -17582,7 +17846,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1191,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57577",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri)"
   },
   {
     "id": "malik-1192",
@@ -17595,7 +17861,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1192,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57573",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبي (Abu Shykh bin Hmar al-Hna'iy) ← محمد بن علي بن أبي طالب ← علي بن أبي طالب (Ali ibn Abi Talib)"
   },
   {
     "id": "malik-1193",
@@ -17698,7 +17966,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1199,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-1200",
@@ -17741,7 +18011,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1202,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57557",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1203",
@@ -17754,7 +18026,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1203,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57460",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-1204",
@@ -17767,7 +18041,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1204,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57559",
+    "chain": "مالك (Imam Maalik) ← أبي الزبير المكي ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1205",
@@ -17780,7 +18056,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1205,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57566",
+    "chain": "مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man) ← القاسم بن محمد (al-Qasim ibn Muhammad) ← عروة بن الزبير ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-1206",
@@ -17808,7 +18086,9 @@
     "bookId": 7,
     "chapterId": 28,
     "hadithNumber": 1207,
-    "narrator": "Yahya related to me from Malik from Yahya ibn Said that Said ibn\nal-Musayyab said, \"There are three things in which there is no jest:"
+    "narrator": "Yahya related to me from Malik from Yahya ibn Said that Said ibn\nal-Musayyab said, \"There are three things in which there is no jest:",
+    "chainId": "c57558",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1208",
@@ -17896,7 +18176,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1213,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57497",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1214",
@@ -17909,7 +18191,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1214,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57564",
+    "chain": "مالك (Imam Maalik) ← علي بن أبي طالب (Ali ibn Abi Talib)"
   },
   {
     "id": "malik-1215",
@@ -17922,7 +18206,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1215,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1216",
@@ -18325,7 +18611,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1242,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57560",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمرة بنت عبد الرحمن ('Umarh bint 'Abdur Rahman) ← حبيبة بنت سهل الأنصاري"
   },
   {
     "id": "malik-1243",
@@ -18338,7 +18626,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1243,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57562",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← مولاة لصفية بنت أبي عبيد ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1244",
@@ -18351,7 +18641,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1244,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57481",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1245",
@@ -18544,7 +18836,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1257,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57561",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد الرحمن بن عوف ('Abdur Rahman Ibn 'Awf)"
   },
   {
     "id": "malik-1258",
@@ -18887,7 +19181,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1280,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57558",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1281",
@@ -18900,7 +19196,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1281,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57563",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد الله بن يزيد ('Abdullah bin Yazid) ← أبو سلمة بن عبد الرحمن بن عوف (Abu Salama bin 'Abdur Rahman) ← فاطمة بنت قيس (Fatima bint Qays)"
   },
   {
     "id": "malik-1282",
@@ -19033,7 +19331,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1290,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57448",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1291",
@@ -19181,7 +19481,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1300,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57568",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد ربه بن سعيد بن قيس ('Abd Rabba bin Sa'id bin Qays bin 'Amr) ← أبو سلمة بن عبد الرحمن (Abu Salama bin 'Abdur Rahman) ← أم سلمة (Umm Salamah)"
   },
   {
     "id": "malik-1301",
@@ -19314,7 +19616,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1309,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57569",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← القاسم بن محمد (al-Qasim ibn Muhammad)"
   },
   {
     "id": "malik-1310",
@@ -19327,7 +19631,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1310,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1311",
@@ -19400,7 +19706,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1315,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57565",
+    "chain": "مالك (Imam Maalik) ← أبي النضر مولى عمر بن عبيد الله ← عامر بن سعد بن أبي وقاص ('Amir bin Sa'd ibn Abi Waqqas) ← سعد بن أبي وقاص (Sa'd ibn Abi Waqqas)"
   },
   {
     "id": "malik-1316",
@@ -19413,7 +19721,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1316,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57567",
+    "chain": "مالك (Imam Maalik) ← عبيد الله ('Ubaydallah bin al-'Abbas) ← أبي (Abu Shykh bin Hmar al-Hna'iy) ← أبي (Abu Shykh bin Hmar al-Hna'iy)"
   },
   {
     "id": "malik-1317",
@@ -19426,7 +19736,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1317,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1318",
@@ -19439,7 +19751,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1318,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57571",
+    "chain": "مالك (Imam Maalik) ← ضمرة بن سعيد المازني ← الحجاج بن عمرو بن غزية (al-Hajjaj bin 'Amr bin Ghaziyah) ← زيد بن ثابت (Zayd ibn Thabit)"
   },
   {
     "id": "malik-1319",
@@ -19452,7 +19766,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1319,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57570",
+    "chain": "مالك (Imam Maalik) ← حميد بن قيس المكي ← رجل ← ابن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1320",
@@ -19480,7 +19796,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1321,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57575",
+    "chain": "زينب (Zaynab bint Khazeemah) ← زينب بنت جحش (Zaynab bint Jahsh)"
   },
   {
     "id": "malik-1322",
@@ -19523,7 +19841,9 @@
     "bookId": 7,
     "chapterId": 29,
     "hadithNumber": 1324,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57579",
+    "chain": "مالك (Imam Maalik) ← أم سلمة (Umm Salamah)"
   },
   {
     "id": "malik-1325",
@@ -19596,7 +19916,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1329,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57572",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد الله بن أبي بكر ('Abdullah bin Abi Bakr) ← عمرة بنت عبد الرحمن ('Umarh bint 'Abdur Rahman) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1330",
@@ -19609,7 +19931,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1330,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57508",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1331",
@@ -19622,7 +19946,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1331,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57574",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة أم المؤمنين"
   },
   {
     "id": "malik-1332",
@@ -19650,7 +19976,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1333,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57578",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عمرو بن الشريد ('Amr bin al-Shryd) ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1334",
@@ -19678,7 +20006,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1335,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57576",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← سالم بن عبد الله بن عمر (Salim bin 'Abdullah bin 'Umar) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1336",
@@ -19691,7 +20021,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1336,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57580",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← صفية بنت أبي عبيد (Safiyya bint Abi 'Ubaid al-Thaqafi) ← حفصة أم المؤمنين"
   },
   {
     "id": "malik-1337",
@@ -19704,7 +20036,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1337,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57588",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن القاسم ('Abdur Rahman bin al-Qasim) ← القاسم بن محمد (al-Qasim ibn Muhammad) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1338",
@@ -19807,7 +20141,9 @@
     "bookId": 7,
     "chapterId": 30,
     "hadithNumber": 1344,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57581",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← سليمان بن يسار (Sulayman ibn Yasar) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة أم المؤمنين"
   },
   {
     "id": "malik-1345",
@@ -19910,7 +20246,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1351,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57582",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عبيد الله بن عبد الله بن عتبة بن مسعود ('Ubaydullah bin 'Abdullah bin 'Utba) ← عبد الله بن مسعود (ibn Mas'ud)"
   },
   {
     "id": "malik-1352",
@@ -19923,7 +20261,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1352,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1353",
@@ -19951,7 +20291,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1354,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57583",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبو سلمة بن عبد الرحمن بن عوف (Abu Salama bin 'Abdur Rahman) ← عبد الرحمن بن عوف ('Abdur Rahman Ibn 'Awf)"
   },
   {
     "id": "malik-1355",
@@ -20024,7 +20366,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1359,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57584",
+    "chain": "مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← خارجة بن زيد بن ثابت (Kharija ibn Zayd ibn Thabit) ← زيد بن ثابت (Zayd ibn Thabit)"
   },
   {
     "id": "malik-1360",
@@ -20037,7 +20381,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1360,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57585",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar) ← زيد بن ثابت (Zayd ibn Thabit)"
   },
   {
     "id": "malik-1361",
@@ -20050,7 +20396,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1361,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57586",
+    "chain": "مالك (Imam Maalik) ← داود بن الحصين (Da'ud bin al-Husain al-Amwy) ← أبو سفيان (Abu Sufyan) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1362",
@@ -20153,7 +20501,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1368,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57594",
+    "chain": "مالك (Imam Maalik) ← عبد الحميد بن سهيل بن عبد الرحمن بن عوف ← سعيد بن المسيب (Sa'id ibn al-Musayyib) ← أبو سعيد الخدري (Abu Sa'id al-Khudri) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1369",
@@ -20166,7 +20516,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1369,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57592",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن يزيد ('Abdullah bin Yazid) ← زيد (Zayd) ← سعد بن أبي وقاص (Sa'd ibn Abi Waqqas)"
   },
   {
     "id": "malik-1370",
@@ -20179,7 +20531,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1370,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57481",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1371",
@@ -20207,7 +20561,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1372,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57587",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1373",
@@ -20295,7 +20651,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1378,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57589",
+    "chain": "مالك (Imam Maalik) ← حميد بن قيس المكي ← مجاهد (Mujahid bin Jabir) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1379",
@@ -20338,7 +20696,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1381,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57590",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1382",
@@ -20351,7 +20711,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1382,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57593",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1383",
@@ -20589,7 +20951,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1398,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57591",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← سليمان بن يسار (Sulayman ibn Yasar) ← سعد بن أبي وقاص (Sa'd ibn Abi Waqqas)"
   },
   {
     "id": "malik-1399",
@@ -21037,7 +21401,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1428,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57595",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن مسعود (ibn Mas'ud)"
   },
   {
     "id": "malik-1429",
@@ -21080,7 +21446,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1431,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57449",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-1432",
@@ -21243,7 +21611,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1442,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57595",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن مسعود (ibn Mas'ud)"
   },
   {
     "id": "malik-1443",
@@ -21301,7 +21671,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1446,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57596",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1447",
@@ -21314,7 +21686,9 @@
     "bookId": 7,
     "chapterId": 31,
     "hadithNumber": 1447,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57558",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1448",
@@ -21587,7 +21961,9 @@
     "bookId": 7,
     "chapterId": 33,
     "hadithNumber": 1466,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57448",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1467",
@@ -21600,7 +21976,9 @@
     "bookId": 7,
     "chapterId": 33,
     "hadithNumber": 1467,
-    "narrator": "Malik related to me from Ibn Shihab from Sulayman ibn Yasar that\nthe Messenger of Allah, may Allah bless him and grant him peace, used\nto send Abdullah ibn Rawaha to Khaybar, to assess the division of the\nfruit crop between him and the jews of Khaybar.\n\n\nThe jews\ncollected for Abdullah pieces of their women's jewellery and said to\nhim, \"This is yours. Go light on us and don't be exact in the\ndivision!\"\n\n\nAbdullah ibn Rawaha said, \"O tribe of jews! By\nAllah! You are among the most hateful to me of Allah's creation, but\nit does not prompt me to deal unjustly with you. What you have offered\nas a bribe is forbidden. We will not touch it.\" They said, \"This is\nwhat supports the heavens and the earth.\"\n\n\nMalik said, \"If a\nshare-cropper waters the palms and between them there is some\nuncultivated land, whatever he cultivates in the uncultivated land is\nhis.\"\n\n\nMalik said, \"If the owner of the land makes a condition\nthat he will cultivate the uncultivated land for himself, that is not\ngood because the sharecropper does the watering for the owner of the\nland and so he increases the owner of the land in property (without\nany return for himself).\"\n\n\nMalik said, \"If the owner\nstipulates that the fruit crop is to be shared between them, there is\nno harm in that if all the maintenance of the property - seeding,\nwatering and case, etc. - are the concern of the sharecropper.\n\n\nIf the share-cropper stipulates that the seeds are the\nresponsibility of the owner of the property - that is not permitted\nbecause he has stipulated an outlay against the owner of the property.\nShare-cropping is conducted on the basis that all the care and expense\nis outlayed by the share-cropper, and the owner of the property is not\nobliged anything. This is the accepted method of share-cropping.\"\n\n\nMalik spoke about a spring which was shared between two men, and\nthen the water dried up and one of them wanted to work on the spring\nand the other said, \"I don't have the means to work on it.\" He said,\n\"Tell the one who wants to work on the spring, 'Work and expend. All\nthe water will be yours. You will have its water until your companion\nbrings you half of what you have spent. If he brings you half of what\nyou have spent, he can take his share of the water.' The first one is\ngiven all the water, because he has spent on it, and if he does not\nreach anything by his work, the other has not incurred any expense.\"\n\n\nMalik said, \"It is not good for a share-cropper not to expend\nanything but his labour and to be hired for a share of the fruit while\nall the expense and work is incurred by the owner of the garden,\nbecause the share-cropper does not know what the exact wage is going\nto be for his labour, whether it will be little or great.\"\n\n\nMalik said, \"No-one who lends a qirad or grants a share-cropping\ncontract, should exempt some of the wealth, or some of the trees from\nhis agent, because, by that, the agent becomes his hired man. He says,\n'I will grant you a share-crop provided that you work for me on such-\nand-such a palm - water it and tend it. I will give you a qirad for\nsuch-and-such money provided that you work for me with ten dinars.\nThey are not part of the qirad I have given you.' That must not be\ndone and it is not good. This is what is done in our community.\"\n\n\nMalik said, \"The sunna about what is permitted to an owner of a\ngarden in share-cropping is that he can stipulate to the share-cropper\nthe maintenance of walls, cleaning the spring, sweeping the irrigation\ncanals, pollinating the palms, pruning branches, harvesting the fruit\nand such things, provided that the share-cropper has a share of the\nfruit fixed by mutual agreement. However, the owner cannot stipulate\nthe beginning of new work which the agent will start digging a well,\nraising the source of a well, instigating new planting, or building a\ncistern whose cost is great. That is as if the owner of the garden\nsaid to a certain man, 'Build me a house here or dig me a well or make\na spring flow for me or do some work for me for half the fruit of this\ngarden of mine,' before the fruit of the garden is sound and it is\nhalal to sell it. This is the sale of fruit before its good condition\nis clear. The Messenger of Allah, may Allah bless him and grant him\npeace, forbade fruit to be sold before its good condition became\nclear.\"\n\n\nMalik said, \"If the fruits are good and their good\ncondition is clear and selling them is halal and then the owner asks a\nman to do one of those jobs for him, specifying the job, for half the\nfruit of his garden, for example, there is no harm in that. He has\nhired the man for something recognised and known. The man has seen it\nand is satisfied with it.\n\n\n\"As for share-cropping, if the\ngarden has no fruit or little or bad fruit, he has only that. The\nlabourer is only hired for a set amount, and hire is only permitted on\nthese terms. Hire is a type of sale. One man buys another man's work\nfrom him. It is not good if uncertainty enters into it because the\nMessenger of Allah, may Allah bless him and grant him peace, forbade\nuncertain transactions.\"\n\n\nMalik said, \"The sunna in share-\ncropping with us is that it can be practised with any kind of fruit\ntree, palm, vine, olive tree, pomegranate, peach, and soon. It is\npermitted, and there is no harm in it provided that the owner of the\nproperty has a share of the fruit:"
+    "narrator": "Malik related to me from Ibn Shihab from Sulayman ibn Yasar that\nthe Messenger of Allah, may Allah bless him and grant him peace, used\nto send Abdullah ibn Rawaha to Khaybar, to assess the division of the\nfruit crop between him and the jews of Khaybar.\n\n\nThe jews\ncollected for Abdullah pieces of their women's jewellery and said to\nhim, \"This is yours. Go light on us and don't be exact in the\ndivision!\"\n\n\nAbdullah ibn Rawaha said, \"O tribe of jews! By\nAllah! You are among the most hateful to me of Allah's creation, but\nit does not prompt me to deal unjustly with you. What you have offered\nas a bribe is forbidden. We will not touch it.\" They said, \"This is\nwhat supports the heavens and the earth.\"\n\n\nMalik said, \"If a\nshare-cropper waters the palms and between them there is some\nuncultivated land, whatever he cultivates in the uncultivated land is\nhis.\"\n\n\nMalik said, \"If the owner of the land makes a condition\nthat he will cultivate the uncultivated land for himself, that is not\ngood because the sharecropper does the watering for the owner of the\nland and so he increases the owner of the land in property (without\nany return for himself).\"\n\n\nMalik said, \"If the owner\nstipulates that the fruit crop is to be shared between them, there is\nno harm in that if all the maintenance of the property - seeding,\nwatering and case, etc. - are the concern of the sharecropper.\n\n\nIf the share-cropper stipulates that the seeds are the\nresponsibility of the owner of the property - that is not permitted\nbecause he has stipulated an outlay against the owner of the property.\nShare-cropping is conducted on the basis that all the care and expense\nis outlayed by the share-cropper, and the owner of the property is not\nobliged anything. This is the accepted method of share-cropping.\"\n\n\nMalik spoke about a spring which was shared between two men, and\nthen the water dried up and one of them wanted to work on the spring\nand the other said, \"I don't have the means to work on it.\" He said,\n\"Tell the one who wants to work on the spring, 'Work and expend. All\nthe water will be yours. You will have its water until your companion\nbrings you half of what you have spent. If he brings you half of what\nyou have spent, he can take his share of the water.' The first one is\ngiven all the water, because he has spent on it, and if he does not\nreach anything by his work, the other has not incurred any expense.\"\n\n\nMalik said, \"It is not good for a share-cropper not to expend\nanything but his labour and to be hired for a share of the fruit while\nall the expense and work is incurred by the owner of the garden,\nbecause the share-cropper does not know what the exact wage is going\nto be for his labour, whether it will be little or great.\"\n\n\nMalik said, \"No-one who lends a qirad or grants a share-cropping\ncontract, should exempt some of the wealth, or some of the trees from\nhis agent, because, by that, the agent becomes his hired man. He says,\n'I will grant you a share-crop provided that you work for me on such-\nand-such a palm - water it and tend it. I will give you a qirad for\nsuch-and-such money provided that you work for me with ten dinars.\nThey are not part of the qirad I have given you.' That must not be\ndone and it is not good. This is what is done in our community.\"\n\n\nMalik said, \"The sunna about what is permitted to an owner of a\ngarden in share-cropping is that he can stipulate to the share-cropper\nthe maintenance of walls, cleaning the spring, sweeping the irrigation\ncanals, pollinating the palms, pruning branches, harvesting the fruit\nand such things, provided that the share-cropper has a share of the\nfruit fixed by mutual agreement. However, the owner cannot stipulate\nthe beginning of new work which the agent will start digging a well,\nraising the source of a well, instigating new planting, or building a\ncistern whose cost is great. That is as if the owner of the garden\nsaid to a certain man, 'Build me a house here or dig me a well or make\na spring flow for me or do some work for me for half the fruit of this\ngarden of mine,' before the fruit of the garden is sound and it is\nhalal to sell it. This is the sale of fruit before its good condition\nis clear. The Messenger of Allah, may Allah bless him and grant him\npeace, forbade fruit to be sold before its good condition became\nclear.\"\n\n\nMalik said, \"If the fruits are good and their good\ncondition is clear and selling them is halal and then the owner asks a\nman to do one of those jobs for him, specifying the job, for half the\nfruit of his garden, for example, there is no harm in that. He has\nhired the man for something recognised and known. The man has seen it\nand is satisfied with it.\n\n\n\"As for share-cropping, if the\ngarden has no fruit or little or bad fruit, he has only that. The\nlabourer is only hired for a set amount, and hire is only permitted on\nthese terms. Hire is a type of sale. One man buys another man's work\nfrom him. It is not good if uncertainty enters into it because the\nMessenger of Allah, may Allah bless him and grant him peace, forbade\nuncertain transactions.\"\n\n\nMalik said, \"The sunna in share-\ncropping with us is that it can be practised with any kind of fruit\ntree, palm, vine, olive tree, pomegranate, peach, and soon. It is\npermitted, and there is no harm in it provided that the owner of the\nproperty has a share of the fruit:",
+    "chainId": "c57597",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سليمان بن يسار (Sulayman ibn Yasar)"
   },
   {
     "id": "malik-1468",
@@ -21613,7 +21991,9 @@
     "bookId": 7,
     "chapterId": 33,
     "hadithNumber": 1468,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57513",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik)"
   },
   {
     "id": "malik-1469",
@@ -21626,7 +22006,9 @@
     "bookId": 7,
     "chapterId": 34,
     "hadithNumber": 1469,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57598",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man) ← حنظلة بن قيس الزرقي ← رافع بن خديج (Rafi' bin Khadij bin Rafi')"
   },
   {
     "id": "malik-1470",
@@ -21654,7 +22036,9 @@
     "bookId": 7,
     "chapterId": 34,
     "hadithNumber": 1471,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57603",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← سالم بن عبد الله بن عمر (Salim bin 'Abdullah bin 'Umar)"
   },
   {
     "id": "malik-1472",
@@ -21667,7 +22051,9 @@
     "bookId": 7,
     "chapterId": 34,
     "hadithNumber": 1472,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57601",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن عوف ('Abdur Rahman Ibn 'Awf)"
   },
   {
     "id": "malik-1473",
@@ -21845,7 +22231,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1484,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57602",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← سليمان بن يسار (Sulayman ibn Yasar)"
   },
   {
     "id": "malik-1485",
@@ -21858,7 +22246,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1485,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57577",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri)"
   },
   {
     "id": "malik-1486",
@@ -22126,7 +22516,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1503,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57460",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-1504",
@@ -22139,7 +22531,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1504,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57608",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن محمد بن عبد الله بن عبد القاري ← محمد بن عبد الله بن عبد القاري (Muhammad bin 'Abdullah bin 'AR) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1505",
@@ -22583,7 +22977,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1534,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57599",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عبد الرحمن بن عبد القاري ('Abdur Rahman bin 'Abd al-Qari) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1535",
@@ -22609,7 +23005,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1536,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57600",
+    "chain": "مالك (Imam Maalik) ← داود بن الحصين (Da'ud bin al-Husain al-Amwy) ← أب ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1537",
@@ -22652,7 +23050,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1539,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57606",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عبد الرحمن بن القاسم ('Abdur Rahman bin al-Qasim) ← مكحول الدمشقي ← القاسم بن محمد (al-Qasim ibn Muhammad)"
   },
   {
     "id": "malik-1540",
@@ -22680,7 +23080,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1541,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57604",
+    "chain": "مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man) ← يزيد (Yazid bin Abi Sufyan) ← زيد بن خالد الجهني (Zayd bin Khalid al-Juhni)"
   },
   {
     "id": "malik-1542",
@@ -22811,7 +23213,9 @@
     "bookId": 7,
     "chapterId": 36,
     "hadithNumber": 1550,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1551",
@@ -22854,7 +23258,9 @@
     "bookId": 7,
     "chapterId": 37,
     "hadithNumber": 1553,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57605",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← أبو بكر بن حزم"
   },
   {
     "id": "malik-1554",
@@ -22867,7 +23273,9 @@
     "bookId": 7,
     "chapterId": 37,
     "hadithNumber": 1554,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57607",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عامر بن سعد بن أبي وقاص ('Amir bin Sa'd ibn Abi Waqqas) ← سعد بن أبي وقاص (Sa'd ibn Abi Waqqas)"
   },
   {
     "id": "malik-1555",
@@ -23054,7 +23462,9 @@
     "bookId": 7,
     "chapterId": 38,
     "hadithNumber": 1567,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57668",
+    "chain": "مالك (Imam Maalik) ← الحسن بن أبي الحسن البصري ← رجل"
   },
   {
     "id": "malik-1568",
@@ -23067,7 +23477,9 @@
     "bookId": 7,
     "chapterId": 38,
     "hadithNumber": 1568,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57609",
+    "chain": "مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man)"
   },
   {
     "id": "malik-1569",
@@ -23080,7 +23492,9 @@
     "bookId": 7,
     "chapterId": 38,
     "hadithNumber": 1569,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57577",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri)"
   },
   {
     "id": "malik-1570",
@@ -23258,7 +23672,9 @@
     "bookId": 7,
     "chapterId": 38,
     "hadithNumber": 1581,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57508",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1582",
@@ -23685,7 +24101,9 @@
     "bookId": 7,
     "chapterId": 40,
     "hadithNumber": 1610,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1611",
@@ -23698,7 +24116,9 @@
     "bookId": 7,
     "chapterId": 40,
     "hadithNumber": 1611,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57558",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1612",
@@ -23876,7 +24296,9 @@
     "bookId": 7,
     "chapterId": 41,
     "hadithNumber": 1623,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57611",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سليمان بن يسار (Sulayman ibn Yasar) ← الليث (al-Laith bin Sa'd) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1624",
@@ -24324,7 +24746,9 @@
     "bookId": 7,
     "chapterId": 42,
     "hadithNumber": 1653,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57610",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← السائب بن يزيد (al-Sa'ib bin Yazid bin Akht Namr) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1654",
@@ -24487,7 +24911,9 @@
     "bookId": 7,
     "chapterId": 42,
     "hadithNumber": 1664,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57614",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبو سلمة بن عبد الرحمن (Abu Salama bin 'Abdur Rahman) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1665",
@@ -24545,7 +24971,9 @@
     "bookId": 7,
     "chapterId": 42,
     "hadithNumber": 1668,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57615",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← ابن وعلة المصري ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1669",
@@ -25263,7 +25691,9 @@
     "bookId": 7,
     "chapterId": 43,
     "hadithNumber": 1716,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57612",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← سليمان بن يسار (Sulayman ibn Yasar)"
   },
   {
     "id": "malik-1717",
@@ -25576,7 +26006,9 @@
     "bookId": 7,
     "chapterId": 45,
     "hadithNumber": 1737,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57617",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1738",
@@ -25754,7 +26186,9 @@
     "bookId": 7,
     "chapterId": 46,
     "hadithNumber": 1749,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57616",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← زيد بن أبي أنيسة (Zayd bin Abi Anisa) ← عبد الحميد بن عبد الرحمن بن زيد بن الخطاب ← مسلم بن يسار الجهني (Muslim bin Yasar al-Juhni) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1750",
@@ -25887,7 +26321,9 @@
     "bookId": 7,
     "chapterId": 47,
     "hadithNumber": 1758,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57613",
+    "chain": "مالك (Imam Maalik) ← معاذ بن جبل (Mu'adh ibn Jabal)"
   },
   {
     "id": "malik-1759",
@@ -25930,7 +26366,9 @@
     "bookId": 7,
     "chapterId": 47,
     "hadithNumber": 1761,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57505",
+    "chain": "مالك (Imam Maalik) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1762",
@@ -25988,7 +26426,9 @@
     "bookId": 7,
     "chapterId": 47,
     "hadithNumber": 1765,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1766",
@@ -26106,7 +26546,9 @@
     "bookId": 7,
     "chapterId": 47,
     "hadithNumber": 1773,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57618",
+    "chain": "مالك (Imam Maalik) ← عطاء بن أبي مسلم عبد الله الخراساني"
   },
   {
     "id": "malik-1774",
@@ -26149,7 +26591,9 @@
     "bookId": 7,
     "chapterId": 48,
     "hadithNumber": 1776,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57624",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← جابر بن عبد الله الأنصاري (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-1777",
@@ -26252,7 +26696,9 @@
     "bookId": 7,
     "chapterId": 48,
     "hadithNumber": 1783,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57619",
+    "chain": "مالك (Imam Maalik) ← مسلم بن أبي مريم (Muslim bin Abi Maryam) ← أبو صالح (Abu Salah al-Ash'ry) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1784",
@@ -26310,7 +26756,9 @@
     "bookId": 7,
     "chapterId": 48,
     "hadithNumber": 1787,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1788",
@@ -26428,7 +26876,9 @@
     "bookId": 7,
     "chapterId": 48,
     "hadithNumber": 1795,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57557",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1796",
@@ -26531,7 +26981,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1802,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c1",
+    "chain": "مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1803",
@@ -26679,7 +27131,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1812,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57620",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1813",
@@ -26767,7 +27221,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1818,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57621",
+    "chain": "مالك (Imam Maalik) ← سمي ← أبو صالح السمان ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1819",
@@ -26780,7 +27236,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1819,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57622",
+    "chain": "مالك (Imam Maalik) ← هب بن كيسان (Wahb bin Kysan al-Quraishi) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-1820",
@@ -26838,7 +27296,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1823,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57644",
+    "chain": "مالك (Imam Maalik) ← أبو بكر الصديق (Abu Bakr As-Siddique) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1824",
@@ -26851,7 +27311,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1824,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57623",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1825",
@@ -26864,7 +27326,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1825,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57557",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1826",
@@ -26877,7 +27341,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1826,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1827",
@@ -26890,7 +27356,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1827,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57626",
+    "chain": "مالك (Imam Maalik) ← محمد بن عمرو بن حلحلة (Muhammad bin 'Amr bin Halhala) ← حميد بن مالك بن خثيم ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1828",
@@ -26903,7 +27371,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1828,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57627",
+    "chain": "مالك (Imam Maalik) ← أبو نعيم (al-Fadl bin Dakayn, Abu Na'eem) ← عمر بن أبي سلمة ('Umar bin Abi Salamah)"
   },
   {
     "id": "malik-1829",
@@ -26916,7 +27386,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1829,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57625",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← القاسم بن محمد (al-Qasim ibn Muhammad) ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1830",
@@ -26929,7 +27401,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1830,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57628",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-1831",
@@ -26955,7 +27429,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1832,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57623",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1833",
@@ -26968,7 +27444,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1833,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57623",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1834",
@@ -26981,7 +27459,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1834,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1835",
@@ -26994,7 +27474,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1835,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57629",
+    "chain": "مالك (Imam Maalik) ← صدقة بن يسار (Sdqh bin Ysar) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1836",
@@ -27020,7 +27502,9 @@
     "bookId": 7,
     "chapterId": 49,
     "hadithNumber": 1837,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57631",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن أبي بكر ('Abdullah bin Abi Bakr) ← عباد بن تميم ('Abbad bin Tameem Mazni) ← أبو بشير الأنصاري (Abu Bashir al-Ansari)"
   },
   {
     "id": "malik-1838",
@@ -27033,7 +27517,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1838,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57633",
+    "chain": "يحيى (Yahya bin Thabit ibn Qays) ← مالك (Imam Maalik) ← محمد بن أبي أمامة بن سهل بن حنيف (Muhammad bin Abi Umama bin Sahl) ← أبو أمامة بن سهل بن حنيف ← سهل بن حنيف (Sahl bin Hunayf)"
   },
   {
     "id": "malik-1839",
@@ -27046,7 +27532,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1839,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57632",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبو أمامة بن سهل بن حنيف"
   },
   {
     "id": "malik-1840",
@@ -27059,7 +27547,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1840,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57637",
+    "chain": "مالك (Imam Maalik) ← حميد بن قيس المكي"
   },
   {
     "id": "malik-1841",
@@ -27072,7 +27562,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1841,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57638",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سليمان بن يسار (Sulayman ibn Yasar) ← عروة بن الزبير ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-1842",
@@ -27085,7 +27577,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1842,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57635",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar)"
   },
   {
     "id": "malik-1843",
@@ -27098,7 +27592,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1843,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57630",
+    "chain": "مالك (Imam Maalik) ← يزيد بن خصيفة ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1844",
@@ -27111,7 +27607,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1844,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57634",
+    "chain": "مالك (Imam Maalik) ← محمد بن عبد الله بن أبي صعصعة ← أبو الحباب سعيد بن يسار ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1845",
@@ -27124,7 +27622,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1845,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-1846",
@@ -27137,7 +27637,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1846,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57640",
+    "chain": "مالك (Imam Maalik) ← يزيد بن خصيفة ← عمرو بن عبد الله بن كعب السلمي ← نافع بن جبير (Nafi' bin Jubayr bin Mut'im) ← عثمان بن أبي العاص ('Uthman bin Abi al-'As bin Nawfal)"
   },
   {
     "id": "malik-1847",
@@ -27150,7 +27652,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1847,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57636",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1848",
@@ -27163,7 +27667,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1848,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57639",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمرة بنت عبد الرحمن ('Umarh bint 'Abdur Rahman) ← أبو بكر الصديق (Abu Bakr As-Siddique)"
   },
   {
     "id": "malik-1849",
@@ -27176,7 +27682,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1849,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57449",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-1850",
@@ -27189,7 +27697,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1850,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-1851",
@@ -27202,7 +27712,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1851,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1852",
@@ -27215,7 +27727,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1852,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57642",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← فاطمة بنت المنذر (Fatima bint al-Mundhir bin al-Zubayr) ← أسماء بنت أبي بكر (Asma' bint Abi Bakr)"
   },
   {
     "id": "malik-1853",
@@ -27228,7 +27742,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1853,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57628",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة ('Urwa ibn al-Zubayr)"
   },
   {
     "id": "malik-1854",
@@ -27241,7 +27757,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1854,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57641",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← ابن عمر (ibn Umar)"
   },
   {
     "id": "malik-1855",
@@ -27254,7 +27772,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1855,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57474",
+    "chain": "مالك (Imam Maalik) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
   },
   {
     "id": "malik-1856",
@@ -27267,7 +27787,9 @@
     "bookId": 7,
     "chapterId": 50,
     "hadithNumber": 1856,
-    "narrator": "Yahya related to me from Malik that he had heard from Bukayr ibn\nAbdullah ibn al-Ashajj from Ibn Atiya that the Messenger of Allah, may\nAllah bless him and grant him peace, said:"
+    "narrator": "Yahya related to me from Malik that he had heard from Bukayr ibn\nAbdullah ibn al-Ashajj from Ibn Atiya that the Messenger of Allah, may\nAllah bless him and grant him peace, said:",
+    "chainId": "c57646",
+    "chain": "مالك (Imam Maalik) ← بكير بن عبد الله بن الأشج (Bukayr bin 'Abdullah bin al-Ashj) ← ابن عطية"
   },
   {
     "id": "malik-1857",
@@ -27280,7 +27802,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1857,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57643",
+    "chain": "مالك (Imam Maalik) ← أبو بكر بن نافع (Abu Bakr bin Nafi' al-'Adwi, The Client) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1858",
@@ -27293,7 +27817,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1858,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57645",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← حميد بن عبد الرحمن بن عوف (Hameed bin 'Abdur Rahman bin Awf) ← معاوية بن أبي سفيان (Mu'awiya ibn Abu Sufyan)"
   },
   {
     "id": "malik-1859",
@@ -27306,7 +27832,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1859,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57653",
+    "chain": "مالك (Imam Maalik) ← زياد بن سعد (Ziyad bin S'ad) ← ابن شهاب (al-Zuhri)"
   },
   {
     "id": "malik-1860",
@@ -27319,7 +27847,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1860,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1861",
@@ -27332,7 +27862,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1861,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57652",
+    "chain": "مالك (Imam Maalik) ← صفوان بن سليم (Safwan bin Slym al-Madni)"
   },
   {
     "id": "malik-1862",
@@ -27345,7 +27877,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1862,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57647",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← أبو قتادة الأنصاري"
   },
   {
     "id": "malik-1863",
@@ -27358,7 +27892,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1863,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57635",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar)"
   },
   {
     "id": "malik-1864",
@@ -27371,7 +27907,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1864,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57650",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← محمد بن إبراهيم التيمي ← أبو سلمة بن عبد الرحمن (Abu Salama bin 'Abdur Rahman) ← عبد الرحمن بن الأسود بن عبد يغوث ('Abdur Rahman bin al-Aswad) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1865",
@@ -27384,7 +27922,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1865,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57648",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← خالد بن الوليد (Khalid bin al-Walid)"
   },
   {
     "id": "malik-1866",
@@ -27397,7 +27937,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1866,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-1867",
@@ -27410,7 +27952,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1867,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57649",
+    "chain": "مالك (Imam Maalik) ← سهيل بن أبي صالح (Suhayl bin Abi Salah) ← أبو صالح (Abu Salah al-Ash'ry) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1868",
@@ -27423,7 +27967,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1868,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57651",
+    "chain": "مالك (Imam Maalik) ← سمي ← القعقاع بن حكيم (al-Q'qa' bin Hkym al-Knany) ← كعب الأحبار (Ka'b al-Ahbar)"
   },
   {
     "id": "malik-1869",
@@ -27436,7 +27982,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1869,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57654",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن عبد الرحمن بن معمر ('Abdullah bin 'Abdur Rahman bin Ma'mar) ← أبو الحباب سعيد بن يسار ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1870",
@@ -27449,7 +27997,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1870,
-    "narrator": "Yahya related to me from Malik from Khubayb ibn Abd ar-Rahman al-\nAnsari from Hafs ibn Asim that either Abu Said al-Khudri or Abu\nHurayra said, \"The Messenger of Allah, may Allah bless him and grant\nhim peace, said, 'There are seven whom Allah will shade in His shade\non the day on which there is no shade except His shade:"
+    "narrator": "Yahya related to me from Malik from Khubayb ibn Abd ar-Rahman al-\nAnsari from Hafs ibn Asim that either Abu Said al-Khudri or Abu\nHurayra said, \"The Messenger of Allah, may Allah bless him and grant\nhim peace, said, 'There are seven whom Allah will shade in His shade\non the day on which there is no shade except His shade:",
+    "chainId": "c57672",
+    "chain": "مالك (Imam Maalik) ← خبيب بن عبد الرحمن الأنصاري ← حفص بن عاصم (Hafs bin 'Asim bin 'Umar) ← أبو سعيد الخدري (Abu Sa'id al-Khudri)"
   },
   {
     "id": "malik-1871",
@@ -27462,7 +28012,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1871,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57649",
+    "chain": "مالك (Imam Maalik) ← سهيل بن أبي صالح (Suhayl bin Abi Salah) ← أبو صالح (Abu Salah al-Ash'ry) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1872",
@@ -27475,7 +28027,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1872,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57662",
+    "chain": "مالك (Imam Maalik) ← أبو حازم بن دينار ← أبو إدريس الخولاني (Abu Idrees al-Khulani) ← معاذ بن جبل (Mu'adh ibn Jabal)"
   },
   {
     "id": "malik-1873",
@@ -27488,7 +28042,9 @@
     "bookId": 7,
     "chapterId": 51,
     "hadithNumber": 1873,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57656",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1874",
@@ -27501,7 +28057,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1874,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57655",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة الأنصاري ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1875",
@@ -27514,7 +28072,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1875,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57661",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← زفر بن صعصعة (Zfr bin S's'h bin Malik) ← أبيه ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1876",
@@ -27527,7 +28087,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1876,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57635",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar)"
   },
   {
     "id": "malik-1877",
@@ -27540,7 +28102,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1877,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57660",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← أبو سلمة بن عبد الرحمن (Abu Salama bin 'Abdur Rahman) ← أبو قتادة بن ربعي (Abu Qatada ibn Rab'i)"
   },
   {
     "id": "malik-1878",
@@ -27553,7 +28117,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1878,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57494",
+    "chain": "مالك (Imam Maalik) ← هشام بن عروة (Hisham bin 'Urwa) ← أبيه"
   },
   {
     "id": "malik-1879",
@@ -27566,7 +28132,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1879,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57657",
+    "chain": "مالك (Imam Maalik) ← موسى بن ميسرة (Musa bin Mysrh al-Dyly) ← سعيد بن أبي هند (Sa'id bin Abi Hnd) ← أبو موسى الأشعري (Abu Musa al-Asha'ari)"
   },
   {
     "id": "malik-1880",
@@ -27579,7 +28147,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1880,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57658",
+    "chain": "مالك (Imam Maalik) ← علقمة بن أبي علقمة ('Alqama bin Abi 'Alqama) ← أمه ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1881",
@@ -27592,7 +28162,9 @@
     "bookId": 7,
     "chapterId": 52,
     "hadithNumber": 1881,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1882",
@@ -27605,7 +28177,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1882,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57449",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-1883",
@@ -27618,7 +28192,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1883,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57659",
+    "chain": "مالك (Imam Maalik) ← هب بن كيسان (Wahb bin Kysan al-Quraishi) ← محمد بن عمرو بن عطاء (Muhammad bin 'Amr bin 'Ata') ← عبد الله بن عباس (ibn Abbas)"
   },
   {
     "id": "malik-1884",
@@ -27631,7 +28207,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1884,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1885",
@@ -27644,7 +28222,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1885,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57666",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← الحارث بن مرة الحنفي أبو مرة ← الليث (al-Laith bin Sa'd)"
   },
   {
     "id": "malik-1886",
@@ -27657,7 +28237,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1886,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57664",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1887",
@@ -27670,7 +28252,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1887,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57667",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← الطفيل بن أبي بن كعب (al-Tufayl bin Ubayy ibn Ka'b) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1888",
@@ -27683,7 +28267,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1888,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57663",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1889",
@@ -27696,7 +28282,9 @@
     "bookId": 7,
     "chapterId": 53,
     "hadithNumber": 1889,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1890",
@@ -27709,7 +28297,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1890,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57665",
+    "chain": "مالك (Imam Maalik) ← صفوان بن سليم (Safwan bin Slym al-Madni) ← عطاء بن يسار ('Ata ibn Yasar)"
   },
   {
     "id": "malik-1891",
@@ -27722,7 +28312,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1891,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57671",
+    "chain": "مالك (Imam Maalik) ← الثقة ← بكير بن عبد الله بن الأشج (Bukayr bin 'Abdullah bin al-Ashj) ← بسر بن سعيد (Basr bin Sa'id al-Madni) ← أبو سعيد الخدري (Abu Sa'id al-Khudri) ← أبو موسى الأشعري (Abu Musa al-Asha'ari)"
   },
   {
     "id": "malik-1892",
@@ -27735,7 +28327,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1892,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57674",
+    "chain": "مالك (Imam Maalik) ← ربيعة بن أبي عبد الرحمن (Talha bin Yahya bin al-Nu'man) ← أبو موسى الأشعري (Abu Musa al-Asha'ari)"
   },
   {
     "id": "malik-1893",
@@ -27748,7 +28342,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1893,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57677",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن أبي بكر ('Abdullah bin Abi Bakr) ← أبو بكر بن عبد الرحمن (Abu Bakr bin 'Abdur Rahman)"
   },
   {
     "id": "malik-1894",
@@ -27761,7 +28357,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1894,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1895",
@@ -27774,7 +28372,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1895,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57673",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← رافع بن إسحاق (Rafa'i bin Ishaq) ← أبو سعيد الخدري (Abu Sa'id al-Khudri)"
   },
   {
     "id": "malik-1896",
@@ -27787,7 +28387,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1896,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57669",
+    "chain": "مالك (Imam Maalik) ← أبو النضر (Abu al-Nadr al-Mazny) ← عبيد الله بن عبد الله بن عتبة بن مسعود ('Ubaydullah bin 'Abdullah bin 'Utba) ← طلحة (Talha ibn 'Ubaidullah)"
   },
   {
     "id": "malik-1897",
@@ -27800,7 +28402,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1897,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57670",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← القاسم بن محمد (al-Qasim ibn Muhammad) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1898",
@@ -27813,7 +28417,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1898,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57678",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن عبد الله بن عبد الرحمن بن أبي صعصعة ← سليمان بن يسار (Sulayman ibn Yasar)"
   },
   {
     "id": "malik-1899",
@@ -27826,7 +28432,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1899,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57676",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← أبو أمامة بن سهل بن حنيف ← عبد الله بن عباس (ibn Abbas) ← خالد بن الوليد بن المغيرة (Khalid bin al-Walid)"
   },
   {
     "id": "malik-1900",
@@ -27839,7 +28447,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1900,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1901",
@@ -27852,7 +28462,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1901,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57675",
+    "chain": "مالك (Imam Maalik) ← يزيد بن خصيفة ← السائب بن يزيد (al-Sa'ib bin Yazid bin Akht Namr) ← سفيان بن أبي زهير (Sufyan bin Abi Zuhyr)"
   },
   {
     "id": "malik-1902",
@@ -27865,7 +28477,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1902,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1903",
@@ -27878,7 +28492,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1903,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1904",
@@ -27891,7 +28507,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1904,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57487",
+    "chain": "مالك (Imam Maalik) ← أبي الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبي هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1905",
@@ -27904,7 +28522,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1905,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57681",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن عبد الله بن عبد الرحمن بن أبي صعصعة ← عبد الله بن عبد الرحمن بن أبي صعصعة ('Abdullah bin 'Abdur Rahman b. Abi Sa'sa) ← أبو سعيد الخدري (Abu Sa'id al-Khudri)"
   },
   {
     "id": "malik-1906",
@@ -27917,7 +28537,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1906,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57641",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← ابن عمر (ibn Umar)"
   },
   {
     "id": "malik-1907",
@@ -27930,7 +28552,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1907,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1908",
@@ -27943,7 +28567,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1908,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57641",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← ابن عمر (ibn Umar)"
   },
   {
     "id": "malik-1909",
@@ -27956,7 +28582,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1909,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57680",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عبيد الله بن عبد الله بن عتبة بن مسعود ('Ubaydullah bin 'Abdullah bin 'Utba) ← عبد الله بن عباس (ibn Abbas) ← ميمونة (Maymuna bint al-Harith)"
   },
   {
     "id": "malik-1910",
@@ -27969,7 +28597,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1910,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57679",
+    "chain": "مالك (Imam Maalik) ← أبي حازم بن دينار ← سهل بن سعد الساعدي (Sahl bin Sa'd bin Malik)"
   },
   {
     "id": "malik-1911",
@@ -27982,7 +28612,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1911,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57683",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← حمزة (Hamza ibn 'Abd al-Muttalib) ← سالم (Salim Mawla Abu Hudhayfah) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1912",
@@ -27995,7 +28627,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1912,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-1913",
@@ -28008,7 +28642,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1913,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57459",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y)"
   },
   {
     "id": "malik-1914",
@@ -28021,7 +28657,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1914,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57623",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1915",
@@ -28034,7 +28672,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1915,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57544",
+    "chain": "مالك (Imam Maalik) ← حميد الطويل (Hameed bin Abi Hameed) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1916",
@@ -28047,7 +28687,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1916,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1917",
@@ -28060,7 +28702,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1917,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57682",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← ابن محيصة الأنصاري"
   },
   {
     "id": "malik-1918",
@@ -28073,7 +28717,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1918,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1919",
@@ -28086,7 +28732,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1919,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57685",
+    "chain": "مالك (Imam Maalik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1920",
@@ -28099,7 +28747,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1920,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57684",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← أبو لبابة (Abu Lubaba bin 'Abdul Mundhir)"
   },
   {
     "id": "malik-1921",
@@ -28112,7 +28762,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1921,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57691",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← سائبة (Sa'ibh Mwlah Rswl al-Lh Sla al-Lh)"
   },
   {
     "id": "malik-1922",
@@ -28125,7 +28777,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1922,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57686",
+    "chain": "مالك (Imam Maalik) ← صيفي مولى ابن أفلح ← أبي (Abu Shykh bin Hmar al-Hna'iy) ← أبي سعيد الخدري (Abu Sa'id al-Khudri)"
   },
   {
     "id": "malik-1923",
@@ -28138,7 +28792,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1923,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1924",
@@ -28151,7 +28807,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1924,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57692",
+    "chain": "مالك (Imam Maalik) ← الثقة ← يعقوب بن عبد الله بن الأشج ← بسر بن سعيد (Basr bin Sa'id al-Madni) ← سعد بن أبي وقاص (Sa'd ibn Abi Waqqas) ← خولة بنت حكيم (Khawlah bint Hakim)"
   },
   {
     "id": "malik-1925",
@@ -28164,7 +28822,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1925,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57693",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن حرملة ('Abdur Rahman bin Harmala) ← عمرو بن شعيب ('Amr bin Shu'aib bin Muhammad) ← أبيه ← جده"
   },
   {
     "id": "malik-1926",
@@ -28177,7 +28837,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1926,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57688",
+    "chain": "مالك (Imam Maalik) ← عبد الرحمن بن حرملة ('Abdur Rahman bin Harmala) ← سعيد بن المسيب (Sa'id ibn al-Musayyib)"
   },
   {
     "id": "malik-1927",
@@ -28190,7 +28852,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1927,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57687",
+    "chain": "مالك (Imam Maalik) ← سعيد بن أبي سعيد المقبري (Kaysan Abu Sa'id al-Muqbari) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1928",
@@ -28203,7 +28867,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1928,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57689",
+    "chain": "مالك (Imam Maalik) ← أبو عبيد (Abu 'Ubaid bin Mas'ud  al-Thaqafi) ← خالد بن معدان (Khalid bin Ma'dan)"
   },
   {
     "id": "malik-1929",
@@ -28216,7 +28882,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1929,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57690",
+    "chain": "مالك (Imam Maalik) ← سمي ← أبو صالح (Abu Salah al-Ash'ry) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1930",
@@ -28229,7 +28897,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1930,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57696",
+    "chain": "مالك (Imam Maalik) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1931",
@@ -28242,7 +28912,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1931,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57685",
+    "chain": "مالك (Imam Maalik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1932",
@@ -28255,7 +28927,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1932,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57695",
+    "chain": "مالك (Imam Maalik) ← مالك (Imam Maalik) ← أبيه ← عثمان بن عفان ('Uthman ibn 'Affaan)"
   },
   {
     "id": "malik-1933",
@@ -28268,7 +28942,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1933,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1934",
@@ -28281,7 +28957,9 @@
     "bookId": 7,
     "chapterId": 54,
     "hadithNumber": 1934,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57685",
+    "chain": "مالك (Imam Maalik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1935",
@@ -28294,7 +28972,9 @@
     "bookId": 7,
     "chapterId": 55,
     "hadithNumber": 1935,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1936",
@@ -28307,7 +28987,9 @@
     "bookId": 7,
     "chapterId": 55,
     "hadithNumber": 1936,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57694",
+    "chain": "مالك (Imam Maalik) ← محمد بن المنكدر (Muhammad bin al-Munkdar bin 'Abdullah) ← أميمة بنت رقيقة (Umayma bint Ruqayqa)"
   },
   {
     "id": "malik-1937",
@@ -28320,7 +29002,9 @@
     "bookId": 7,
     "chapterId": 55,
     "hadithNumber": 1937,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1938",
@@ -28333,7 +29017,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1938,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1939",
@@ -28346,7 +29032,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1939,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57649",
+    "chain": "مالك (Imam Maalik) ← سهيل بن أبي صالح (Suhayl bin Abi Salah) ← أبو صالح (Abu Salah al-Ash'ry) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1940",
@@ -28359,7 +29047,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1940,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c1",
+    "chain": "مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1941",
@@ -28372,7 +29062,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1941,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57697",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← عيسى ('Isa bin 'Abdullah al-Sbahy)"
   },
   {
     "id": "malik-1942",
@@ -28385,7 +29077,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1942,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57698",
+    "chain": "مالك (Imam Maalik) ← محمد بن عمرو بن علقمة (Muhammad bin 'Amr bin 'Alqama) ← عمرو بن علقمة ('Amr bin 'Alqama bin Waqqas) ← بلال بن الحارث المزني (Bilal bin al-Harith al-Mazni)"
   },
   {
     "id": "malik-1943",
@@ -28398,7 +29092,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1943,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57699",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← أبو صالح السمان ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1944",
@@ -28411,7 +29107,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1944,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57700",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1945",
@@ -28424,7 +29122,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1945,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57701",
+    "chain": "مالك (Imam Maalik) ← عيسى ('Isa bin 'Abdullah al-Sbahy)"
   },
   {
     "id": "malik-1946",
@@ -28437,7 +29137,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1946,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57505",
+    "chain": "مالك (Imam Maalik) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1947",
@@ -28450,7 +29152,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1947,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57702",
+    "chain": "مالك (Imam Maalik) ← الوليد بن عبد الله بن صياد (al-Walid bin 'Abdullah bin Syad) ← المطلب بن عبد الله بن حنطب المخزومي ← رجل"
   },
   {
     "id": "malik-1948",
@@ -28463,7 +29167,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1948,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57635",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar)"
   },
   {
     "id": "malik-1949",
@@ -28476,7 +29182,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1949,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57455",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← أسلم (Abu Rafi') ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1950",
@@ -28489,7 +29197,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1950,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57511",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن دينار ('Abdullah bin Dinar) ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1951",
@@ -28502,7 +29212,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1951,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1952",
@@ -28515,7 +29227,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1952,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57703",
+    "chain": "مالك (Imam Maalik) ← صفوان بن سليم (Safwan bin Slym al-Madni) ← رجل"
   },
   {
     "id": "malik-1953",
@@ -28528,7 +29242,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1953,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57595",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن مسعود (ibn Mas'ud)"
   },
   {
     "id": "malik-1954",
@@ -28541,7 +29257,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1954,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57704",
+    "chain": "مالك (Imam Maalik) ← لقمان (Lqman bin 'Amir al-Wsaby)"
   },
   {
     "id": "malik-1955",
@@ -28554,7 +29272,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1955,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57595",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن مسعود (ibn Mas'ud)"
   },
   {
     "id": "malik-1956",
@@ -28567,7 +29287,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1956,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57652",
+    "chain": "مالك (Imam Maalik) ← صفوان بن سليم (Safwan bin Slym al-Madni)"
   },
   {
     "id": "malik-1957",
@@ -28580,7 +29302,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1957,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57649",
+    "chain": "مالك (Imam Maalik) ← سهيل بن أبي صالح (Suhayl bin Abi Salah) ← أبو صالح (Abu Salah al-Ash'ry) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1958",
@@ -28593,7 +29317,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1958,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c1",
+    "chain": "مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1959",
@@ -28606,7 +29332,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1959,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57579",
+    "chain": "مالك (Imam Maalik) ← أم سلمة (Umm Salamah)"
   },
   {
     "id": "malik-1960",
@@ -28619,7 +29347,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1960,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57705",
+    "chain": "مالك (Imam Maalik) ← إسماعيل بن أبي حكيم (Isma'il bin Abi Hkym) ← عمر بن عبد العزيز ('Umar bin ‘Abdul-‘Aziz)"
   },
   {
     "id": "malik-1961",
@@ -28632,7 +29362,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1961,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57664",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1962",
@@ -28645,7 +29377,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1962,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57538",
+    "chain": "مالك (Imam Maalik) ← القاسم بن محمد (al-Qasim ibn Muhammad)"
   },
   {
     "id": "malik-1963",
@@ -28658,7 +29392,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1963,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57706",
+    "chain": "مالك (Imam Maalik) ← عامر بن عبد الله بن الزبير ('Amir bin 'Abdullah)"
   },
   {
     "id": "malik-1964",
@@ -28671,7 +29407,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1964,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57636",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عروة بن الزبير ('Urwa ibn al-Zubayr) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1965",
@@ -28684,7 +29422,9 @@
     "bookId": 7,
     "chapterId": 56,
     "hadithNumber": 1965,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57487",
+    "chain": "مالك (Imam Maalik) ← أبي الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبي هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1966",
@@ -28697,7 +29437,9 @@
     "bookId": 7,
     "chapterId": 57,
     "hadithNumber": 1966,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c1",
+    "chain": "مالك (Imam Maalik) ← أبو الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1967",
@@ -28710,7 +29452,9 @@
     "bookId": 7,
     "chapterId": 57,
     "hadithNumber": 1967,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57707",
+    "chain": "مالك (Imam Maalik) ← مالك (Imam Maalik) ← أبيه ← أبو هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1968",
@@ -28723,7 +29467,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1968,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57708",
+    "chain": "مالك (Imam Maalik) ← يحيى بن سعيد (Yahya bin S'aid bin al-'As Tab'y) ← سعيد بن يسار (Sa'id bin Yasar, Abu al-Hubab)"
   },
   {
     "id": "malik-1969",
@@ -28736,7 +29482,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1969,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57557",
+    "chain": "مالك (Imam Maalik) ← إسحاق بن عبد الله بن أبي طلحة (Ishaq bin 'Abdullah bin Abi Talha) ← أنس بن مالك (Anas bin Malik)"
   },
   {
     "id": "malik-1970",
@@ -28749,7 +29497,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1970,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57449",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam)"
   },
   {
     "id": "malik-1971",
@@ -28762,7 +29512,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1971,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57709",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عمرو بن معاذ الأشهلي الأنصاري ← جدته"
   },
   {
     "id": "malik-1972",
@@ -28775,7 +29527,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1972,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57505",
+    "chain": "مالك (Imam Maalik) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1973",
@@ -28788,7 +29542,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1973,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57505",
+    "chain": "مالك (Imam Maalik) ← عائشة ('Aisha bint Abi Bakr)"
   },
   {
     "id": "malik-1974",
@@ -28801,7 +29557,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1974,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57710",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← عطاء بن يزيد الليثي (Ata'a bin Yazid al-Laithi al-Junda'i) ← أبو سعيد الخدري (Abu Sa'id al-Khudri)"
   },
   {
     "id": "malik-1975",
@@ -28814,7 +29572,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1975,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c3",
+    "chain": "مالك (Imam Maalik) ← نافع (Nafie') ← عبد الله بن عمر (ibn Umar)"
   },
   {
     "id": "malik-1976",
@@ -28827,7 +29587,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1976,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57635",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar)"
   },
   {
     "id": "malik-1977",
@@ -28840,7 +29602,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1977,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57487",
+    "chain": "مالك (Imam Maalik) ← أبي الزناد (Abu al-Zanad) ← الأعرج ('Abdur Rahman bin Harmaz al-A'araj) ← أبي هريرة (Abu Hurairah)"
   },
   {
     "id": "malik-1978",
@@ -28853,7 +29617,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1978,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57711",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← عطاء بن يسار ('Ata ibn Yasar) ← رجل"
   },
   {
     "id": "malik-1979",
@@ -28866,7 +29632,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1979,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57712",
+    "chain": "مالك (Imam Maalik) ← العلاء بن عبد الرحمن (al-Ala' bin 'Abdur Rahman bin Ya'qub)"
   },
   {
     "id": "malik-1980",
@@ -28879,7 +29647,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1980,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1981",
@@ -28892,7 +29662,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1981,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57720",
+    "chain": "مالك (Imam Maalik) ← عبد الله بن أبي بكر ('Abdullah bin Abi Bakr) ← أبو بكر بن محمد بن عمرو بن حزم (Abu Bakr bin Muhammad bin 'Amr bin Hazm)"
   },
   {
     "id": "malik-1982",
@@ -28905,7 +29677,9 @@
     "bookId": 7,
     "chapterId": 58,
     "hadithNumber": 1982,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57713",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← أبيه ← عبد الله بن الأرقم ('Abdullah bin al-Arqam)"
   },
   {
     "id": "malik-1983",
@@ -28918,7 +29692,9 @@
     "bookId": 7,
     "chapterId": 59,
     "hadithNumber": 1983,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c8308",
+    "chain": "مالك (Imam Maalik)"
   },
   {
     "id": "malik-1984",
@@ -28931,7 +29707,9 @@
     "bookId": 7,
     "chapterId": 60,
     "hadithNumber": 1984,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57455",
+    "chain": "مالك (Imam Maalik) ← زيد بن أسلم (Zayd bin Aslam) ← أسلم (Abu Rafi') ← عمر بن الخطاب ('Umar ibn al-Khattab)"
   },
   {
     "id": "malik-1985",
@@ -28944,6 +29722,8 @@
     "bookId": 7,
     "chapterId": 61,
     "hadithNumber": 1985,
-    "narrator": ""
+    "narrator": "",
+    "chainId": "c57714",
+    "chain": "مالك (Imam Maalik) ← ابن شهاب (al-Zuhri) ← محمد بن جبير بن مطعم (Muhammad bin Jubayr bin Mut'im)"
   }
 ]
