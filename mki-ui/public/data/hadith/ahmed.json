@@ -1600,9 +1600,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 107,
-    "narrator": "Abdullah bin 'Umar narrated that 'Umar bin al-Khattab said:",
-    "chainId": "c57716",
-    "chain": "بشر بن شعيب بن أبي حمزة (Bashr bin Shu'aib bin Abi Hamza) ← شعيب بن أبي حمزة (Shu'aib bin Abi Hamza) ← الزهري (al-Zuhri) ← سالم بن عبد الله (Salm bin 'Abdullah al-Mharby) ← عبد الله بن عمر (ibn Umar) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
+    "narrator": "Abdullah bin 'Umar narrated that 'Umar bin al-Khattab said:"
   },
   {
     "id": "ahmed-108",
@@ -1615,9 +1613,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 108,
-    "narrator": "",
-    "chainId": "c50273",
-    "chain": "أبو اليمان (Abu al-Yaman al-Rahal al-Madni) ← أبو بكر بن عبد الله (Abu Bakr bin 'Abdullah bin Abi al-Jahm) ← راشد بن سعد (Rashid bin Sa'd) ← عمر بن الخطاب ('Umar ibn al-Khattab) ← حذيفة بن اليمان (Hudhayfah ibn al-Yaman)"
+    "narrator": ""
   },
   {
     "id": "ahmed-109",
@@ -2170,9 +2166,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 145,
-    "narrator": "",
-    "chainId": "c57715",
-    "chain": "يحيى بن غيلان (Yahya bin Ghylan) ← رشدين بن سعد (Rashidayn bin Sa'd al-Mahri al-Qayni) ← أبو عبد الله الغافقي ← زيد بن أسلم (Zayd bin Aslam) ← أبيه ← عمر بن الخطاب ('Umar ibn al-Khattab)"
+    "narrator": ""
   },
   {
     "id": "ahmed-146",
@@ -2740,9 +2734,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 183,
-    "narrator": "It was narrated from Abu Umamah bin Sahl bin Hunaif that a man shot an arrow at another man and killed him, and he had no heir except a maternal uncle. Abu 'Ubaidah bin al-Jarrah wrote to ‘Umar concerning that and he wrote back saying that the Prophet ﷺ said:",
-    "chainId": "c57717",
-    "chain": "وكيع (Waki' bin al-Jarrah) ← سفيان (Sufyan bin Sa‘id Ath-Thawri) ← عبد الرحمن بن الحارث بن عياش بن أبي ربيعة ← حكيم بن حكيم بن عباد بن حنيف (Hakeem bin Hakeem bin 'Aabad) ← أبي أمامة بن سهل بن حنيف"
+    "narrator": "It was narrated from Abu Umamah bin Sahl bin Hunaif that a man shot an arrow at another man and killed him, and he had no heir except a maternal uncle. Abu 'Ubaidah bin al-Jarrah wrote to ‘Umar concerning that and he wrote back saying that the Prophet ﷺ said:"
   },
   {
     "id": "ahmed-184",
@@ -2785,9 +2777,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 186,
-    "narrator": "It was narrated from 'Asim bin 'Umar that his father said:",
-    "chainId": "c57718",
-    "chain": "وكيع (Waki' bin al-Jarrah) ← هشام بن عروة (Hisham bin 'Urwa) ← عروة ('Urwa ibn al-Zubayr) ← عاصم بن عمر ('Asim bin 'Umar) ← عمر ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated from 'Asim bin 'Umar that his father said:"
   },
   {
     "id": "ahmed-187",
@@ -2800,9 +2790,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 187,
-    "narrator": "It was narrated that ‘Abdur-Rahman bin Abi Laila said:",
-    "chainId": "c50353",
-    "chain": "يزيد (Yazid bin Abi Sufyan) ← إسرائيل بن يونس (Isra'il bin Yonus bin Abi Ishaq) ← عبد الأعلى الثعلبي ← عبد الرحمن بن أبي ليلى ('Abdur Rahman bin Abi Layla) ← عمر ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated that ‘Abdur-Rahman bin Abi Laila said:"
   },
   {
     "id": "ahmed-188",
@@ -2815,9 +2803,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 188,
-    "narrator": "It was narrated from Jabir bin 'Abdullah that 'Umar bin al-Khattab رضي الله عنه said:",
-    "chainId": "c57723",
-    "chain": "محمد بن جعفر (Muhammad bin Ja'far Ghandar) ← سعيد (Sa'id bin Zayd) ← قتادة (Qatada) ← سليمان (Sulaiman bin Sard) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
+    "narrator": "It was narrated from Jabir bin 'Abdullah that 'Umar bin al-Khattab رضي الله عنه said:"
   },
   {
     "id": "ahmed-189",
@@ -3190,9 +3176,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 213,
-    "narrator": "It was narrated from Jabir bin 'Abdullah that 'Umar bin al Khattab said:",
-    "chainId": "c57726",
-    "chain": "روح (Ruh bin 'Ubada bin al-'Ala') ← سفيان الثوري (Sufyan bin Sa‘id Ath-Thawri) ← أبو الزبير (Abu al-Zubair Mu'dhn Byt al-Mqds) ← جابر بن عبد الله (Jabir ibn 'Abdullah)"
+    "narrator": "It was narrated from Jabir bin 'Abdullah that 'Umar bin al Khattab said:"
   },
   {
     "id": "ahmed-214",
@@ -3820,9 +3804,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 255,
-    "narrator": "It was narrated that Qaza`ah said:",
-    "chainId": "c57722",
-    "chain": "عفان (Afan bin Habib Mdhkwr) ← همام (Humam bin 'Urwah al-Thaqafi) ← قتادة (Qatada) ← قزعة (Qaz'a bin Yahya) ← ابن عمر (ibn Umar) ← عمر ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated that Qaza`ah said:"
   },
   {
     "id": "ahmed-256",
@@ -4195,9 +4177,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 280,
-    "narrator": "It was narrated that `Amr bin Maimoon said:",
-    "chainId": "c57719",
-    "chain": "عبد الرزاق ('Abdur-Razzaq) ← الثوري (Sufyan bin Sa‘id Ath-Thawri) ← أبو إسحاق (Abu Ishaq al-Sabay'ai') ← عمرو بن ميمون ('Amr bin Maymun al-Aw'di) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated that `Amr bin Maimoon said:"
   },
   {
     "id": "ahmed-281",
@@ -4825,9 +4805,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 322,
-    "narrator": "It was narrated that Ibn `Abbas said:",
-    "chainId": "c57721",
-    "chain": "سفيان (Sufyan bin Sa‘id Ath-Thawri) ← يحيى ابن سعيد ← عبيد بن حنين ('Ubaid bin Hnyn) ← ابن عباس (ibn Abbas)"
+    "narrator": "It was narrated that Ibn `Abbas said:"
   },
   {
     "id": "ahmed-323",
@@ -4975,9 +4953,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 332,
-    "narrator": "It was narrated from Ibn al Musayyab that `Umar (رضي الله عنه) said:",
-    "chainId": "c50490",
-    "chain": "إسماعيل (Isma'il bin S'aid bin Ubaid bin Asyd) ← ابن أبي عروبة ← قتادة (Qatada) ← ابن المسيب (Sa'id ibn al-Musayyib) ← عمر ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated from Ibn al Musayyab that `Umar (رضي الله عنه) said:"
   },
   {
     "id": "ahmed-333",
@@ -5005,9 +4981,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 334,
-    "narrator": "it was narrated that `AbdurRahman bin `Awf said:",
-    "chainId": "c57727",
-    "chain": "محمد بن جعفر (Muhammad bin Ja'far Ghandar) ← شعبة (Shu'bah bin al-Hajjaj) ← سعد بن إبراهيم (Sa'd bin Ibrahim) ← عبيد الله بن عبد الله بن عتبة ('Ubaydullah bin 'Abdullah bin 'Utba) ← ابن عباس (ibn Abbas) ← عبد الرحمن بن عوف ('Abdur Rahman Ibn 'Awf)"
+    "narrator": "it was narrated that `AbdurRahman bin `Awf said:"
   },
   {
     "id": "ahmed-335",
@@ -5020,9 +4994,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 335,
-    "narrator": "It was narrated that Simak bin Harb said:",
-    "chainId": "c57732",
-    "chain": "محمد بن جعفر (Muhammad bin Ja'far Ghandar) ← شعبة (Shu'bah bin al-Hajjaj) ← سماك بن حرب (Smak bin Hrb bin Aws) ← النعمان بن بشير (al-Nu'man bin Bashir ibn Sa'd) ← عمر ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated that Simak bin Harb said:"
   },
   {
     "id": "ahmed-336",
@@ -5035,9 +5007,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 336,
-    "narrator": "It was narrated from Ibn ‘Umar, from his father, that the Prophet  said:",
-    "chainId": "c57733",
-    "chain": "محمد بن جعفر (Muhammad bin Ja'far Ghandar) ← شعبة (Shu'bah bin al-Hajjaj) ← قتادة (Qatada) ← سعيد بن المسيب (Sa'id ibn al-Musayyib) ← ابن عمر (ibn Umar) ← عمر بن الخطاب ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated from Ibn ‘Umar, from his father, that the Prophet  said:"
   },
   {
     "id": "ahmed-337",
@@ -5245,9 +5215,7 @@
     "bookId": 8,
     "chapterId": 2,
     "hadithNumber": 350,
-    "narrator": "It was narrated that Ibn as Sa`idi al-Maliki said:",
-    "chainId": "c50507",
-    "chain": "حجاج (al-Hajjaj bin Malik al-Aslami) ← ليث ← بكير بن عبد الله (Bkyr bin 'Abdullah) ← بسر بن سعيد (Basr bin Sa'id al-Madni) ← ابن الساعدي المالكي ← عمر بن الخطاب ('Umar ibn al-Khattab)"
+    "narrator": "It was narrated that Ibn as Sa`idi al-Maliki said:"
   },
   {
     "id": "ahmed-351",
@@ -6115,9 +6083,7 @@
     "bookId": 8,
     "chapterId": 4,
     "hadithNumber": 408,
-    "narrator": "It was narrated that `Uthman bin `Affan (رضي الله عنه) said:",
-    "chainId": "c57724",
-    "chain": "عبد الكبير بن عبد المجيد أبو بكر الحنفي ← عبد الحميد بن جعفر ('Abdul Hameed bin Ja'far) ← جعفر (Ja'far ibn Abi Talib) ← محمود بن لبيد (Mahmud bin Labid bin 'Uqba) ← عثمان بن عفان ('Uthman ibn 'Affaan)"
+    "narrator": "It was narrated that `Uthman bin `Affan (رضي الله عنه) said:"
   },
   {
     "id": "ahmed-409",
@@ -6130,9 +6096,7 @@
     "bookId": 8,
     "chapterId": 4,
     "hadithNumber": 409,
-    "narrator": "It was narrated that Abu ‘Ubaid, the freed slave of ‘AbdurRahman bin Azhar, said:",
-    "chainId": "c57729",
-    "chain": "عثمان بن عمر ('Uthman bin 'Umar bin Fars) ← ابن أبي ذئب (Muhammad bin 'Abdur Rahman b. Abi Dh'ab) ← سعيد بن خالد بن عبد الله بن قارظ (Sa'id bin Khalid bin 'Abdullah bin Qariz) ← عبد الرحمن ('Abdur Rahman bin Sakran bin 'Amr) ← علي (Ali ibn Abi Talib) ← عثمان ('Uthman ibn 'Affaan)"
+    "narrator": "It was narrated that Abu ‘Ubaid, the freed slave of ‘AbdurRahman bin Azhar, said:"
   },
   {
     "id": "ahmed-410",
@@ -6145,9 +6109,7 @@
     "bookId": 8,
     "chapterId": 4,
     "hadithNumber": 410,
-    "narrator": "It was narrated that Muhammad bin ‘Abdullah bin Abi Maryam said:",
-    "chainId": "c57725",
-    "chain": "صفوان بن عيسى (Safwan bin 'Isa al-Zhry) ← محمد بن عبد الله بن أبي مريم (Muhammad bin 'Abdullah bin Aba) ← عثمان ('Uthman ibn 'Affaan) ← عثمان ('Uthman ibn 'Affaan)"
+    "narrator": "It was narrated that Muhammad bin ‘Abdullah bin Abi Maryam said:"
   },
   {
     "id": "ahmed-411",
@@ -7480,9 +7442,7 @@
     "bookId": 8,
     "chapterId": 4,
     "hadithNumber": 499,
-    "narrator": "It was narrated from Ibraheem` bin `Abdullah bin Farrookh that his father said:",
-    "chainId": "c57735",
-    "chain": "عبد الله ('Abdullah bin Abi Salah al-Saman) ← سريج بن يونس (Sryj bin Yonus bin Ibrahim) ← محبوب بن محرز (Mhbwb bin Mhrz al-Tmymy) ← إبراهيم بن عبد الله بن فروخ ← عبد الله بن فروخ ('Abdullah bin Frwkh) ← عثمان بن عفان ('Uthman ibn 'Affaan)"
+    "narrator": "It was narrated from Ibraheem` bin `Abdullah bin Farrookh that his father said:"
   },
   {
     "id": "ahmed-500",
@@ -7495,9 +7455,7 @@
     "bookId": 8,
     "chapterId": 4,
     "hadithNumber": 500,
-    "narrator": "It was narrated from Mihjan the freed slave of `Uthman, that `Uthman  said:",
-    "chainId": "c57730",
-    "chain": "عبد الله ('Abdullah bin Abi Salah al-Saman) ← أبو يحيى البزاز محمد بن عبد الرحيم ← الحسن بن بشر بن سلم الكوفي ← العباس بن الفضل الأنصاري ← هشام بن زياد القرشي ← هشام (Hisham bin 'Urwa) ← عثمان ('Uthman ibn 'Affaan) ← عثمان ('Uthman ibn 'Affaan)"
+    "narrator": "It was narrated from Mihjan the freed slave of `Uthman, that `Uthman  said:"
   },
   {
     "id": "ahmed-501",
@@ -8155,9 +8113,7 @@
     "bookId": 8,
     "chapterId": 5,
     "hadithNumber": 544,
-    "narrator": "It was narrated that ‘Abdullah bin Zurair said:",
-    "chainId": "c57740",
-    "chain": "حسن ← ابن لهيعة ('Abdullah bin lahya'a bin 'Uqba) ← عبد الله بن هبيرة ('Abdullah bin Hbyrh) ← عبد الله بن زرير ('Abdullah bin Zryr) ← علي بن أبي طالب (Ali ibn Abi Talib)"
+    "narrator": "It was narrated that ‘Abdullah bin Zurair said:"
   },
   {
     "id": "ahmed-545",

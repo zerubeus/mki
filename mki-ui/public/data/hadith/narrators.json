@@ -164457,5 +164457,110 @@
     "generation": "atba_tabieen",
     "grade": "ثقة",
     "deathYear": 143
+  },
+  {
+    "id": 20117,
+    "nameAr": "وراد",
+    "nameEn": "Warrad",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20118,
+    "nameAr": "برید",
+    "nameEn": "Burayd",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20119,
+    "nameAr": "عبدالله",
+    "nameEn": "Abdullah",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20120,
+    "nameAr": "الزهری",
+    "nameEn": "Al-Zuhri",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20121,
+    "nameAr": "اسرائیل",
+    "nameEn": "Israel",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20122,
+    "nameAr": "سفیان",
+    "nameEn": "Sufyan",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20123,
+    "nameAr": "الاصمعي",
+    "nameEn": "Al-Asma'i",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20124,
+    "nameAr": "ابن عدس",
+    "nameEn": "Ibn 'Uddus",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20125,
+    "nameAr": "حبیب",
+    "nameEn": "Habib",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20126,
+    "nameAr": "بنت النبي",
+    "nameEn": "Bint al-Nabi",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20127,
+    "nameAr": "والدتي",
+    "nameEn": "Walidati",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20128,
+    "nameAr": "مجهول",
+    "nameEn": "Unknown narrator",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20129,
+    "nameAr": "عمن سمع",
+    "nameEn": "From someone who heard",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20130,
+    "nameAr": "بدیل",
+    "nameEn": "Budayl",
+    "status": "unknown",
+    "generation": "unknown"
+  },
+  {
+    "id": 20131,
+    "nameAr": "طاووس",
+    "nameEn": "Tawus",
+    "status": "unknown",
+    "generation": "unknown"
   }
 ]
