@@ -3,10 +3,38 @@ import { getDir, getTranslations } from '../i18n/utils';
 import type { Locale } from '../i18n/translations';
 import '../styles/global.css'; // Import Tailwind global styles
 
+// SEO Props interface
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	type?: 'website' | 'article';
+	noindex?: boolean;
+}
+
 // Use Astro's currentLocale which is automatically available
 const locale = Astro.currentLocale as Locale || 'ar';
 const t = getTranslations(locale);
 const dir = getDir(locale);
+
+// Get SEO props with defaults
+const {
+	title = `${t.title} - ${t.subtitle}`,
+	description = locale === 'ar'
+		? 'موقع معرفة إسلامية شامل يضم الأحاديث النبوية والسيرة والعقيدة والتاريخ الإسلامي'
+		: 'Comprehensive Islamic knowledge website featuring Hadith, Seerah, Aqeedah and Islamic history',
+	image = '/favicon.svg',
+	type = 'website',
+	noindex = false
+} = Astro.props;
+
+// Build canonical URL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Build alternate language URLs for hreflang
+const currentPath = Astro.url.pathname;
+const arURL = new URL(currentPath.replace(/^\/en/, ''), Astro.site);
+const enURL = new URL(currentPath.startsWith('/en') ? currentPath : `/en${currentPath}`, Astro.site);
 ---
 
 <!doctype html>
@@ -16,13 +44,45 @@ const dir = getDir(locale);
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{t.title} - {t.subtitle}</title>
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+		<!-- Canonical & Hreflang -->
+		<link rel="canonical" href={canonicalURL} />
+		<link rel="alternate" hreflang="ar" href={arURL} />
+		<link rel="alternate" hreflang="en" href={enURL} />
+		<link rel="alternate" hreflang="x-default" href={arURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.site)} />
+		<meta property="og:locale" content={locale === 'ar' ? 'ar_SA' : 'en_US'} />
+		<meta property="og:site_name" content="MustKnowIslam" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 		<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 		<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap" rel="stylesheet">
+
+		<!-- JSON-LD Schema slot -->
+		<slot name="schema" />
 	</head>
 	<body class="min-h-screen w-full m-0 p-0 font-['Cairo'] text-white bg-[#0f1319] relative">
 		<slot />

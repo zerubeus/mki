@@ -1,0 +1,60 @@
+---
+/**
+ * JSON-LD Structured Data for Hadith pages
+ * Helps Google understand and display rich snippets
+ */
+
+import type { CsvHadith } from '../types';
+
+interface Props {
+  hadith: CsvHadith;
+  locale: 'ar' | 'en';
+}
+
+const { hadith, locale } = Astro.props;
+
+// Clean source name for display
+const sourceName = hadith.source.trim();
+
+// Build the schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": locale === 'ar'
+    ? `${sourceName} - حديث رقم ${hadith.hadithNo}`
+    : `${sourceName} - Hadith ${hadith.hadithNo}`,
+  "description": locale === 'ar'
+    ? hadith.textAr.substring(0, 160)
+    : hadith.textEn.substring(0, 160),
+  "inLanguage": locale,
+  "author": {
+    "@type": "Organization",
+    "name": sourceName
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MustKnowIslam",
+    "url": "https://mustknowislam.com"
+  },
+  "isPartOf": {
+    "@type": "Book",
+    "name": sourceName,
+    "author": {
+      "@type": "Person",
+      "name": sourceName.includes('Bukhari') ? 'Imam al-Bukhari'
+        : sourceName.includes('Muslim') ? 'Imam Muslim'
+        : sourceName.includes('Tirmidhi') ? 'Imam al-Tirmidhi'
+        : sourceName.includes('Dawud') ? 'Imam Abu Dawud'
+        : sourceName.includes("Nasa'i") ? "Imam al-Nasa'i"
+        : sourceName.includes('Majah') ? 'Imam Ibn Majah'
+        : 'Unknown'
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href
+  }
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

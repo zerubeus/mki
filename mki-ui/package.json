@@ -9,7 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.6.0",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "astro": "^5.8.0",
