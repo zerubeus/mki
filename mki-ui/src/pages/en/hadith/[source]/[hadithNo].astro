@@ -2,6 +2,9 @@
 /**
  * Dynamic Hadith Page - SSR (English)
  * URL: /en/hadith/bukhari/1, /en/hadith/muslim/123, etc.
+ *
+ * Server-renders SEO content and loads the full HadithDetailView
+ * with the existing design (flowchart, narrator details, etc.)
  */
 import Layout from '../../../../layouts/Layout.astro';
 import HadithSchema from '../../../../components/HadithSchema.astro';
@@ -28,7 +31,7 @@ if (isNaN(hadithNumber)) {
   return Astro.redirect('/en/404');
 }
 
-// Get locale - English for this route
+// English locale for this route
 const currentLocale: Locale = 'en';
 const t = getTranslations(currentLocale);
 
@@ -59,42 +62,37 @@ const description = generateHadithDescription(hadith, currentLocale);
 >
   <HadithSchema slot="schema" hadith={hadith} locale={currentLocale} />
 
-  <!-- Server-rendered hadith content for SEO -->
-  <article class="max-w-4xl mx-auto p-4">
-    <header class="mb-6">
-      <h1 class="text-2xl font-bold mb-2">
+  <!-- Server-rendered content for SEO (hidden when JS loads) -->
+  <noscript>
+    <article class="max-w-4xl mx-auto p-4" dir="ltr" lang="en">
+      <h1 class="text-2xl font-bold mb-4">
         {hadith.source.trim()} - Hadith {hadith.hadithNo}
       </h1>
-      <p class="text-gray-400">
-        Chapter: {hadith.chapter}
-      </p>
-    </header>
+      <p class="text-gray-400 mb-4">Chapter: {hadith.chapter}</p>
+      <div class="p-4 bg-gray-800/50 rounded-lg mb-4">
+        <h2 class="text-lg font-semibold mb-2">English Translation</h2>
+        <p class="text-lg leading-relaxed">{hadith.textEn}</p>
+      </div>
+      <div class="p-4 bg-gray-800/50 rounded-lg" dir="rtl" lang="ar">
+        <h2 class="text-lg font-semibold mb-2">Arabic Text</h2>
+        <p class="text-lg leading-relaxed">{hadith.textAr}</p>
+      </div>
+    </article>
+  </noscript>
 
-    <!-- English Translation -->
-    <section class="mb-6 p-4 bg-gray-800/50 rounded-lg" dir="ltr" lang="en">
-      <h2 class="text-lg font-semibold mb-2">English Translation</h2>
-      <p class="text-lg leading-relaxed">
-        {hadith.textEn}
-      </p>
-    </section>
+  <!-- Hidden SEO content for crawlers (invisible to users, visible to search engines) -->
+  <div class="sr-only" aria-hidden="true">
+    <h1>{hadith.source.trim()} - Hadith {hadith.hadithNo}</h1>
+    <p>Chapter: {hadith.chapter}</p>
+    <p>{hadith.textEn}</p>
+    <p>{hadith.textAr}</p>
+  </div>
 
-    <!-- Arabic Text -->
-    <section class="mb-6 p-4 bg-gray-800/50 rounded-lg" dir="rtl" lang="ar">
-      <h2 class="text-lg font-semibold mb-2 text-right">Arabic Text</h2>
-      <p class="text-lg leading-relaxed font-['Amiri_Quran'] text-right">
-        {hadith.textAr}
-      </p>
-    </section>
-
-    <!-- Interactive Isnad Visualization (client-side) -->
-    <section class="mt-8">
-      <h2 class="text-xl font-semibold mb-4">Chain of Narration (Isnad)</h2>
-      <HadithDetailView
-        client:load
-        locale={currentLocale}
-        t={t}
-        initialHadithId={hadith.id}
-      />
-    </section>
-  </article>
+  <!-- Full Interactive Hadith View with existing design -->
+  <HadithDetailView
+    client:load
+    locale={currentLocale}
+    t={t}
+    initialHadith={hadith}
+  />
 </Layout>

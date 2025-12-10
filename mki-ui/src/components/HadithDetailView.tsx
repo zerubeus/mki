@@ -12,6 +12,10 @@ import ExtendedNarratorDetails from "./ExtendedNarratorDetails";
 interface HadithDetailViewProps {
   locale: "ar" | "en";
   t: Record<string, string>;
+  /** Pre-loaded hadith data from SSR (for SEO-friendly URLs) */
+  initialHadith?: CsvHadith;
+  /** Hadith ID to load client-side (for query param URLs) */
+  initialHadithId?: string;
 }
 
 // Initialize mermaid
@@ -255,24 +259,40 @@ function SanadNotAvailable({ locale }: { locale: "ar" | "en" }) {
 export default function HadithDetailView({
   locale,
   t: _t,
+  initialHadith,
+  initialHadithId,
 }: HadithDetailViewProps) {
-  const [hadith, setHadith] = useState<CsvHadith | null>(null);
+  const [hadith, setHadith] = useState<CsvHadith | null>(initialHadith || null);
   const [resolvedSanad, setResolvedSanad] = useState<ExtendedNarrator[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!initialHadith);
   const [error, setError] = useState<string | null>(null);
   const [selectedNarratorIndex, setSelectedNarratorIndex] = useState<number | null>(null);
   const [selectedNarrator, setSelectedNarrator] = useState<ExtendedNarrator | null>(null);
 
   const isRTL = locale === "ar";
 
-  // Load hadith data
+  // Load hadith data (either from initialHadith, initialHadithId, or URL query param)
   useEffect(() => {
     const loadHadith = async () => {
+      // If we already have hadith from props, just resolve the chain
+      if (initialHadith) {
+        if (initialHadith.chainIndices.length > 0) {
+          try {
+            const chain = await resolveChain(initialHadith.chainIndices);
+            setResolvedSanad(chain);
+          } catch (err) {
+            console.error("Failed to resolve chain:", err);
+          }
+        }
+        setLoading(false);
+        return;
+      }
+
       setLoading(true);
       setError(null);
 
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get("id");
+      // Get ID from props or URL query param
+      const id = initialHadithId || new URLSearchParams(window.location.search).get("id");
 
       if (!id) {
         setError(locale === "ar" ? "معرف الحديث مفقود" : "Missing hadith identifier");
@@ -302,7 +322,7 @@ export default function HadithDetailView({
     };
 
     loadHadith();
-  }, [locale]);
+  }, [locale, initialHadith, initialHadithId]);
 
   // Handle narrator selection
   const handleNarratorClick = async (index: number) => {
