@@ -1,2 +1,3 @@
 mki-datasets/hadith-csv/sanadset.csv
 .env
+*.pyc
