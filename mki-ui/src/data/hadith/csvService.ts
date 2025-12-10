@@ -2,10 +2,14 @@
  * CSV-based Hadith Data Service
  *
  * Fetches and parses hadith and narrator data from CSV files at runtime.
+ * Data is hosted on Cloudflare R2 for efficient delivery.
  * Provides caching and helper functions for data access.
  */
 
 import { fetchAndParseCSV, parseIndices, parseName } from '../../utils/csvParser';
+
+// R2 bucket base URL for hadith data
+const R2_BASE_URL = 'https://r2.mustknowislam.com';
 import { mapGradeToStatus, mapGradeToGeneration } from '../../utils/gradeMapper';
 import type { CsvRawiRow, CsvHadithRow, ExtendedNarrator, CsvHadith } from '../../types';
 
@@ -78,7 +82,7 @@ function transformHadith(row: CsvHadithRow): CsvHadith {
 export async function loadNarrators(): Promise<Map<number, ExtendedNarrator>> {
   if (narratorsCache) return narratorsCache;
 
-  const result = await fetchAndParseCSV<CsvRawiRow>('/data/hadith-csv/all_rawis.csv');
+  const result = await fetchAndParseCSV<CsvRawiRow>(`${R2_BASE_URL}/data/hadith-csv/all_rawis.csv`);
 
   narratorsCache = new Map();
   for (const row of result.data) {
@@ -96,7 +100,7 @@ export async function loadNarrators(): Promise<Map<number, ExtendedNarrator>> {
 export async function loadHadiths(): Promise<CsvHadith[]> {
   if (hadithsCache) return hadithsCache;
 
-  const result = await fetchAndParseCSV<CsvHadithRow>('/data/hadith-csv/all_hadiths_clean.csv');
+  const result = await fetchAndParseCSV<CsvHadithRow>(`${R2_BASE_URL}/data/hadith-csv/all_hadiths_clean.csv`);
   hadithsCache = result.data.map(transformHadith);
 
   return hadithsCache;
