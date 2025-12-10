@@ -13,17 +13,7 @@ export default defineConfig({
     port: 4321
   },
   vite: {
-    plugins: [tailwindcss()],
-    server: {
-      host: '0.0.0.0',
-      port: 4321,
-      // Allow Replit preview domains
-      allowedHosts: ['.replit.dev'],
-      // Ensure HMR connects over HTTPS through Replit's proxy
-      hmr: {
-        clientPort: 443
-      }
-    }
+    plugins: [tailwindcss()]
   },
   i18n: {
     defaultLocale: 'ar',
