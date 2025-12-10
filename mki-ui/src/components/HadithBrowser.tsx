@@ -1,12 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 import {
   getHadithsPaginated,
-  fuzzySearchInBook,
-  fuzzySearchAllBooks,
-  bookInfo,
-  type BookKey,
-  type ImportedHadith,
-} from "../data/hadith/books";
+  searchHadiths,
+  getHadithSources,
+} from "../data/hadith/csvService";
+import type { CsvHadith } from "../types";
 
 interface HadithBrowserProps {
   locale: "ar" | "en";
@@ -24,30 +22,70 @@ function useDebounce<T>(value: T, delay: number): T {
   return debouncedValue;
 }
 
-// Extract book key from hadith id (e.g., "bukhari-1" -> "bukhari")
-function getBookFromId(id: string): string {
-  const lastDash = id.lastIndexOf("-");
-  if (lastDash === -1) return id;
-  return id.substring(0, lastDash);
+// Source info with Arabic names
+const sourceInfo: Record<string, { nameAr: string; nameEn: string }> = {
+  "Sahih Bukhari": { nameAr: "صحيح البخاري", nameEn: "Sahih Bukhari" },
+  "sahih bukhari": { nameAr: "صحيح البخاري", nameEn: "Sahih Bukhari" },
+  "Sahih Muslim": { nameAr: "صحيح مسلم", nameEn: "Sahih Muslim" },
+  "sahih muslim": { nameAr: "صحيح مسلم", nameEn: "Sahih Muslim" },
+  "Sunan Abu Dawud": { nameAr: "سنن أبي داود", nameEn: "Sunan Abu Dawud" },
+  "Jami at-Tirmidhi": { nameAr: "جامع الترمذي", nameEn: "Jami at-Tirmidhi" },
+  "Sunan an-Nasai": { nameAr: "سنن النسائي", nameEn: "Sunan an-Nasai" },
+  "Sunan Ibn Majah": { nameAr: "سنن ابن ماجه", nameEn: "Sunan Ibn Majah" },
+  "Muwatta Malik": { nameAr: "موطأ مالك", nameEn: "Muwatta Malik" },
+  "Musnad Ahmad": { nameAr: "مسند أحمد", nameEn: "Musnad Ahmad" },
+  "Sunan ad-Darimi": { nameAr: "سنن الدارمي", nameEn: "Sunan ad-Darimi" },
+};
+
+function getSourceDisplay(source: string, locale: "ar" | "en"): string {
+  const normalizedSource = source.trim();
+  const info = sourceInfo[normalizedSource] || sourceInfo[normalizedSource.toLowerCase()];
+  if (info) {
+    return locale === "ar" ? info.nameAr : info.nameEn;
+  }
+  return source;
 }
 
 export default function HadithBrowser({ locale }: HadithBrowserProps) {
-  const [selectedBook, setSelectedBook] = useState<BookKey | "all">("bukhari");
+  const [selectedSource, setSelectedSource] = useState<string | "all">("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [hadiths, setHadiths] = useState<ImportedHadith[]>([]);
+  const [hadiths, setHadiths] = useState<CsvHadith[]>([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
+  const [sources, setSources] = useState<{ source: string; count: number }[]>([]);
 
   const isRTL = locale === "ar";
   const debouncedSearch = useDebounce(searchQuery, 300);
 
+  // Load available sources on mount
+  useEffect(() => {
+    const loadSources = async () => {
+      try {
+        const sourcesData = await getHadithSources();
+        setSources(sourcesData);
+      } catch (error) {
+        console.error("Failed to load sources:", error);
+      }
+    };
+    loadSources();
+  }, []);
+
   // Build URL for hadith detail page
-  const getHadithUrl = (hadith: ImportedHadith): string => {
-    const book = getBookFromId(hadith.id);
+  const getHadithUrl = (hadith: CsvHadith): string => {
     const basePath = locale === "ar" ? "/hadith/view" : "/en/hadith/view";
-    return `${basePath}?book=${book}&number=${hadith.hadithNumber}`;
+    return `${basePath}?id=${hadith.id}`;
+  };
+
+  // Extract chapter name (Arabic or English based on locale)
+  const getChapterDisplay = (chapter: string): string => {
+    // Format: "Revelation - كتاب بدء الوحى"
+    const parts = chapter.split(" - ");
+    if (parts.length === 2) {
+      return locale === "ar" ? parts[1] : parts[0];
+    }
+    return chapter;
   };
 
   // Load hadiths
@@ -56,44 +94,37 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
     try {
       if (debouncedSearch.trim()) {
         // Search mode
-        if (selectedBook === "all") {
-          const results = await fuzzySearchAllBooks(debouncedSearch, 100);
-          setHadiths(results);
-          setTotalCount(results.length);
-          setTotalPages(1);
-        } else {
-          const results = await fuzzySearchInBook(selectedBook, debouncedSearch, 100);
-          setHadiths(results);
-          setTotalCount(results.length);
-          setTotalPages(1);
-        }
-      } else if (selectedBook !== "all") {
-        // Browse mode
-        const result = await getHadithsPaginated(selectedBook, page, 20);
+        const results = await searchHadiths(debouncedSearch, 100);
+        // Filter by source if selected
+        const filtered = selectedSource === "all"
+          ? results
+          : results.filter(h => h.source.toLowerCase().includes(selectedSource.toLowerCase()));
+        setHadiths(filtered);
+        setTotalCount(filtered.length);
+        setTotalPages(1);
+      } else {
+        // Browse mode with pagination
+        const sourceFilter = selectedSource === "all" ? undefined : selectedSource;
+        const result = await getHadithsPaginated(page, 20, sourceFilter);
         setHadiths(result.hadiths);
         setTotalPages(result.pages);
         setTotalCount(result.total);
-      } else {
-        setHadiths([]);
-        setTotalCount(0);
       }
     } catch (error) {
       console.error("Failed to load hadiths:", error);
     } finally {
       setLoading(false);
     }
-  }, [selectedBook, page, debouncedSearch]);
+  }, [selectedSource, page, debouncedSearch]);
 
   useEffect(() => {
     loadHadiths();
   }, [loadHadiths]);
 
-  // Reset page when book or search changes
+  // Reset page when source or search changes
   useEffect(() => {
     setPage(1);
-  }, [selectedBook, debouncedSearch]);
-
-  const books = Object.entries(bookInfo) as [BookKey, typeof bookInfo[BookKey]][];
+  }, [selectedSource, debouncedSearch]);
 
   return (
     <div
@@ -105,19 +136,6 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
         <h1 className="text-2xl font-bold text-amber-400 mb-4 text-center">
           {locale === "ar" ? "مكتبة الحديث" : "Hadith Library"}
         </h1>
-
-        {/* Link to Isnad Visualization */}
-        <div className="text-center mb-6">
-          <a
-            href={locale === "ar" ? "/hadith/isnad" : "/en/hadith/isnad"}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-amber-600/20 hover:bg-amber-600/30 border border-amber-600/50 rounded-lg text-amber-400 transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-            </svg>
-            {locale === "ar" ? "عرض أمثلة تحليل الإسناد" : "View Isnad Analysis Examples"}
-          </a>
-        </div>
 
         {/* Search & Filters */}
         <div className="bg-[#1a1f2e] rounded-lg p-4 mb-6 space-y-4">
@@ -133,37 +151,37 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white"
+                className={`absolute ${isRTL ? "left-3" : "right-3"} top-1/2 -translate-y-1/2 text-gray-500 hover:text-white`}
               >
                 ✕
               </button>
             )}
           </div>
 
-          {/* Book Selector */}
+          {/* Source Selector */}
           <div className="flex flex-wrap gap-2">
             <button
-              onClick={() => setSelectedBook("all")}
+              onClick={() => setSelectedSource("all")}
               className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                selectedBook === "all"
+                selectedSource === "all"
                   ? "bg-amber-600 text-white"
                   : "bg-gray-800 text-gray-400 hover:bg-gray-700"
               }`}
             >
               {locale === "ar" ? "الكل" : "All Books"}
             </button>
-            {books.map(([key, info]) => (
+            {sources.map(({ source, count }) => (
               <button
-                key={key}
-                onClick={() => setSelectedBook(key)}
+                key={source}
+                onClick={() => setSelectedSource(source)}
                 className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                  selectedBook === key
+                  selectedSource === source
                     ? "bg-amber-600 text-white"
                     : "bg-gray-800 text-gray-400 hover:bg-gray-700"
                 }`}
               >
-                {locale === "ar" ? info.nameAr : info.nameEn}
-                <span className="ml-1 text-xs opacity-70">({info.count.toLocaleString()})</span>
+                {getSourceDisplay(source, locale)}
+                <span className="ml-1 text-xs opacity-70">({count.toLocaleString()})</span>
               </button>
             ))}
           </div>
@@ -198,13 +216,13 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
                   {/* Source badge */}
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2 mb-2 flex-wrap">
                     <span className="bg-amber-600/20 text-amber-400 text-xs px-2 py-0.5 rounded">
-                      {locale === "ar" ? hadith.sourceAr : hadith.source} #{hadith.hadithNumber}
+                      {getSourceDisplay(hadith.source, locale)} #{hadith.hadithNo}
                     </span>
-                    {hadith.topic && (
+                    {hadith.chapter && (
                       <span className="bg-gray-700 text-gray-300 text-xs px-2 py-0.5 rounded">
-                        {locale === "ar" ? hadith.topicAr : hadith.topic}
+                        {getChapterDisplay(hadith.chapter)}
                       </span>
                     )}
                   </div>
@@ -216,7 +234,7 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
                 </div>
 
                 {/* Arrow icon */}
-                <span className="text-gray-500 group-hover:text-amber-400 transition-colors">
+                <span className="text-gray-500 group-hover:text-amber-400 transition-colors flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isRTL ? "M15 19l-7-7 7-7" : "M9 5l7 7-7 7"} />
                   </svg>
@@ -225,10 +243,17 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
             </a>
           ))}
 
+          {/* Loading state */}
+          {loading && (
+            <div className="flex justify-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400"></div>
+            </div>
+          )}
+
           {/* Empty state */}
           {!loading && hadiths.length === 0 && (
             <div className="text-center py-12 text-gray-500">
-              {selectedBook === "all" && !searchQuery ? (
+              {!searchQuery ? (
                 <p>{locale === "ar" ? "اختر كتاباً أو ابحث" : "Select a book or search"}</p>
               ) : (
                 <p>{locale === "ar" ? "لا توجد نتائج" : "No results found"}</p>
