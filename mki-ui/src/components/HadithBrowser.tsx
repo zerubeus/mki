@@ -100,7 +100,7 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
         // Filter by source if selected
         const filtered = selectedSource === "all"
           ? results
-          : results.filter(h => h.source.toLowerCase().includes(selectedSource.toLowerCase()));
+          : results.filter(h => h.source.trim().toLowerCase() === selectedSource.trim().toLowerCase());
         setHadiths(filtered);
         setTotalCount(filtered.length);
         setTotalPages(1);
@@ -135,8 +135,8 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
     >
       {/* Header */}
       <div className="max-w-4xl mx-auto">
-        {/* Home button */}
-        <div className="mb-4">
+        {/* Navigation bar */}
+        <div className="flex justify-between items-center mb-4">
           <a
             href={locale === "ar" ? "/" : "/en/"}
             className="inline-flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"
@@ -146,6 +146,14 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
             </svg>
             {locale === "ar" ? "الصفحة الرئيسية" : "Home"}
           </a>
+          <select
+            className="px-4 py-2 border border-gray-700 rounded-lg bg-[#1a1f2e] text-gray-300 font-medium cursor-pointer transition-all duration-300 hover:border-amber-700/50 focus:outline-none focus:border-amber-600 appearance-none text-center min-w-[100px]"
+            onChange={(e) => window.location.href = e.target.value}
+            value={locale === "ar" ? "/hadith" : "/en/hadith"}
+          >
+            <option value="/hadith">العربية</option>
+            <option value="/en/hadith">English</option>
+          </select>
         </div>
 
         <h1 className="text-2xl font-bold text-amber-400 mb-4 text-center">
@@ -224,7 +232,7 @@ export default function HadithBrowser({ locale }: HadithBrowserProps) {
         <div className="space-y-3">
           {hadiths.map((hadith) => (
             <a
-              key={hadith.id}
+              key={`${hadith.source}-${hadith.hadithNo}`}
               href={getHadithUrl(hadith)}
               className="block bg-[#1a1f2e] rounded-lg border border-gray-700/50 p-4 hover:bg-[#252a3a] hover:border-amber-600/30 transition-all group"
             >

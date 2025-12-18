@@ -389,8 +389,8 @@ export default function HadithDetailView({
       className={`min-h-screen bg-[#0f1319] ${isRTL ? "font-['Cairo']" : ""}`}
       dir={isRTL ? "rtl" : "ltr"}
     >
-      {/* Back link */}
-      <div className="max-w-7xl mx-auto px-4 py-4">
+      {/* Navigation bar */}
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <a
           href={locale === "ar" ? "/hadith" : "/en/hadith"}
           className="inline-flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"
@@ -400,6 +400,23 @@ export default function HadithDetailView({
           </svg>
           {locale === "ar" ? "العودة للمكتبة" : "Back to Library"}
         </a>
+        <select
+          className="px-4 py-2 border border-gray-700 rounded-lg bg-[#1a1f2e] text-gray-300 font-medium cursor-pointer transition-all duration-300 hover:border-amber-700/50 focus:outline-none focus:border-amber-600 appearance-none text-center min-w-[100px]"
+          onChange={(e) => {
+            // Preserve the current hadith path when switching language
+            const currentPath = window.location.pathname;
+            const pathParts = currentPath.split('/').filter(Boolean);
+            // Path is like /hadith/bukhari/123 or /en/hadith/bukhari/123
+            const isEnglish = pathParts[0] === 'en';
+            const hadithPath = isEnglish ? pathParts.slice(1).join('/') : pathParts.join('/');
+            const newPath = e.target.value === 'ar' ? `/${hadithPath}` : `/en/${hadithPath}`;
+            window.location.href = newPath;
+          }}
+          value={locale}
+        >
+          <option value="ar">العربية</option>
+          <option value="en">English</option>
+        </select>
       </div>
 
       {/* Hadith Text Box */}

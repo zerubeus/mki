@@ -17,6 +17,14 @@ import type { CsvRawiRow, CsvHadithRow, ExtendedNarrator, CsvHadith } from '../.
 let narratorsCache: Map<number, ExtendedNarrator> | null = null;
 let hadithsCache: CsvHadith[] | null = null;
 
+// ============ Helper Functions ============
+/**
+ * Normalize source name for consistent comparison
+ */
+function normalizeSource(source: string): string {
+  return source.trim().toLowerCase();
+}
+
 // ============ Transform Functions ============
 
 /**
@@ -215,7 +223,8 @@ export async function getHadithsPaginated(
   let hadiths = await loadHadiths();
 
   if (source) {
-    hadiths = hadiths.filter((h) => h.source.toLowerCase().includes(source.toLowerCase()));
+    const normalizedFilter = normalizeSource(source);
+    hadiths = hadiths.filter((h) => normalizeSource(h.source) === normalizedFilter);
   }
 
   const start = (page - 1) * perPage;
