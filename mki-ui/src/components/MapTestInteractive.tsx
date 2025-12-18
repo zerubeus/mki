@@ -31,18 +31,18 @@ const MapTestInteractive: React.FC = () => {
     if (mapRef.current && window.L && !leafletMapRef.current) {
       // Create a map
       const map = window.L.map(mapRef.current, {
-        attributionControl: false,
+        attributionControl: true,
         zoomControl: true,
         minZoom: 2,
-        maxZoom: 10,
+        maxZoom: 16,
       }).setView([25, 45], 4); // Center on Arabian Peninsula
 
-      // Add base layer
+      // Use Stamen Watercolor tiles for vintage/historical aesthetic
       window.L.tileLayer(
-        "https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_basemap_NCEI/MapServer/tile/{z}/{y}/{x}",
+        "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg",
         {
-          attribution: '&copy; GEBCO',
-          maxZoom: 10,
+          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>. Hosted by <a href="https://stadiamaps.com/">Stadia Maps</a>.',
+          maxZoom: 16,
           minZoom: 2,
         },
       ).addTo(map);
@@ -102,25 +102,25 @@ const MapTestInteractive: React.FC = () => {
     if (geoJsonData && geoJsonData.features && geoJsonData.features.length > 0) {
       geoJsonLayerRef.current = window.L.geoJSON(geoJsonData, {
         style: (feature: any) => {
-          // Different styling for different sources
+          // Different styling for different sources - vintage aesthetic
           if (selectedFile === "internal") {
             return {
               fillColor: feature?.properties?.color || "#B22222",
               weight: 2,
-              opacity: 1,
-              color: "#333",
-              fillOpacity: 0.5,
+              opacity: 0.7,
+              color: "#6B4423",  // Warm brown border for vintage look
+              fillOpacity: 0.3,
             };
           } else {
-            // Random colors for external files
-            const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A", "#98D8C8", "#6C5CE7"];
+            // Vintage earth-tone colors for external files
+            const colors = ["#A0522D", "#CD853F", "#8B4513", "#D2691E", "#BC8F8F", "#6B4423"];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             return {
               fillColor: randomColor,
               weight: 1,
-              opacity: 0.8,
-              color: "#333",
-              fillOpacity: 0.4,
+              opacity: 0.7,
+              color: "#6B4423",
+              fillOpacity: 0.3,
             };
           }
         },

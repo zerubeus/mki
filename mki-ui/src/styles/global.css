@@ -7,6 +7,45 @@
   opacity: 1;
 }
 
+/* Vintage map styling for Stamen Watercolor tiles */
+.leaflet-container {
+  background: #f5f0e6;  /* Parchment background for loading state */
+}
+
+/* Soften map controls for vintage aesthetic */
+.leaflet-control-zoom a {
+  background-color: rgba(245, 240, 230, 0.9) !important;
+  color: #5D4037 !important;
+  border-color: #8B7355 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: rgba(255, 250, 240, 0.95) !important;
+}
+
+/* Style tooltips to match vintage theme */
+.leaflet-tooltip {
+  background-color: #faf8f5;
+  border: 1px solid #8B7355;
+  color: #4a3728;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.leaflet-tooltip::before {
+  border-top-color: #8B7355;
+}
+
+/* Style attribution for vintage look */
+.leaflet-control-attribution {
+  background-color: rgba(250, 248, 245, 0.8) !important;
+  color: #6B4423 !important;
+  font-size: 10px;
+}
+
+.leaflet-control-attribution a {
+  color: #8B4513 !important;
+}
+
 /* Custom Leaflet Popup Styling to work with Tailwind */
 /* These might need to be adjusted if Tailwind is now processing them differently */
 /* For example, @apply might not be needed if Tailwind handles these classes globally */

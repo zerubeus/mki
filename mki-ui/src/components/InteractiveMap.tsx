@@ -43,18 +43,18 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
     if (mapRef.current && window.L && !leafletMapRef.current) {
       // Create a map with a simple background
       const map = window.L.map(mapRef.current, {
-        attributionControl: false,
+        attributionControl: true,
         zoomControl: true,
         minZoom: 3,
-        maxZoom: 10,
+        maxZoom: 16,
       }).setView(center, zoom);
 
-      // Use GEBCO (ocean/bathymetry) tiles which show only physical features
+      // Use Stamen Watercolor tiles for vintage/historical aesthetic
       window.L.tileLayer(
-        "https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_basemap_NCEI/MapServer/tile/{z}/{y}/{x}",
+        "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg",
         {
-          attribution: '&copy; GEBCO',
-          maxZoom: 10,
+          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>. Hosted by <a href="https://stadiamaps.com/">Stadia Maps</a>.',
+          maxZoom: 16,
           minZoom: 0,
         },
       ).addTo(map);
@@ -90,9 +90,9 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
         style: (feature: GeoJSON.Feature) => ({
           fillColor: feature?.properties?.color || "#cccccc",
           weight: 2,
-          opacity: 1,
-          color: "#333",
-          fillOpacity: 0.4,
+          opacity: 0.7,
+          color: "#6B4423",  // Warm brown border for vintage look
+          fillOpacity: 0.3,
         }),
         onEachFeature: (feature: GeoJSON.Feature, layer: any) => {
           if (feature.properties && feature.properties.name) {
