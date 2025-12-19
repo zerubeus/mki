@@ -1,3 +1,5 @@
 mki-datasets/hadith-csv/sanadset.csv
 .env
 *.pyc
+node_modules
+.wrangler
