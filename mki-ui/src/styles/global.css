@@ -1,66 +1,62 @@
 @import "tailwindcss";
 
-/* You can add other global styles here if needed, AFTER the tailwindcss import */
-
-/* Ensure your GeoJSON overlays are fully visible and prominent */
-.leaflet-overlay-pane {
-  opacity: 1;
-}
-
-/* Vintage map styling for Stamen Watercolor tiles */
+/* Leaflet container background */
 .leaflet-container {
-  background: #f5f0e6;  /* Parchment background for loading state */
+  background: #0f1319;
 }
 
-/* Soften map controls for vintage aesthetic */
+/* Dark theme zoom controls */
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
 .leaflet-control-zoom a {
-  background-color: rgba(245, 240, 230, 0.9) !important;
-  color: #5D4037 !important;
-  border-color: #8B7355 !important;
+  background-color: #1a1f2e !important;
+  color: #d1d5db !important;
+  border: 1px solid #374151 !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+  font-size: 16px !important;
+}
+
+.leaflet-control-zoom a:first-child {
+  border-radius: 6px 6px 0 0 !important;
+}
+
+.leaflet-control-zoom a:last-child {
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
 }
 
 .leaflet-control-zoom a:hover {
-  background-color: rgba(255, 250, 240, 0.95) !important;
+  background-color: #252a3a !important;
+  color: #f59e0b !important;
 }
 
-/* Style tooltips to match vintage theme */
+/* Style tooltips to match dark theme */
 .leaflet-tooltip {
-  background-color: #faf8f5;
-  border: 1px solid #8B7355;
-  color: #4a3728;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  background-color: #1a1f2e;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  padding: 6px 10px;
 }
 
 .leaflet-tooltip::before {
-  border-top-color: #8B7355;
+  border-top-color: #374151;
 }
 
-/* Style attribution for vintage look */
+/* Style attribution */
 .leaflet-control-attribution {
-  background-color: rgba(250, 248, 245, 0.8) !important;
-  color: #6B4423 !important;
+  background-color: rgba(15, 19, 25, 0.8) !important;
+  color: #9ca3af !important;
   font-size: 10px;
+  border-radius: 4px 0 0 0;
 }
 
 .leaflet-control-attribution a {
-  color: #8B4513 !important;
+  color: #f59e0b !important;
 }
-
-/* Custom Leaflet Popup Styling to work with Tailwind */
-/* These might need to be adjusted if Tailwind is now processing them differently */
-/* For example, @apply might not be needed if Tailwind handles these classes globally */
-.leaflet-popup-content-wrapper {
-  /* bg-white rounded-lg shadow-lg p-0; */ /* Let Tailwind handle this via classes in component if possible */
-}
-.leaflet-popup-content {
-  /* text-sm text-gray-700 p-3; */
-  /* margin: 0 !important; */
-}
-/* .leaflet-popup-tip-container { */
-  /* display: none; */ 
-/* } */
-
-/* Ensure map container has a defined size if not set by inline styles */
-/* #leaflet-map {
-  min-height: 400px; 
-} */ 

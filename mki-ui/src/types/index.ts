@@ -5,6 +5,8 @@ export interface GeoCoordinates {
 
 export type EventEra = "Pre-Prophethood" | "Meccan" | "Medinan";
 
+export type EventType = "Birth" | "Marriage" | "Religious" | "Battle" | "Treaty" | "Death" | "Migration" | "Personal";
+
 // Declare L on window if using CDN version of Leaflet and not importing via npm module directly
 // For Astro with npm installed leaflet, direct import is fine, but this handles script tag loading.
 declare global {
@@ -21,6 +23,7 @@ export interface HistoricalEvent {
   locationName: string;
   coordinates: GeoCoordinates;
   era: EventEra;
+  eventType: EventType;
 }
 
 // Hadith Types

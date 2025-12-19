@@ -1,7 +1,6 @@
 ---
 import type { translations } from '../i18n/translations.ts';
 import { getLocalizedEvents } from '../data/seerahEvents.ts';
-import SelectedEventDisplay from './SelectedEventDisplay.astro';
 import SeerahInteractivity from './SeerahInteractivity.tsx';
 
 type TranslationObject = (typeof translations)[keyof typeof translations];
@@ -29,60 +28,43 @@ const sortedEvents = [...events].sort((a, b) => {
 const initialEvent = sortedEvents[0] || null;
 ---
 
-<div class="min-h-screen flex flex-col p-4 md:p-8 space-y-6">
-  <header class="text-white">
-    <div class="flex justify-between items-center mb-4">
+<div class="h-screen flex flex-col bg-[#0f1319]">
+  <!-- Header Bar -->
+  <header class="bg-[#1a1f2e] border-b border-gray-700/50 px-4 py-2 flex-shrink-0">
+    <div class="flex justify-between items-center">
       <a
         href={homeUrl}
-        class="inline-flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors"
+        class="inline-flex items-center gap-2 text-gray-300 hover:text-amber-400 transition-colors text-sm"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
-        {locale === 'ar' ? 'الصفحة الرئيسية' : 'Home'}
+        {locale === 'ar' ? 'الرئيسية' : 'Home'}
       </a>
+
+      <div class="text-center">
+        <h1 class="text-lg font-bold text-white">
+          {t.seerahJourneyTitle}
+        </h1>
+      </div>
+
       <select
-        class="px-4 py-2 border border-gray-700 rounded-lg bg-[#1a1f2e] text-gray-300 font-medium cursor-pointer transition-all duration-300 hover:border-amber-700/50 focus:outline-none focus:border-amber-600 appearance-none text-center min-w-[100px]"
+        class="px-2 py-1 border border-gray-700 rounded bg-[#0f1319] text-gray-300 text-sm cursor-pointer hover:border-amber-600 focus:outline-none"
         onchange="window.location.href = this.value"
       >
         <option value={arabicUrl} selected={locale === 'ar'}>العربية</option>
         <option value={englishUrl} selected={locale === 'en'}>English</option>
       </select>
     </div>
-    <div class="text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-white">
-        {t.seerahJourneyTitle}
-      </h1>
-      <p class="text-sm md:text-md text-gray-200 mt-1">
-        {t.seerahJourneySubtitle || 'An Interactive Journey Through Seerah'}
-      </p>
-    </div>
   </header>
 
-  <main
-    class="flex-grow flex flex-col space-y-6 w-full max-w-5xl mx-auto text-gray-800"
-  >
-    <!-- Event Display Container - Will be updated by React -->
-    <div
-      id="event-display"
-      class="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-xl"
-    >
-      <SelectedEventDisplay event={initialEvent} />
-    </div>
-
-    <!-- Interactive components loaded only when visible -->
+  <!-- Main Content -->
+  <main class="flex-grow flex flex-col overflow-hidden">
     <SeerahInteractivity
       client:visible
       sortedEvents={sortedEvents}
       initialEventId={initialEvent?.id || null}
-      timelineTitle={t.timelineTitle}
+      locale={locale}
     />
   </main>
-
-  <footer class="text-center text-xs text-gray-300 py-4">
-    {
-      t.seerahJourneyFooter ||
-        'Map data &copy; OpenStreetMap contributors &copy; CartoDB. Event information compiled for educational purposes.'
-    }
-  </footer>
 </div>

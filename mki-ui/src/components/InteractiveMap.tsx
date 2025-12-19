@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { HistoricalEvent } from "../types";
-import { getGeoJsonForYear } from "../data/territoryManager";
 
 interface InteractiveMapProps {
   events: HistoricalEvent[];
@@ -8,7 +7,8 @@ interface InteractiveMapProps {
   onMarkerClick: (eventId: number) => void;
   center: [number, number];
   zoom: number;
-  year?: number; // Optional year to display specific historical boundaries
+  year?: number;
+  className?: string;
 }
 
 const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
@@ -18,17 +18,43 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
   center,
   zoom,
   year = 622,
+  className = "h-[400px] md:h-[500px]",
 }) => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const leafletMapRef = useRef<any>(null); // To store the Leaflet map instance
-  const markersRef = useRef<any[]>([]); // To store marker instances
-  const geoJsonLayerRef = useRef<any>(null); // To store the GeoJSON layer
+  const leafletMapRef = useRef<any>(null);
+  const markersRef = useRef<any[]>([]);
+  const [leafletReady, setLeafletReady] = useState<boolean>(false);
   const [mapReady, setMapReady] = useState<boolean>(false);
-  const [manualYear, setManualYear] = useState<number>(year);
-  const [showTimeSlider] = useState<boolean>(false);
+
+  // Check for Leaflet library availability with retry (client-side only)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    if (window.L) {
+      setLeafletReady(true);
+      return;
+    }
+
+    const checkLeaflet = setInterval(() => {
+      if (window.L) {
+        setLeafletReady(true);
+        clearInterval(checkLeaflet);
+      }
+    }, 100);
+
+    const timeout = setTimeout(() => {
+      clearInterval(checkLeaflet);
+      console.error("Leaflet failed to load within timeout");
+    }, 10000);
+
+    return () => {
+      clearInterval(checkLeaflet);
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const getIconHtml = (isSelected: boolean, era: string) => {
-    let bgColor = "bg-gray-500"; // Default
+    let bgColor = "bg-gray-500";
     if (era === "Meccan") bgColor = "bg-amber-500";
     if (era === "Medinan") bgColor = "bg-emerald-500";
     if (era === "Pre-Prophethood") bgColor = "bg-sky-500";
@@ -39,79 +65,32 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
     return `<div class="${bgColor} w-3 h-3 rounded-full border border-white shadow"></div>`;
   };
 
+  // Initialize map when Leaflet is ready
   useEffect(() => {
-    if (mapRef.current && window.L && !leafletMapRef.current) {
-      // Create a map with a simple background
-      const map = window.L.map(mapRef.current, {
-        attributionControl: true,
-        zoomControl: true,
-        minZoom: 3,
+    if (!leafletReady || !mapRef.current || leafletMapRef.current) return;
+
+    const map = window.L.map(mapRef.current, {
+      attributionControl: true,
+      zoomControl: true,
+      minZoom: 3,
+      maxZoom: 16,
+    }).setView(center, zoom);
+
+    // Use Stamen Watercolor tiles for vintage/historical aesthetic
+    window.L.tileLayer(
+      "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg",
+      {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>. Hosted by <a href="https://stadiamaps.com/">Stadia Maps</a>.',
         maxZoom: 16,
-      }).setView(center, zoom);
+        minZoom: 0,
+      },
+    ).addTo(map);
 
-      // Use Stamen Watercolor tiles for vintage/historical aesthetic
-      window.L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg",
-        {
-          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>. Hosted by <a href="https://stadiamaps.com/">Stadia Maps</a>.',
-          maxZoom: 16,
-          minZoom: 0,
-        },
-      ).addTo(map);
+    leafletMapRef.current = map;
+    setMapReady(true);
+  }, [leafletReady, center, zoom]);
 
-      leafletMapRef.current = map;
-      setMapReady(true);
-    }
-  }, []);
-
-  // Update manual year when year prop changes
-  useEffect(() => {
-    setManualYear(year);
-  }, [year]);
-
-  // Add GeoJSON layer when map is ready or when year changes
-  useEffect(() => {
-    if (!mapReady || !leafletMapRef.current || !window.L) return;
-
-    // Remove existing GeoJSON layer if it exists
-    if (geoJsonLayerRef.current) {
-      leafletMapRef.current.removeLayer(geoJsonLayerRef.current);
-      geoJsonLayerRef.current = null;
-    }
-
-    // Get GeoJSON data for the specified year (use manual year if time slider is shown)
-    const yearToUse = showTimeSlider ? manualYear : year;
-    const geoJsonData = getGeoJsonForYear(yearToUse);
-
-    // Only add GeoJSON if there are features to display
-    if (geoJsonData.features.length > 0) {
-      // Add GeoJSON layer to the map
-      geoJsonLayerRef.current = window.L.geoJSON(geoJsonData, {
-        style: (feature: GeoJSON.Feature) => ({
-          fillColor: feature?.properties?.color || "#cccccc",
-          weight: 2,
-          opacity: 0.7,
-          color: "#6B4423",  // Warm brown border for vintage look
-          fillOpacity: 0.3,
-        }),
-        onEachFeature: (feature: GeoJSON.Feature, layer: any) => {
-          if (feature.properties && feature.properties.name) {
-            layer.bindTooltip(
-              `<div class="font-semibold">${feature.properties.name}</div>
-               <div class="text-xs">${feature.properties.description || ""}</div>`,
-              { sticky: true },
-            );
-          }
-        },
-      }).addTo(leafletMapRef.current);
-
-      // Send GeoJSON layer to back so markers appear on top
-      if (geoJsonLayerRef.current) {
-        geoJsonLayerRef.current.bringToBack();
-      }
-    }
-  }, [mapReady, year]);
-
+  // Add markers when map is ready or events change
   useEffect(() => {
     if (!mapReady || !leafletMapRef.current || !window.L) return;
 
@@ -126,7 +105,7 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
       const isSelected = event.id === selectedEventId;
       const icon = window.L.divIcon({
         html: getIconHtml(isSelected, event.era),
-        className: "", // Important to prevent default Leaflet icon styling and allow Tailwind
+        className: "",
         iconSize: isSelected ? [20, 20] : [12, 12],
         iconAnchor: isSelected ? [10, 10] : [6, 6],
       });
@@ -138,17 +117,17 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
         .addTo(leafletMapRef.current)
         .on("click", () => onMarkerClick(event.id));
 
-      marker.bindPopup(`<b>${event.title}</b><br>${event.locationName}`);
+      // Use tooltip instead of popup to prevent click interception
+      marker.bindTooltip(
+        `<b>${event.title}</b><br>${event.locationName}`,
+        { direction: 'top', offset: [0, -10] }
+      );
 
       markersRef.current.push(marker);
     });
+  }, [events, selectedEventId, onMarkerClick, mapReady]);
 
-    // Ensure markers are on top of GeoJSON layers
-    if (geoJsonLayerRef.current) {
-      geoJsonLayerRef.current.bringToBack();
-    }
-  }, [events, selectedEventId, onMarkerClick, mapReady]); // Update markers when events or selection changes
-
+  // Update map view when center/zoom changes
   useEffect(() => {
     if (leafletMapRef.current) {
       leafletMapRef.current.flyTo(center, zoom);
@@ -156,10 +135,16 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
   }, [center, zoom]);
 
   return (
-    <div className="relative">
+    <div className="relative h-full">
+      {/* Year display overlay */}
+      <div className="absolute top-4 right-4 z-[500] pointer-events-none">
+        <div className="bg-[#1a1f2e]/90 backdrop-blur-sm text-white text-4xl font-bold px-6 py-3 rounded-lg border border-gray-700/50 shadow-xl">
+          {year}
+        </div>
+      </div>
       <div
         ref={mapRef}
-        className="h-[400px] md:h-[500px] w-full rounded-lg shadow-md z-0"
+        className={`${className} w-full rounded-lg shadow-md z-0`}
       />
     </div>
   );

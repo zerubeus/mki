@@ -1,4 +1,4 @@
-import type { HistoricalEvent, GeoCoordinates, EventEra } from "../types";
+import type { HistoricalEvent, GeoCoordinates, EventEra, EventType } from "../types";
 
 // Base event structure with coordinates and metadata
 interface BaseEvent {
@@ -6,6 +6,7 @@ interface BaseEvent {
   year: string;
   coordinates: GeoCoordinates;
   era: EventEra;
+  eventType: EventType;
 }
 
 // Localized content for events
@@ -27,90 +28,105 @@ const BASE_EVENTS: BaseEvent[] = [
     year: "570 CE",
     coordinates: { lat: 21.4225, lng: 39.8262 },
     era: "Pre-Prophethood",
+    eventType: "Birth",
   },
   {
     id: 2,
     year: "c. 595 CE",
     coordinates: { lat: 21.4225, lng: 39.8262 },
     era: "Pre-Prophethood",
+    eventType: "Marriage",
   },
   {
     id: 3,
     year: "610 CE",
     coordinates: { lat: 21.4573, lng: 39.8593 },
     era: "Meccan",
+    eventType: "Religious",
   },
   {
     id: 4,
     year: "613 CE",
     coordinates: { lat: 21.4225, lng: 39.8262 },
     era: "Meccan",
+    eventType: "Religious",
   },
   {
     id: 5,
     year: "619 CE",
     coordinates: { lat: 21.4225, lng: 39.8262 },
     era: "Meccan",
+    eventType: "Personal",
   },
   {
     id: 6,
     year: "c. 621 CE",
     coordinates: { lat: 31.7761, lng: 35.2357 }, // Jerusalem (Al-Aqsa)
     era: "Meccan",
+    eventType: "Religious",
   },
   {
     id: 7,
     year: "622 CE",
     coordinates: { lat: 24.4686, lng: 39.6142 },
     era: "Meccan", // Journey itself; Medinan era starts upon arrival
+    eventType: "Migration",
   },
   {
     id: 8,
     year: "622 CE",
     coordinates: { lat: 24.4686, lng: 39.6142 },
     era: "Medinan",
+    eventType: "Treaty",
   },
   {
     id: 9,
     year: "624 CE (2 AH)",
     coordinates: { lat: 23.7667, lng: 38.7917 },
     era: "Medinan",
+    eventType: "Battle",
   },
   {
     id: 10,
     year: "625 CE (3 AH)",
     coordinates: { lat: 24.5036, lng: 39.6136 },
     era: "Medinan",
+    eventType: "Battle",
   },
   {
     id: 11,
     year: "627 CE (5 AH)",
     coordinates: { lat: 24.4686, lng: 39.6142 },
     era: "Medinan",
+    eventType: "Battle",
   },
   {
     id: 12,
     year: "628 CE (6 AH)",
     coordinates: { lat: 21.3175, lng: 39.6586 },
     era: "Medinan",
+    eventType: "Treaty",
   },
   {
     id: 13,
     year: "630 CE (8 AH)",
     coordinates: { lat: 21.4225, lng: 39.8262 },
     era: "Medinan",
+    eventType: "Battle",
   },
   {
     id: 14,
     year: "632 CE (10 AH)",
     coordinates: { lat: 21.3549, lng: 39.9841 }, // Mount Arafat
     era: "Medinan",
+    eventType: "Religious",
   },
   {
     id: 15,
     year: "632 CE (11 AH)",
     coordinates: { lat: 24.4686, lng: 39.6142 },
     era: "Medinan",
+    eventType: "Death",
   },
 ];
 
