@@ -5,10 +5,15 @@
   background: #0f1319;
 }
 
-/* Dark theme zoom controls */
+/* Dark theme zoom controls - positioned bottom-left */
 .leaflet-control-zoom {
   border: none !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+  position: absolute !important;
+  bottom: 80px !important;
+  top: auto !important;
+  left: 10px !important;
+  margin-bottom: 0 !important;
 }
 
 .leaflet-control-zoom a {

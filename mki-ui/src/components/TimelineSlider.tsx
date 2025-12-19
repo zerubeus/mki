@@ -33,22 +33,24 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
     };
   }, [events]);
 
-  // Generate tick marks for the timeline - extended range for broader context
+  // Generate tick marks for the timeline - starting from Prophet's birth
   const tickMarks = useMemo(() => {
     const ticks: number[] = [];
-    // Extended range: 0 CE to 800 CE for historical context
-    const start = 0;
-    const end = 800;
-    for (let i = start; i <= end; i += 100) {
+    // Range: 570 CE (Prophet's birth) to 640 CE
+    const start = 570;
+    const end = 640;
+    for (let i = start; i <= end; i += 10) {
       ticks.push(i);
     }
     return ticks;
   }, []);
 
-  // Calculate position percentage
+  // Calculate position percentage with clamping to keep elements visible
   const getPositionPercent = useCallback((year: number) => {
     const range = tickMarks[tickMarks.length - 1] - tickMarks[0];
-    return ((year - tickMarks[0]) / range) * 100;
+    const percent = ((year - tickMarks[0]) / range) * 100;
+    // Clamp between 2% and 98% to prevent overflow at edges
+    return Math.max(2, Math.min(98, percent));
   }, [tickMarks]);
 
   // Find nearest event year helper
@@ -131,7 +133,7 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
       <div className="absolute -bottom-16 left-0 right-0 h-40 bg-gradient-to-t from-[#0f1319] via-[#0f1319]/80 to-transparent pointer-events-none" />
 
       {/* Year indicator bubble */}
-      <div className="relative h-10 mx-4 pointer-events-none">
+      <div className="relative h-10 mx-8 pointer-events-none">
         <div
           className="absolute transform -translate-x-1/2 bottom-0"
           style={{ left: `${currentPos}%` }}
@@ -145,7 +147,7 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
       {/* Timeline track - now interactive */}
       <div
         ref={trackRef}
-        className="relative h-14 mx-4 cursor-pointer select-none"
+        className="relative h-14 mx-8 cursor-pointer select-none"
         onClick={handleTrackClick}
       >
         {/* Background track line */}

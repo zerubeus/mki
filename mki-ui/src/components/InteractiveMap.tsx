@@ -7,7 +7,6 @@ interface InteractiveMapProps {
   onMarkerClick: (eventId: number) => void;
   center: [number, number];
   zoom: number;
-  year?: number;
   className?: string;
 }
 
@@ -17,7 +16,6 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
   onMarkerClick,
   center,
   zoom,
-  year = 622,
   className = "h-[400px] md:h-[500px]",
 }) => {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -136,12 +134,6 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
 
   return (
     <div className="relative h-full">
-      {/* Year display overlay */}
-      <div className="absolute top-4 right-4 z-[500] pointer-events-none">
-        <div className="bg-[#1a1f2e]/90 backdrop-blur-sm text-white text-4xl font-bold px-6 py-3 rounded-lg border border-gray-700/50 shadow-xl">
-          {year}
-        </div>
-      </div>
       <div
         ref={mapRef}
         className={`${className} w-full rounded-lg shadow-md z-0`}
