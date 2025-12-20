@@ -7,6 +7,7 @@ interface InteractiveMapProps {
   events: HistoricalEvent[];
   selectedEventId: number | null;
   onMarkerClick: (eventId: number) => void;
+  onRegionClick?: (regionName: string) => void;
   center: [number, number];
   zoom: number;
   className?: string;
@@ -45,22 +46,29 @@ const regionColors = [
 // Region name translations (English to Arabic)
 const regionTranslations: Record<string, string> = {
   "Himyarite Kingdom": "مملكة حمير",
+  "Himyarite K.": "مملكة حمير",
   "Axum": "أكسوم",
   "Sasanian Empire": "الإمبراطورية الساسانية",
+  "Sasanian E": "الإمبراطورية الساسانية",
   "Eastern Roman Empire": "الإمبراطورية الرومانية الشرقية",
+  "E. Roman Emp": "الإمبراطورية الرومانية الشرقية",
   "Gupta Empire": "إمبراطورية غوبتا",
   "Lakhmids": "اللخميون",
   "Ghassanids": "الغساسنة",
   "Kindah": "كندة",
+  "Kingdom of Kinda": "مملكة كندة",
   "Makkura": "مقرة",
   "Nobatia": "نوباتيا",
   "Alodia": "علوة",
+  "Blemmyes": "البليميون",
+  "Kushan Prin.": "إمارات كوشان",
 };
 
 const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
   events,
   selectedEventId,
   onMarkerClick,
+  onRegionClick,
   center,
   zoom,
   className = "h-[400px] md:h-[500px]",
@@ -271,10 +279,14 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
 
         // Add GeoJSON borders layer with styling - each region gets a unique color
         let featureIndex = 0;
+        const featureStyles = new Map<any, { fillColor: string }>();
+
         bordersLayerRef.current = window.L.geoJSON(data, {
-          style: () => {
+          style: (feature: any) => {
             const color = regionColors[featureIndex % regionColors.length];
             featureIndex++;
+            // Store the original color for this feature
+            featureStyles.set(feature, { fillColor: color });
             return {
               color: '#8B4513', // Brown border for vintage look
               weight: 1.5,
@@ -282,6 +294,41 @@ const InteractiveMapReact: React.FC<InteractiveMapProps> = ({
               fillColor: color,
               fillOpacity: 0.5,
             };
+          },
+          onEachFeature: (feature: any, layer: any) => {
+            const regionName = feature.properties?.NAME || feature.properties?.ABBREVN;
+            if (!regionName) return;
+
+            // Click handler
+            if (onRegionClick) {
+              layer.on('click', (e: any) => {
+                // Stop propagation to prevent map click
+                window.L.DomEvent.stopPropagation(e);
+                onRegionClick(regionName);
+              });
+            }
+
+            // Hover effects
+            const originalStyle = featureStyles.get(feature);
+            layer.on('mouseover', () => {
+              layer.setStyle({
+                weight: 3,
+                fillOpacity: 0.7,
+                color: '#5D4037', // Darker border on hover
+              });
+              // Change cursor to pointer
+              if (layer._path) {
+                layer._path.style.cursor = 'pointer';
+              }
+            });
+            layer.on('mouseout', () => {
+              layer.setStyle({
+                weight: 1.5,
+                fillOpacity: 0.5,
+                color: '#8B4513',
+                fillColor: originalStyle?.fillColor,
+              });
+            });
           },
         }).addTo(leafletMapRef.current);
 

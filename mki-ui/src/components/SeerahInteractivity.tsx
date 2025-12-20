@@ -1,8 +1,10 @@
 import React, { useState, useCallback, useEffect, useMemo } from "react";
 import InteractiveMap from "./InteractiveMap";
 import TimelineSlider from "./TimelineSlider";
+import WikipediaPanel from "./WikipediaPanel";
 import type { HistoricalEvent, EventEra } from "../types";
 import { MAP_EVENT_ZOOM } from "../data/seerahEvents";
+import { getWikipediaRegionInfo, type WikipediaRegionInfo } from "../data/wikipediaRegions";
 
 interface SeerahInteractivityProps {
   sortedEvents: HistoricalEvent[];
@@ -35,6 +37,11 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
 
   // Event info overlay state
   const [showEventInfo, setShowEventInfo] = useState<boolean>(true);
+
+  // Wikipedia panel state
+  const [selectedRegionName, setSelectedRegionName] = useState<string | null>(null);
+  const [selectedRegionInfo, setSelectedRegionInfo] = useState<WikipediaRegionInfo | null>(null);
+  const [showWikipediaPanel, setShowWikipediaPanel] = useState<boolean>(false);
 
   // Get the selected event object
   const selectedEvent = useMemo(() => {
@@ -98,6 +105,19 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
     [sortedEvents, handleEventSelect],
   );
 
+  // Handle region click for Wikipedia panel
+  const handleRegionClick = useCallback((regionName: string) => {
+    const regionInfo = getWikipediaRegionInfo(regionName);
+    setSelectedRegionName(regionName);
+    setSelectedRegionInfo(regionInfo);
+    setShowWikipediaPanel(true);
+  }, []);
+
+  // Close Wikipedia panel
+  const handleCloseWikipediaPanel = useCallback(() => {
+    setShowWikipediaPanel(false);
+  }, []);
+
   // Select the first event by default if none selected
   useEffect(() => {
     if (sortedEvents.length > 0 && selectedEventId === null) {
@@ -135,6 +155,7 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
           events={sortedEvents}
           selectedEventId={selectedEventId}
           onMarkerClick={handleEventSelect}
+          onRegionClick={handleRegionClick}
           center={mapCenter}
           zoom={mapZoom}
           className="h-full"
@@ -184,6 +205,15 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
           locale={locale}
         />
       </div>
+
+      {/* Wikipedia Panel */}
+      <WikipediaPanel
+        regionInfo={selectedRegionInfo}
+        regionName={selectedRegionName || ""}
+        isOpen={showWikipediaPanel}
+        onClose={handleCloseWikipediaPanel}
+        locale={locale}
+      />
     </div>
   );
 };

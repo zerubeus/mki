@@ -190,3 +190,9 @@ export interface CsvHadith {
   textAr: string;
   textEn: string;
 }
+
+// ============ Wikipedia Types ============
+
+// Re-export from data and utils modules
+export type { WikipediaRegionInfo } from "../data/wikipediaRegions";
+export type { WikipediaSummary } from "../utils/wikipediaApi";
