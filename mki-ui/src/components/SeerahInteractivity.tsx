@@ -138,6 +138,7 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
           center={mapCenter}
           zoom={mapZoom}
           className="h-full"
+          locale={locale}
         />
 
         {/* Event Info Overlay - positioned at top of map */}
