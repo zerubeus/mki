@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import world400 from "../data/geojson/world_400.geojson?raw";
 import { getGeoJsonForYear, getYearRange } from "../data/territoryManager";
+
+// R2 bucket URL for geojson data
+const R2_BASE_URL = 'https://r2.mustknowislam.com';
 
 interface GeoJSONFile {
   name: string;
-  data: any;
+  url?: string;
+  data?: any;
   year?: number;
 }
 
@@ -17,14 +20,17 @@ const MapTestInteractive: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<string>("internal");
   const [showInfo, setShowInfo] = useState<boolean>(true);
   const [territoryInfo, setTerritoryInfo] = useState<string[]>([]);
-  
+  const [externalGeoJson, setExternalGeoJson] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+
   // Get year range from internal data
   const yearRange = getYearRange();
 
-  // Available GeoJSON files
+  // Available GeoJSON files (fetched from R2)
   const geoJsonFiles: GeoJSONFile[] = [
-    { name: "Internal Territories", data: null, year: selectedYear },
-    { name: "World 400 CE", data: JSON.parse(world400), year: 400 },
+    { name: "Internal Territories", year: selectedYear },
+    { name: "World 400 CE", url: `${R2_BASE_URL}/data/geojson/world_400.geojson`, year: 400 },
+    { name: "World 500 CE", url: `${R2_BASE_URL}/data/geojson/world_500.geojson`, year: 500 },
   ];
 
   useEffect(() => {
@@ -52,9 +58,31 @@ const MapTestInteractive: React.FC = () => {
     }
   }, []);
 
-  // Update map when year or file changes
+  // Fetch external GeoJSON when file selection changes
+  useEffect(() => {
+    const file = geoJsonFiles.find(f => f.name === selectedFile);
+    if (file?.url) {
+      setLoading(true);
+      fetch(file.url)
+        .then(res => res.json())
+        .then(data => {
+          setExternalGeoJson(data);
+          setLoading(false);
+        })
+        .catch(err => {
+          console.error('Failed to fetch GeoJSON:', err);
+          setExternalGeoJson(null);
+          setLoading(false);
+        });
+    } else {
+      setExternalGeoJson(null);
+    }
+  }, [selectedFile]);
+
+  // Update map when year, file, or external data changes
   useEffect(() => {
     if (!mapReady || !leafletMapRef.current || !window.L) return;
+    if (loading) return;
 
     // Remove existing GeoJSON layer
     if (geoJsonLayerRef.current) {
@@ -68,7 +96,7 @@ const MapTestInteractive: React.FC = () => {
     if (selectedFile === "internal") {
       // Use internal territory data
       geoJsonData = getGeoJsonForYear(selectedYear);
-      
+
       // Extract territory names for info panel
       if (geoJsonData.features) {
         geoJsonData.features.forEach((feature: any) => {
@@ -79,20 +107,17 @@ const MapTestInteractive: React.FC = () => {
           }
         });
       }
-    } else {
-      // Use external GeoJSON file
-      const file = geoJsonFiles.find(f => f.name === selectedFile);
-      if (file?.data) {
-        geoJsonData = file.data;
-        
-        // Extract feature names
-        if (geoJsonData.features) {
-          geoJsonData.features.forEach((feature: any) => {
-            if (feature.properties?.NAME || feature.properties?.name) {
-              territories.push(feature.properties.NAME || feature.properties.name);
-            }
-          });
-        }
+    } else if (externalGeoJson) {
+      // Use fetched external GeoJSON data
+      geoJsonData = externalGeoJson;
+
+      // Extract feature names
+      if (geoJsonData.features) {
+        geoJsonData.features.forEach((feature: any) => {
+          if (feature.properties?.NAME || feature.properties?.name) {
+            territories.push(feature.properties.NAME || feature.properties.name);
+          }
+        });
       }
     }
 
@@ -154,7 +179,7 @@ const MapTestInteractive: React.FC = () => {
         console.log("Could not fit bounds");
       }
     }
-  }, [mapReady, selectedYear, selectedFile]);
+  }, [mapReady, selectedYear, selectedFile, externalGeoJson, loading]);
 
   return (
     <div className="flex flex-col gap-4">

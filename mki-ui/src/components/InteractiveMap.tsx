@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import type { HistoricalEvent } from "../types";
 import meccaSvg from "../assets/mecca.svg?url";
-import worldBordersUrl from "../data/geojson/world_500.geojson?url";
+
+// R2 bucket URL for geojson data
+const R2_BASE_URL = 'https://r2.mustknowislam.com';
+const worldBordersUrl = `${R2_BASE_URL}/data/geojson/world_500.geojson`;
 
 interface InteractiveMapProps {
   events: HistoricalEvent[];
