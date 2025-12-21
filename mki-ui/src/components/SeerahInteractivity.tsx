@@ -2,7 +2,8 @@ import React, { useState, useCallback, useEffect, useMemo } from "react";
 import InteractiveMap from "./InteractiveMap";
 import TimelineSlider from "./TimelineSlider";
 import WikipediaPanel from "./WikipediaPanel";
-import type { HistoricalEvent, EventEra } from "../types";
+import EventBottomSheet from "./EventBottomSheet";
+import type { HistoricalEvent } from "../types";
 import { MAP_EVENT_ZOOM } from "../data/seerahEvents";
 import { getWikipediaRegionInfo, type WikipediaRegionInfo } from "../data/wikipediaRegions";
 
@@ -79,20 +80,6 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
     }
   }, [selectedEventId]);
 
-  // Helper function for era badge colors
-  const getEraBadgeColors = (era: EventEra): string => {
-    switch (era) {
-      case "Pre-Prophethood":
-        return "bg-sky-500/20 text-sky-300 border-sky-500/30";
-      case "Meccan":
-        return "bg-amber-500/20 text-amber-300 border-amber-500/30";
-      case "Medinan":
-        return "bg-emerald-500/20 text-emerald-300 border-emerald-500/30";
-      default:
-        return "bg-gray-500/20 text-gray-300 border-gray-500/30";
-    }
-  };
-
   return (
     <div className="relative flex flex-col h-full">
       {/* Map Container */}
@@ -109,39 +96,13 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
           locale={locale}
         />
 
-        {/* Event Info Overlay - positioned at top of map */}
-        {selectedEvent && showEventInfo && (
-          <div className="absolute top-2 left-2 right-2 z-[600]">
-            <div className="bg-[#1a1f2e]/95 backdrop-blur-sm rounded-lg shadow-xl border border-gray-700/50 p-4">
-              <div className="flex justify-between items-start gap-4">
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-2 flex-wrap">
-                    <h3 className="text-lg font-bold text-white truncate">
-                      {selectedEvent.title}
-                    </h3>
-                    <span className={`px-2 py-0.5 rounded-full text-xs font-medium border ${getEraBadgeColors(selectedEvent.era)}`}>
-                      {selectedEvent.era}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-400 mb-1">
-                    {selectedEvent.year} • {selectedEvent.locationName}
-                  </p>
-                  <p className="text-sm text-gray-300">
-                    {selectedEvent.description}
-                  </p>
-                </div>
-                <button
-                  onClick={() => setShowEventInfo(false)}
-                  className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-gray-700/50 hover:bg-gray-600/50 text-gray-400 hover:text-white transition-colors"
-                  aria-label="Close event info"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
+        {/* Event Bottom Sheet - draggable panel */}
+        {showEventInfo && (
+          <EventBottomSheet
+            event={selectedEvent}
+            onClose={() => setShowEventInfo(false)}
+            locale={locale}
+          />
         )}
 
         {/* Timeline Slider - positioned at bottom of map */}
