@@ -25,16 +25,6 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
   });
   const [mapZoom, setMapZoom] = useState<number>(MAP_EVENT_ZOOM);
 
-  // Year state for timeline
-  const [currentYear, setCurrentYear] = useState<number>(() => {
-    const initial = sortedEvents.find(e => e.id === initialEventId);
-    if (initial) {
-      const yearMatch = initial.year.match(/^(\d+)/);
-      return yearMatch ? parseInt(yearMatch[1]) : 570;
-    }
-    return 570;
-  });
-
   // Event info overlay state
   const [showEventInfo, setShowEventInfo] = useState<boolean>(true);
 
@@ -57,52 +47,9 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
       if (event) {
         setMapCenter([event.coordinates.lat, event.coordinates.lng]);
         setMapZoom(MAP_EVENT_ZOOM);
-
-        // Update year
-        const yearMatch = event.year.match(/^(\d+)/);
-        if (yearMatch && yearMatch[1]) {
-          setCurrentYear(parseInt(yearMatch[1]));
-        }
       }
     },
     [sortedEvents],
-  );
-
-  // Handle year change from timeline slider
-  const handleYearChange = useCallback(
-    (year: number) => {
-      setCurrentYear(year);
-      // Find an event matching this year
-      const eventsForYear = sortedEvents.filter(e => {
-        const match = e.year.match(/^(\d+)/);
-        return match && parseInt(match[1]) === year;
-      });
-
-      if (eventsForYear.length > 0) {
-        handleEventSelect(eventsForYear[0].id);
-      } else {
-        // Find nearest event to this year
-        let nearestEvent = sortedEvents[0];
-        let minDiff = Infinity;
-
-        sortedEvents.forEach(event => {
-          const match = event.year.match(/^(\d+)/);
-          if (match) {
-            const eventYear = parseInt(match[1]);
-            const diff = Math.abs(eventYear - year);
-            if (diff < minDiff) {
-              minDiff = diff;
-              nearestEvent = event;
-            }
-          }
-        });
-
-        if (nearestEvent) {
-          handleEventSelect(nearestEvent.id);
-        }
-      }
-    },
-    [sortedEvents, handleEventSelect],
   );
 
   // Handle region click for Wikipedia panel
@@ -200,8 +147,8 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
         {/* Timeline Slider - positioned at bottom of map */}
         <TimelineSlider
           events={sortedEvents}
-          currentYear={currentYear}
-          onYearChange={handleYearChange}
+          selectedEventId={selectedEventId}
+          onEventSelect={handleEventSelect}
           locale={locale}
         />
       </div>

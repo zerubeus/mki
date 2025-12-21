@@ -16,7 +16,7 @@ const arabicUrl = '/seera';
 const englishUrl = '/en/seera';
 
 // Get initial data server-side
-const events = getLocalizedEvents(locale);
+const events = await getLocalizedEvents(locale);
 const sortedEvents = [...events].sort((a, b) => {
   const yearA = parseInt(a.year.match(/\d+/)?.[0] || '0');
   const yearB = parseInt(b.year.match(/\d+/)?.[0] || '0');

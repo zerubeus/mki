@@ -3,88 +3,123 @@ import type { HistoricalEvent } from "../types";
 
 interface TimelineSliderProps {
   events: HistoricalEvent[];
-  currentYear: number;
-  onYearChange: (year: number) => void;
+  selectedEventId: number | null;
+  onEventSelect: (eventId: number) => void;
   locale?: "ar" | "en";
 }
 
+interface EventPosition {
+  event: HistoricalEvent;
+  yearValue: number;
+  positionValue: number;
+}
+
+const getEventYearValue = (event: HistoricalEvent): number | null => {
+  const match = event.year.match(/(\d+)/);
+  return match ? parseInt(match[1], 10) : null;
+};
+
 const TimelineSlider: React.FC<TimelineSliderProps> = ({
   events,
-  currentYear,
-  onYearChange,
+  selectedEventId,
+  onEventSelect,
   locale = "en",
 }) => {
   const trackRef = useRef<HTMLDivElement>(null);
 
-  // Extract unique years from events and get range
-  const { years, minYear, maxYear } = useMemo(() => {
-    const yearSet = new Set<number>();
+  // Build event positions so multiple events in the same year remain selectable
+  const { eventPositions, minYear, maxYear } = useMemo(() => {
+    const fallbackMinYear = 570;
+    const fallbackMaxYear = 632;
+    if (events.length === 0) {
+      return { eventPositions: [], minYear: fallbackMinYear, maxYear: fallbackMaxYear };
+    }
+
+    const yearCounts = new Map<number, number>();
+    const yearValues: number[] = [];
+
     events.forEach((event) => {
-      const match = event.year.match(/(\d+)/);
-      if (match) {
-        yearSet.add(parseInt(match[1]));
+      const yearValue = getEventYearValue(event);
+      if (yearValue !== null) {
+        yearValues.push(yearValue);
+        yearCounts.set(yearValue, (yearCounts.get(yearValue) ?? 0) + 1);
       }
     });
-    const sortedYears = Array.from(yearSet).sort((a, b) => a - b);
-    return {
-      years: sortedYears,
-      minYear: sortedYears[0] || 570,
-      maxYear: sortedYears[sortedYears.length - 1] || 632,
-    };
+
+    const minYearValue = yearValues.length > 0 ? Math.min(...yearValues) : fallbackMinYear;
+    const maxYearValue = yearValues.length > 0 ? Math.max(...yearValues) : fallbackMaxYear;
+    const yearOffsets = new Map<number, number>();
+
+    const positions: EventPosition[] = events.map((event) => {
+      const yearValue = getEventYearValue(event) ?? minYearValue;
+      const count = yearCounts.get(yearValue) ?? 1;
+      const index = yearOffsets.get(yearValue) ?? 0;
+      yearOffsets.set(yearValue, index + 1);
+      const offset = count > 1 ? (index + 1) / (count + 1) : 0.5;
+      return {
+        event,
+        yearValue,
+        positionValue: yearValue + offset,
+      };
+    });
+
+    return { eventPositions: positions, minYear: minYearValue, maxYear: maxYearValue };
   }, [events]);
 
-  // Generate tick marks for the timeline - starting from Prophet's birth
+  // Generate tick marks for the timeline based on dataset range
   const tickMarks = useMemo(() => {
     const ticks: number[] = [];
-    // Range: 570 CE (Prophet's birth) to 640 CE
-    const start = 570;
-    const end = 640;
+    const start = Math.floor(minYear / 10) * 10;
+    const end = Math.ceil(maxYear / 10) * 10;
     for (let i = start; i <= end; i += 10) {
       ticks.push(i);
     }
     return ticks;
-  }, []);
+  }, [minYear, maxYear]);
 
   // Calculate position percentage with clamping to keep elements visible
-  const getPositionPercent = useCallback((year: number) => {
+  const getPositionPercent = useCallback((value: number) => {
     const range = tickMarks[tickMarks.length - 1] - tickMarks[0];
-    const percent = ((year - tickMarks[0]) / range) * 100;
+    const percent = ((value - tickMarks[0]) / range) * 100;
     // Clamp between 2% and 98% to prevent overflow at edges
     return Math.max(2, Math.min(98, percent));
   }, [tickMarks]);
 
-  // Find nearest event year helper
-  const findNearestYear = useCallback((targetYear: number) => {
-    let nearestYear = years[0];
-    let minDiff = Math.abs(targetYear - nearestYear);
-    for (const year of years) {
-      const diff = Math.abs(targetYear - year);
-      if (diff < minDiff) {
-        minDiff = diff;
-        nearestYear = year;
-      }
-    }
-    return nearestYear;
-  }, [years]);
+  const selectedPosition = useMemo(() => {
+    if (!eventPositions.length) return null;
+    return (
+      eventPositions.find((entry) => entry.event.id === selectedEventId) ?? eventPositions[0]
+    );
+  }, [eventPositions, selectedEventId]);
 
-  // Calculate year from position
-  const getYearFromPosition = useCallback((clientX: number) => {
-    if (!trackRef.current) return currentYear;
+  // Find nearest event based on slider position
+  const getNearestEvent = useCallback((clientX: number) => {
+    if (!trackRef.current || eventPositions.length === 0) return null;
 
     const rect = trackRef.current.getBoundingClientRect();
     const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
     const percent = x / rect.width;
     const range = tickMarks[tickMarks.length - 1] - tickMarks[0];
-    const year = Math.round(tickMarks[0] + percent * range);
+    const targetValue = tickMarks[0] + percent * range;
 
-    return findNearestYear(year);
-  }, [tickMarks, findNearestYear, currentYear]);
+    let nearest = eventPositions[0];
+    let minDiff = Math.abs(targetValue - nearest.positionValue);
+    for (const entry of eventPositions) {
+      const diff = Math.abs(targetValue - entry.positionValue);
+      if (diff < minDiff) {
+        minDiff = diff;
+        nearest = entry;
+      }
+    }
+
+    return nearest.event;
+  }, [eventPositions, tickMarks]);
 
   // Handle click on track
   const handleTrackClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const nearestYear = getYearFromPosition(e.clientX);
-    onYearChange(nearestYear);
-  }, [getYearFromPosition, onYearChange]);
+    const nearestEvent = getNearestEvent(e.clientX);
+    if (nearestEvent) onEventSelect(nearestEvent.id);
+  }, [getNearestEvent, onEventSelect]);
 
   // Handle mouse drag
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
@@ -92,8 +127,8 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
     e.stopPropagation();
 
     const handleMouseMove = (moveEvent: MouseEvent) => {
-      const nearestYear = getYearFromPosition(moveEvent.clientX);
-      onYearChange(nearestYear);
+      const nearestEvent = getNearestEvent(moveEvent.clientX);
+      if (nearestEvent) onEventSelect(nearestEvent.id);
     };
 
     const handleMouseUp = () => {
@@ -103,7 +138,7 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
 
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
-  }, [getYearFromPosition, onYearChange]);
+  }, [getNearestEvent, onEventSelect]);
 
   // Handle touch drag
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
@@ -112,8 +147,8 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
 
     const handleTouchMove = (moveEvent: TouchEvent) => {
       const touch = moveEvent.touches[0];
-      const nearestYear = getYearFromPosition(touch.clientX);
-      onYearChange(nearestYear);
+      const nearestEvent = getNearestEvent(touch.clientX);
+      if (nearestEvent) onEventSelect(nearestEvent.id);
     };
 
     const handleTouchEnd = () => {
@@ -123,9 +158,11 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
 
     document.addEventListener('touchmove', handleTouchMove, { passive: false });
     document.addEventListener('touchend', handleTouchEnd);
-  }, [getYearFromPosition, onYearChange]);
+  }, [getNearestEvent, onEventSelect]);
 
-  const currentPos = getPositionPercent(currentYear);
+  const currentPos = selectedPosition
+    ? getPositionPercent(selectedPosition.positionValue)
+    : 50;
 
   return (
     <div className="absolute bottom-16 left-0 right-0 z-[1000]">
@@ -139,7 +176,7 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
           style={{ left: `${currentPos}%` }}
         >
           <div className="bg-amber-600 text-white px-4 py-1.5 rounded-lg text-base font-bold shadow-lg border border-amber-500">
-            {currentYear}
+            {selectedPosition ? selectedPosition.yearValue : minYear}
           </div>
         </div>
       </div>
@@ -153,13 +190,14 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
         {/* Background track line */}
         <div className="absolute top-5 left-0 right-0 h-0.5 bg-gray-400/40" />
 
-        {/* Event year markers (small dots) */}
-        {years.map((year) => {
-          const pos = getPositionPercent(year);
+        {/* Event markers (small dots) */}
+        {eventPositions.map((entry) => {
+          const pos = getPositionPercent(entry.positionValue);
+          const isSelected = entry.event.id === selectedEventId;
           return (
             <div
-              key={`event-${year}`}
-              className="absolute w-1.5 h-1.5 bg-amber-500/60 rounded-full pointer-events-none"
+              key={`event-${entry.event.id}`}
+              className={`absolute rounded-full pointer-events-none ${isSelected ? "w-2 h-2 bg-amber-400" : "w-1.5 h-1.5 bg-amber-500/60"}`}
               style={{ left: `${pos}%`, top: '17px', transform: 'translateX(-50%)' }}
             />
           );

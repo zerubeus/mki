@@ -22,6 +22,7 @@ export async function fetchAndParseCSV<T>(url: string): Promise<CsvParseResult<T
       header: true,
       skipEmptyLines: true,
       dynamicTyping: true,
+      transformHeader: (header) => header.replace(/^\uFEFF/, ''),
       complete: (results) => {
         resolve({
           data: results.data,
