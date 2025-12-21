@@ -164,13 +164,29 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
     ? getPositionPercent(selectedPosition.positionValue)
     : 50;
 
+  // Navigate to previous event
+  const handlePrevEvent = useCallback(() => {
+    if (events.length === 0) return;
+    const currentIndex = events.findIndex((e) => e.id === selectedEventId);
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : events.length - 1;
+    onEventSelect(events[prevIndex].id);
+  }, [events, selectedEventId, onEventSelect]);
+
+  // Navigate to next event
+  const handleNextEvent = useCallback(() => {
+    if (events.length === 0) return;
+    const currentIndex = events.findIndex((e) => e.id === selectedEventId);
+    const nextIndex = currentIndex < events.length - 1 ? currentIndex + 1 : 0;
+    onEventSelect(events[nextIndex].id);
+  }, [events, selectedEventId, onEventSelect]);
+
   return (
     <div className="absolute bottom-16 left-0 right-0 z-[1000]">
       {/* Gradient background for timeline area */}
       <div className="absolute -bottom-16 left-0 right-0 h-40 bg-gradient-to-t from-[#0f1319] via-[#0f1319]/80 to-transparent pointer-events-none" />
 
       {/* Year indicator bubble */}
-      <div className="relative h-10 mx-8 pointer-events-none">
+      <div className="relative h-10 mx-12 pointer-events-none">
         <div
           className="absolute transform -translate-x-1/2 bottom-0"
           style={{ left: `${currentPos}%` }}
@@ -181,12 +197,25 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
         </div>
       </div>
 
-      {/* Timeline track - now interactive */}
-      <div
-        ref={trackRef}
-        className="relative h-14 mx-8 cursor-pointer select-none"
-        onClick={handleTrackClick}
-      >
+      {/* Timeline track with navigation buttons */}
+      <div className="relative h-14 mx-4 flex items-start">
+        {/* Left button - arrow pointing left ← */}
+        <button
+          onClick={handleNextEvent}
+          className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-amber-500 hover:text-amber-400 transition-colors mt-1"
+          aria-label="Previous event"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+
+        {/* Timeline track - now interactive */}
+        <div
+          ref={trackRef}
+          className="relative flex-1 h-14 cursor-pointer select-none"
+          onClick={handleTrackClick}
+        >
         {/* Background track line */}
         <div className="absolute top-5 left-0 right-0 h-0.5 bg-gray-400/40" />
 
@@ -237,6 +266,18 @@ const TimelineSlider: React.FC<TimelineSliderProps> = ({
             <div className="w-2 h-2 bg-white rounded-full" />
           </div>
         </div>
+        </div>
+
+        {/* Right button - arrow pointing right → */}
+        <button
+          onClick={handlePrevEvent}
+          className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-amber-500 hover:text-amber-400 transition-colors mt-1"
+          aria-label="Next event"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
       </div>
     </div>
   );

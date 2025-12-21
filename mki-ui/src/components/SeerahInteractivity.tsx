@@ -126,7 +126,7 @@ const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({
                   <p className="text-sm text-gray-400 mb-1">
                     {selectedEvent.year} • {selectedEvent.locationName}
                   </p>
-                  <p className="text-sm text-gray-300 line-clamp-2">
+                  <p className="text-sm text-gray-300">
                     {selectedEvent.description}
                   </p>
                 </div>
