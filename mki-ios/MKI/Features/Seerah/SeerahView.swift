@@ -29,7 +29,7 @@ struct SeerahView: View {
                         Image(systemName: "chevron.left")
                         Text(appLocale == .arabic ? "الرئيسية" : "Home")
                     }
-                    .foregroundColor(.amberAccent)
+                    .foregroundColor(Color.amberAccent)
                 }
             }
 
@@ -113,7 +113,7 @@ struct SeerahView: View {
     private var loadingView: some View {
         VStack(spacing: 16) {
             ProgressView()
-                .progressViewStyle(CircularProgressViewStyle(tint: .amberAccent))
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.amberAccent))
                 .scaleEffect(1.5)
 
             Text(appLocale == .arabic ? "جاري التحميل..." : "Loading...")
@@ -140,7 +140,7 @@ struct SeerahView: View {
                 }
             } label: {
                 Text(appLocale == .arabic ? "إعادة المحاولة" : "Retry")
-                    .foregroundColor(.amberAccent)
+                    .foregroundColor(Color.amberAccent)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)
                     .background(Color.backgroundSecondary)

@@ -98,10 +98,8 @@ class SeerahViewModel {
         showEventCard = true
 
         if let event = events.first(where: { $0.id == eventId }) {
-            withAnimation(.easeInOut(duration: 0.3)) {
-                mapCenter = event.coordinates.clLocation
-                mapZoom = eventZoom
-            }
+            mapCenter = event.coordinates.clLocation
+            mapZoom = eventZoom
         }
     }
 

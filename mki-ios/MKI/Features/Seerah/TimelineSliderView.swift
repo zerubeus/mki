@@ -47,7 +47,7 @@ struct TimelineSliderView: View {
                 Button(action: onPrevious) {
                     Image(systemName: "chevron.left.circle.fill")
                         .font(.title2)
-                        .foregroundColor(selectedIndex > 0 ? .amberAccent : .gray.opacity(0.5))
+                        .foregroundColor(selectedIndex > 0 ? Color.amberAccent : .gray.opacity(0.5))
                 }
                 .disabled(selectedIndex <= 0)
 
@@ -91,7 +91,7 @@ struct TimelineSliderView: View {
                 Button(action: onNext) {
                     Image(systemName: "chevron.right.circle.fill")
                         .font(.title2)
-                        .foregroundColor(selectedIndex < events.count - 1 ? .amberAccent : .gray.opacity(0.5))
+                        .foregroundColor(selectedIndex < events.count - 1 ? Color.amberAccent : .gray.opacity(0.5))
                 }
                 .disabled(selectedIndex >= events.count - 1)
             }

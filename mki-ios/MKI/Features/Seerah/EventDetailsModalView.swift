@@ -57,7 +57,7 @@ struct EventDetailsModalView: View {
                     VStack(alignment: appLocale.isRTL ? .trailing : .leading, spacing: 8) {
                         Text(appLocale == .arabic ? "التفاصيل" : "Details")
                             .font(.headline)
-                            .foregroundColor(.amberAccent)
+                            .foregroundColor(Color.amberAccent)
 
                         Text(event.description)
                             .font(.body)
@@ -97,11 +97,11 @@ struct EventDetailsModalView: View {
                 Text(label)
                     .foregroundColor(.gray)
                 Image(systemName: icon)
-                    .foregroundColor(.amberAccent)
+                    .foregroundColor(Color.amberAccent)
                     .frame(width: 24)
             } else {
                 Image(systemName: icon)
-                    .foregroundColor(.amberAccent)
+                    .foregroundColor(Color.amberAccent)
                     .frame(width: 24)
                 Text(label)
                     .foregroundColor(.gray)

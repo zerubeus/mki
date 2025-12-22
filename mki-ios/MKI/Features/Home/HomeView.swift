@@ -63,7 +63,7 @@ struct HomeHeaderView: View {
                         Image(systemName: "chevron.down")
                             .font(.caption)
                     }
-                    .foregroundColor(.amberAccent)
+                    .foregroundColor(Color.amberAccent)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 8)
                     .background(Color.backgroundSecondary)

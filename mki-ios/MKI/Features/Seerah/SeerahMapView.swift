@@ -43,17 +43,15 @@ struct SeerahMapView: View {
             }
         }
         .mapStyle(.imagery(elevation: .realistic))
-        .onChange(of: center) { _, newCenter in
-            withAnimation(.easeInOut(duration: 0.5)) {
-                cameraPosition = .camera(
-                    MapCamera(
-                        centerCoordinate: newCenter,
-                        distance: zoomToDistance(zoom),
-                        heading: 0,
-                        pitch: 0
-                    )
+        .onChange(of: selectedEventId) { _, _ in
+            cameraPosition = .camera(
+                MapCamera(
+                    centerCoordinate: center,
+                    distance: zoomToDistance(zoom),
+                    heading: 0,
+                    pitch: 0
                 )
-            }
+            )
         }
         .onAppear {
             cameraPosition = .camera(
@@ -106,7 +104,7 @@ struct SeerahMapView: View {
             // Kaaba icon
             Image(systemName: "building.2.fill")
                 .font(.title)
-                .foregroundColor(.amberAccent)
+                .foregroundColor(Color.amberAccent)
         }
     }
 

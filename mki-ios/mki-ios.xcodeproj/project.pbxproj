@@ -1,0 +1,874 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BDE42F712EF9626200AE05DF /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = BDE42F702EF9626200AE05DF /* MapLibre */; };
+		BDF0E6412EF959A300D907BA /* TimelineSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */; };
+		BDF0E6422EF959A300D907BA /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */; };
+		BDF0E6432EF959A300D907BA /* AppLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6262EF959A300D907BA /* AppLocale.swift */; };
+		BDF0E6442EF959A300D907BA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6222EF959A300D907BA /* Color+Theme.swift */; };
+		BDF0E6452EF959A300D907BA /* MKIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6202EF959A300D907BA /* MKIApp.swift */; };
+		BDF0E6462EF959A300D907BA /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6292EF959A300D907BA /* Topic.swift */; };
+		BDF0E6472EF959A300D907BA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62F2EF959A300D907BA /* HomeView.swift */; };
+		BDF0E6482EF959A300D907BA /* EventDetailsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6332EF959A300D907BA /* EventDetailsModalView.swift */; };
+		BDF0E6492EF959A300D907BA /* SeerahViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6372EF959A300D907BA /* SeerahViewModel.swift */; };
+		BDF0E64A2EF959A300D907BA /* SeerahMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6352EF959A300D907BA /* SeerahMapView.swift */; };
+		BDF0E64B2EF959A300D907BA /* TopicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6302EF959A300D907BA /* TopicCardView.swift */; };
+		BDF0E64C2EF959A300D907BA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62C2EF959A300D907BA /* DataService.swift */; };
+		BDF0E64D2EF959A300D907BA /* SeerahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6362EF959A300D907BA /* SeerahView.swift */; };
+		BDF0E64E2EF959A300D907BA /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6242EF959A300D907BA /* Strings.swift */; };
+		BDF0E64F2EF959A300D907BA /* MapLibreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6342EF959A300D907BA /* MapLibreMapView.swift */; };
+		BDF0E6502EF959A300D907BA /* EventEra.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6272EF959A300D907BA /* EventEra.swift */; };
+		BDF0E6512EF959A300D907BA /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6322EF959A300D907BA /* EventCardView.swift */; };
+		BDF0E6522EF959A300D907BA /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62B2EF959A300D907BA /* CSVParser.swift */; };
+		BDF0E6532EF959A300D907BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63E2EF959A300D907BA /* Assets.xcassets */; };
+		BDF0E6542EF959A300D907BA /* seera_events.csv in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63B2EF959A300D907BA /* seera_events.csv */; };
+		BDF0E6552EF959A300D907BA /* world_500.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63C2EF959A300D907BA /* world_500.geojson */; };
+		BDF0E6562EF959A300D907BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63E2EF959A300D907BA /* Assets.xcassets */; };
+		BDF0E6572EF959A300D907BA /* seera_events.csv in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63B2EF959A300D907BA /* seera_events.csv */; };
+		BDF0E6582EF959A300D907BA /* world_500.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63C2EF959A300D907BA /* world_500.geojson */; };
+		BDF0E6592EF959A300D907BA /* TimelineSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */; };
+		BDF0E65A2EF959A300D907BA /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */; };
+		BDF0E65B2EF959A300D907BA /* AppLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6262EF959A300D907BA /* AppLocale.swift */; };
+		BDF0E65C2EF959A300D907BA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6222EF959A300D907BA /* Color+Theme.swift */; };
+		BDF0E65D2EF959A300D907BA /* MKIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6202EF959A300D907BA /* MKIApp.swift */; };
+		BDF0E65E2EF959A300D907BA /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6292EF959A300D907BA /* Topic.swift */; };
+		BDF0E65F2EF959A300D907BA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62F2EF959A300D907BA /* HomeView.swift */; };
+		BDF0E6602EF959A300D907BA /* EventDetailsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6332EF959A300D907BA /* EventDetailsModalView.swift */; };
+		BDF0E6612EF959A300D907BA /* SeerahViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6372EF959A300D907BA /* SeerahViewModel.swift */; };
+		BDF0E6622EF959A300D907BA /* SeerahMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6352EF959A300D907BA /* SeerahMapView.swift */; };
+		BDF0E6632EF959A300D907BA /* TopicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6302EF959A300D907BA /* TopicCardView.swift */; };
+		BDF0E6642EF959A300D907BA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62C2EF959A300D907BA /* DataService.swift */; };
+		BDF0E6652EF959A300D907BA /* SeerahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6362EF959A300D907BA /* SeerahView.swift */; };
+		BDF0E6662EF959A300D907BA /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6242EF959A300D907BA /* Strings.swift */; };
+		BDF0E6672EF959A300D907BA /* MapLibreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6342EF959A300D907BA /* MapLibreMapView.swift */; };
+		BDF0E6682EF959A300D907BA /* EventEra.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6272EF959A300D907BA /* EventEra.swift */; };
+		BDF0E6692EF959A300D907BA /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6322EF959A300D907BA /* EventCardView.swift */; };
+		BDF0E66A2EF959A300D907BA /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62B2EF959A300D907BA /* CSVParser.swift */; };
+		BDF0E66B2EF959A300D907BA /* TimelineSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */; };
+		BDF0E66C2EF959A300D907BA /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */; };
+		BDF0E66D2EF959A300D907BA /* AppLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6262EF959A300D907BA /* AppLocale.swift */; };
+		BDF0E66E2EF959A300D907BA /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6222EF959A300D907BA /* Color+Theme.swift */; };
+		BDF0E66F2EF959A300D907BA /* MKIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6202EF959A300D907BA /* MKIApp.swift */; };
+		BDF0E6702EF959A300D907BA /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6292EF959A300D907BA /* Topic.swift */; };
+		BDF0E6712EF959A300D907BA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62F2EF959A300D907BA /* HomeView.swift */; };
+		BDF0E6722EF959A300D907BA /* EventDetailsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6332EF959A300D907BA /* EventDetailsModalView.swift */; };
+		BDF0E6732EF959A300D907BA /* SeerahViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6372EF959A300D907BA /* SeerahViewModel.swift */; };
+		BDF0E6742EF959A300D907BA /* SeerahMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6352EF959A300D907BA /* SeerahMapView.swift */; };
+		BDF0E6752EF959A300D907BA /* TopicCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6302EF959A300D907BA /* TopicCardView.swift */; };
+		BDF0E6762EF959A300D907BA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62C2EF959A300D907BA /* DataService.swift */; };
+		BDF0E6772EF959A300D907BA /* SeerahView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6362EF959A300D907BA /* SeerahView.swift */; };
+		BDF0E6782EF959A300D907BA /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6242EF959A300D907BA /* Strings.swift */; };
+		BDF0E6792EF959A300D907BA /* MapLibreMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6342EF959A300D907BA /* MapLibreMapView.swift */; };
+		BDF0E67A2EF959A300D907BA /* EventEra.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6272EF959A300D907BA /* EventEra.swift */; };
+		BDF0E67B2EF959A300D907BA /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6322EF959A300D907BA /* EventCardView.swift */; };
+		BDF0E67C2EF959A300D907BA /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62B2EF959A300D907BA /* CSVParser.swift */; };
+		BDF0E67D2EF959A300D907BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63E2EF959A300D907BA /* Assets.xcassets */; };
+		BDF0E67E2EF959A300D907BA /* seera_events.csv in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63B2EF959A300D907BA /* seera_events.csv */; };
+		BDF0E67F2EF959A300D907BA /* world_500.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63C2EF959A300D907BA /* world_500.geojson */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDF0E5CE2EF958F400D907BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDF0E5B82EF958F300D907BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDF0E5BF2EF958F300D907BA;
+			remoteInfo = mki;
+		};
+		BDF0E5D82EF958F400D907BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDF0E5B82EF958F300D907BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDF0E5BF2EF958F300D907BA;
+			remoteInfo = mki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BDF0E5C02EF958F300D907BA /* mki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF0E5CD2EF958F400D907BA /* mkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF0E5D72EF958F400D907BA /* mkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF0E6202EF959A300D907BA /* MKIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKIApp.swift; sourceTree = "<group>"; };
+		BDF0E6222EF959A300D907BA /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		BDF0E6242EF959A300D907BA /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BDF0E6262EF959A300D907BA /* AppLocale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocale.swift; sourceTree = "<group>"; };
+		BDF0E6272EF959A300D907BA /* EventEra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEra.swift; sourceTree = "<group>"; };
+		BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEvent.swift; sourceTree = "<group>"; };
+		BDF0E6292EF959A300D907BA /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		BDF0E62B2EF959A300D907BA /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		BDF0E62C2EF959A300D907BA /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		BDF0E62F2EF959A300D907BA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BDF0E6302EF959A300D907BA /* TopicCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCardView.swift; sourceTree = "<group>"; };
+		BDF0E6322EF959A300D907BA /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		BDF0E6332EF959A300D907BA /* EventDetailsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsModalView.swift; sourceTree = "<group>"; };
+		BDF0E6342EF959A300D907BA /* MapLibreMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLibreMapView.swift; sourceTree = "<group>"; };
+		BDF0E6352EF959A300D907BA /* SeerahMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeerahMapView.swift; sourceTree = "<group>"; };
+		BDF0E6362EF959A300D907BA /* SeerahView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeerahView.swift; sourceTree = "<group>"; };
+		BDF0E6372EF959A300D907BA /* SeerahViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeerahViewModel.swift; sourceTree = "<group>"; };
+		BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineSliderView.swift; sourceTree = "<group>"; };
+		BDF0E63B2EF959A300D907BA /* seera_events.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = seera_events.csv; sourceTree = "<group>"; };
+		BDF0E63C2EF959A300D907BA /* world_500.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = world_500.geojson; sourceTree = "<group>"; };
+		BDF0E63E2EF959A300D907BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BDF0E5D02EF958F400D907BA /* mkiTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = mkiTests;
+			sourceTree = "<group>";
+		};
+		BDF0E5DA2EF958F400D907BA /* mkiUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = mkiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDF0E5BD2EF958F300D907BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE42F712EF9626200AE05DF /* MapLibre in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF0E5CA2EF958F400D907BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF0E5D42EF958F400D907BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDE42F6F2EF9626200AE05DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDF0E5B72EF958F300D907BA = {
+			isa = PBXGroup;
+			children = (
+				BDF0E5D02EF958F400D907BA /* mkiTests */,
+				BDF0E5DA2EF958F400D907BA /* mkiUITests */,
+				BDF0E5C12EF958F300D907BA /* Products */,
+				BDF0E6402EF959A300D907BA /* MKI */,
+				BDE42F6F2EF9626200AE05DF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDF0E5C12EF958F300D907BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E5C02EF958F300D907BA /* mki.app */,
+				BDF0E5CD2EF958F400D907BA /* mkiTests.xctest */,
+				BDF0E5D72EF958F400D907BA /* mkiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDF0E6212EF959A300D907BA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6202EF959A300D907BA /* MKIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BDF0E6232EF959A300D907BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6222EF959A300D907BA /* Color+Theme.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BDF0E6252EF959A300D907BA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6242EF959A300D907BA /* Strings.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		BDF0E62A2EF959A300D907BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6262EF959A300D907BA /* AppLocale.swift */,
+				BDF0E6272EF959A300D907BA /* EventEra.swift */,
+				BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */,
+				BDF0E6292EF959A300D907BA /* Topic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BDF0E62D2EF959A300D907BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E62B2EF959A300D907BA /* CSVParser.swift */,
+				BDF0E62C2EF959A300D907BA /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BDF0E62E2EF959A300D907BA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6232EF959A300D907BA /* Extensions */,
+				BDF0E6252EF959A300D907BA /* Localization */,
+				BDF0E62A2EF959A300D907BA /* Models */,
+				BDF0E62D2EF959A300D907BA /* Services */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BDF0E6312EF959A300D907BA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E62F2EF959A300D907BA /* HomeView.swift */,
+				BDF0E6302EF959A300D907BA /* TopicCardView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BDF0E6392EF959A300D907BA /* Seerah */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6322EF959A300D907BA /* EventCardView.swift */,
+				BDF0E6332EF959A300D907BA /* EventDetailsModalView.swift */,
+				BDF0E6342EF959A300D907BA /* MapLibreMapView.swift */,
+				BDF0E6352EF959A300D907BA /* SeerahMapView.swift */,
+				BDF0E6362EF959A300D907BA /* SeerahView.swift */,
+				BDF0E6372EF959A300D907BA /* SeerahViewModel.swift */,
+				BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */,
+			);
+			path = Seerah;
+			sourceTree = "<group>";
+		};
+		BDF0E63A2EF959A300D907BA /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6312EF959A300D907BA /* Home */,
+				BDF0E6392EF959A300D907BA /* Seerah */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BDF0E63D2EF959A300D907BA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E63B2EF959A300D907BA /* seera_events.csv */,
+				BDF0E63C2EF959A300D907BA /* world_500.geojson */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BDF0E63F2EF959A300D907BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E63D2EF959A300D907BA /* Data */,
+				BDF0E63E2EF959A300D907BA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDF0E6402EF959A300D907BA /* MKI */ = {
+			isa = PBXGroup;
+			children = (
+				BDF0E6212EF959A300D907BA /* App */,
+				BDF0E62E2EF959A300D907BA /* Core */,
+				BDF0E63A2EF959A300D907BA /* Features */,
+				BDF0E63F2EF959A300D907BA /* Resources */,
+			);
+			path = MKI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDF0E5BF2EF958F300D907BA /* mki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDF0E5E12EF958F400D907BA /* Build configuration list for PBXNativeTarget "mki" */;
+			buildPhases = (
+				BDF0E5BC2EF958F300D907BA /* Sources */,
+				BDF0E5BD2EF958F300D907BA /* Frameworks */,
+				BDF0E5BE2EF958F300D907BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mki;
+			packageProductDependencies = (
+				BDE42F702EF9626200AE05DF /* MapLibre */,
+			);
+			productName = mki;
+			productReference = BDF0E5C02EF958F300D907BA /* mki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDF0E5CC2EF958F400D907BA /* mkiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDF0E5E42EF958F400D907BA /* Build configuration list for PBXNativeTarget "mkiTests" */;
+			buildPhases = (
+				BDF0E5C92EF958F400D907BA /* Sources */,
+				BDF0E5CA2EF958F400D907BA /* Frameworks */,
+				BDF0E5CB2EF958F400D907BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDF0E5CF2EF958F400D907BA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BDF0E5D02EF958F400D907BA /* mkiTests */,
+			);
+			name = mkiTests;
+			packageProductDependencies = (
+			);
+			productName = mkiTests;
+			productReference = BDF0E5CD2EF958F400D907BA /* mkiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDF0E5D62EF958F400D907BA /* mkiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDF0E5E72EF958F400D907BA /* Build configuration list for PBXNativeTarget "mkiUITests" */;
+			buildPhases = (
+				BDF0E5D32EF958F400D907BA /* Sources */,
+				BDF0E5D42EF958F400D907BA /* Frameworks */,
+				BDF0E5D52EF958F400D907BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDF0E5D92EF958F400D907BA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BDF0E5DA2EF958F400D907BA /* mkiUITests */,
+			);
+			name = mkiUITests;
+			packageProductDependencies = (
+			);
+			productName = mkiUITests;
+			productReference = BDF0E5D72EF958F400D907BA /* mkiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDF0E5B82EF958F300D907BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					BDF0E5BF2EF958F300D907BA = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					BDF0E5CC2EF958F400D907BA = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = BDF0E5BF2EF958F300D907BA;
+					};
+					BDF0E5D62EF958F400D907BA = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = BDF0E5BF2EF958F300D907BA;
+					};
+				};
+			};
+			buildConfigurationList = BDF0E5BB2EF958F300D907BA /* Build configuration list for PBXProject "mki" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDF0E5B72EF958F300D907BA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BDE42F6E2EF9624600AE05DF /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BDF0E5C12EF958F300D907BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDF0E5BF2EF958F300D907BA /* mki */,
+				BDF0E5CC2EF958F400D907BA /* mkiTests */,
+				BDF0E5D62EF958F400D907BA /* mkiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDF0E5BE2EF958F300D907BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF0E6532EF959A300D907BA /* Assets.xcassets in Resources */,
+				BDF0E6542EF959A300D907BA /* seera_events.csv in Resources */,
+				BDF0E6552EF959A300D907BA /* world_500.geojson in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF0E5CB2EF958F400D907BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF0E6562EF959A300D907BA /* Assets.xcassets in Resources */,
+				BDF0E6572EF959A300D907BA /* seera_events.csv in Resources */,
+				BDF0E6582EF959A300D907BA /* world_500.geojson in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF0E5D52EF958F400D907BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF0E67D2EF959A300D907BA /* Assets.xcassets in Resources */,
+				BDF0E67E2EF959A300D907BA /* seera_events.csv in Resources */,
+				BDF0E67F2EF959A300D907BA /* world_500.geojson in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDF0E5BC2EF958F300D907BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF0E6412EF959A300D907BA /* TimelineSliderView.swift in Sources */,
+				BDF0E6422EF959A300D907BA /* HistoricalEvent.swift in Sources */,
+				BDF0E6432EF959A300D907BA /* AppLocale.swift in Sources */,
+				BDF0E6442EF959A300D907BA /* Color+Theme.swift in Sources */,
+				BDF0E6452EF959A300D907BA /* MKIApp.swift in Sources */,
+				BDF0E6462EF959A300D907BA /* Topic.swift in Sources */,
+				BDF0E6472EF959A300D907BA /* HomeView.swift in Sources */,
+				BDF0E6482EF959A300D907BA /* EventDetailsModalView.swift in Sources */,
+				BDF0E6492EF959A300D907BA /* SeerahViewModel.swift in Sources */,
+				BDF0E64A2EF959A300D907BA /* SeerahMapView.swift in Sources */,
+				BDF0E64B2EF959A300D907BA /* TopicCardView.swift in Sources */,
+				BDF0E64C2EF959A300D907BA /* DataService.swift in Sources */,
+				BDF0E64D2EF959A300D907BA /* SeerahView.swift in Sources */,
+				BDF0E64E2EF959A300D907BA /* Strings.swift in Sources */,
+				BDF0E64F2EF959A300D907BA /* MapLibreMapView.swift in Sources */,
+				BDF0E6502EF959A300D907BA /* EventEra.swift in Sources */,
+				BDF0E6512EF959A300D907BA /* EventCardView.swift in Sources */,
+				BDF0E6522EF959A300D907BA /* CSVParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF0E5C92EF958F400D907BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF0E6592EF959A300D907BA /* TimelineSliderView.swift in Sources */,
+				BDF0E65A2EF959A300D907BA /* HistoricalEvent.swift in Sources */,
+				BDF0E65B2EF959A300D907BA /* AppLocale.swift in Sources */,
+				BDF0E65C2EF959A300D907BA /* Color+Theme.swift in Sources */,
+				BDF0E65D2EF959A300D907BA /* MKIApp.swift in Sources */,
+				BDF0E65E2EF959A300D907BA /* Topic.swift in Sources */,
+				BDF0E65F2EF959A300D907BA /* HomeView.swift in Sources */,
+				BDF0E6602EF959A300D907BA /* EventDetailsModalView.swift in Sources */,
+				BDF0E6612EF959A300D907BA /* SeerahViewModel.swift in Sources */,
+				BDF0E6622EF959A300D907BA /* SeerahMapView.swift in Sources */,
+				BDF0E6632EF959A300D907BA /* TopicCardView.swift in Sources */,
+				BDF0E6642EF959A300D907BA /* DataService.swift in Sources */,
+				BDF0E6652EF959A300D907BA /* SeerahView.swift in Sources */,
+				BDF0E6662EF959A300D907BA /* Strings.swift in Sources */,
+				BDF0E6672EF959A300D907BA /* MapLibreMapView.swift in Sources */,
+				BDF0E6682EF959A300D907BA /* EventEra.swift in Sources */,
+				BDF0E6692EF959A300D907BA /* EventCardView.swift in Sources */,
+				BDF0E66A2EF959A300D907BA /* CSVParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF0E5D32EF958F400D907BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF0E66B2EF959A300D907BA /* TimelineSliderView.swift in Sources */,
+				BDF0E66C2EF959A300D907BA /* HistoricalEvent.swift in Sources */,
+				BDF0E66D2EF959A300D907BA /* AppLocale.swift in Sources */,
+				BDF0E66E2EF959A300D907BA /* Color+Theme.swift in Sources */,
+				BDF0E66F2EF959A300D907BA /* MKIApp.swift in Sources */,
+				BDF0E6702EF959A300D907BA /* Topic.swift in Sources */,
+				BDF0E6712EF959A300D907BA /* HomeView.swift in Sources */,
+				BDF0E6722EF959A300D907BA /* EventDetailsModalView.swift in Sources */,
+				BDF0E6732EF959A300D907BA /* SeerahViewModel.swift in Sources */,
+				BDF0E6742EF959A300D907BA /* SeerahMapView.swift in Sources */,
+				BDF0E6752EF959A300D907BA /* TopicCardView.swift in Sources */,
+				BDF0E6762EF959A300D907BA /* DataService.swift in Sources */,
+				BDF0E6772EF959A300D907BA /* SeerahView.swift in Sources */,
+				BDF0E6782EF959A300D907BA /* Strings.swift in Sources */,
+				BDF0E6792EF959A300D907BA /* MapLibreMapView.swift in Sources */,
+				BDF0E67A2EF959A300D907BA /* EventEra.swift in Sources */,
+				BDF0E67B2EF959A300D907BA /* EventCardView.swift in Sources */,
+				BDF0E67C2EF959A300D907BA /* CSVParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDF0E5CF2EF958F400D907BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDF0E5BF2EF958F300D907BA /* mki */;
+			targetProxy = BDF0E5CE2EF958F400D907BA /* PBXContainerItemProxy */;
+		};
+		BDF0E5D92EF958F400D907BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDF0E5BF2EF958F300D907BA /* mki */;
+			targetProxy = BDF0E5D82EF958F400D907BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BDF0E5DF2EF958F400D907BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDF0E5E02EF958F400D907BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDF0E5E22EF958F400D907BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zrb.mki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDF0E5E32EF958F400D907BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zrb.mki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDF0E5E52EF958F400D907BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zrb.mkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mki.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mki";
+			};
+			name = Debug;
+		};
+		BDF0E5E62EF958F400D907BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zrb.mkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mki.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mki";
+			};
+			name = Release;
+		};
+		BDF0E5E82EF958F400D907BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zrb.mkiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mki;
+			};
+			name = Debug;
+		};
+		BDF0E5E92EF958F400D907BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GFUYTR75P2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zrb.mkiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mki;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDF0E5BB2EF958F300D907BA /* Build configuration list for PBXProject "mki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDF0E5DF2EF958F400D907BA /* Debug */,
+				BDF0E5E02EF958F400D907BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDF0E5E12EF958F400D907BA /* Build configuration list for PBXNativeTarget "mki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDF0E5E22EF958F400D907BA /* Debug */,
+				BDF0E5E32EF958F400D907BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDF0E5E42EF958F400D907BA /* Build configuration list for PBXNativeTarget "mkiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDF0E5E52EF958F400D907BA /* Debug */,
+				BDF0E5E62EF958F400D907BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDF0E5E72EF958F400D907BA /* Build configuration list for PBXNativeTarget "mkiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDF0E5E82EF958F400D907BA /* Debug */,
+				BDF0E5E92EF958F400D907BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDE42F6E2EF9624600AE05DF /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.21.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDE42F702EF9626200AE05DF /* MapLibre */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE42F6E2EF9624600AE05DF /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			productName = MapLibre;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BDF0E5B82EF958F300D907BA /* Project object */;
+}
