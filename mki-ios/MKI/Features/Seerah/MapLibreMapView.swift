@@ -100,13 +100,12 @@ class MapLibreCoordinator: NSObject, MLNMapViewDelegate {
 
     func mapView(_ mapView: MLNMapView, viewFor annotation: MLNAnnotation) -> MLNAnnotationView? {
         guard let eventAnnotation = annotation as? EventAnnotation else {
-            // Default Mecca marker
+            // Default Mecca marker - use Kaaba SVG from assets
             if annotation.title == "Mecca" {
                 let view = MLNAnnotationView(annotation: annotation, reuseIdentifier: "mecca")
                 view.frame = CGRect(x: 0, y: 0, width: 48, height: 48)
 
-                let imageView = UIImageView(image: UIImage(systemName: "building.2.fill"))
-                imageView.tintColor = UIColor(Color.amberAccent)
+                let imageView = UIImageView(image: UIImage(named: "kaaba"))
                 imageView.frame = view.bounds
                 imageView.contentMode = .scaleAspectFit
                 view.addSubview(imageView)

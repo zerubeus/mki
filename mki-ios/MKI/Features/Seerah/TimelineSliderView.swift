@@ -43,9 +43,9 @@ struct TimelineSliderView: View {
 
             // Timeline controls
             HStack(spacing: 12) {
-                // Previous button
+                // Left button - go to previous event
                 Button(action: onPrevious) {
-                    Image(systemName: "chevron.left.circle.fill")
+                    Image(systemName: "chevron.backward.circle.fill")
                         .font(.title2)
                         .foregroundColor(selectedIndex > 0 ? Color.amberAccent : .gray.opacity(0.5))
                 }
@@ -87,9 +87,9 @@ struct TimelineSliderView: View {
                 }
                 .frame(height: 60)
 
-                // Next button
+                // Right button - go to next event
                 Button(action: onNext) {
-                    Image(systemName: "chevron.right.circle.fill")
+                    Image(systemName: "chevron.forward.circle.fill")
                         .font(.title2)
                         .foregroundColor(selectedIndex < events.count - 1 ? Color.amberAccent : .gray.opacity(0.5))
                 }

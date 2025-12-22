@@ -95,17 +95,10 @@ struct SeerahMapView: View {
     }
 
     private var meccaMarker: some View {
-        ZStack {
-            // Glow effect
-            Circle()
-                .fill(Color.amberAccent.opacity(0.3))
-                .frame(width: 48, height: 48)
-
-            // Kaaba icon
-            Image(systemName: "building.2.fill")
-                .font(.title)
-                .foregroundColor(Color.amberAccent)
-        }
+        Image("kaaba")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 48, height: 48)
     }
 
     // MARK: - Helpers
