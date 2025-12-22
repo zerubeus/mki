@@ -4,7 +4,6 @@ import SwiftUI
 struct SeerahView: View {
     @State private var viewModel = SeerahViewModel()
     @Environment(\.appLocale) private var appLocale
-    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         ZStack {
@@ -19,26 +18,12 @@ struct SeerahView: View {
                 mainContent
             }
         }
+        .navigationTitle(appLocale == .arabic ? "مسار النبي ﷺ" : "The Prophet's Path ﷺ")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    HStack(spacing: 4) {
-                        Image(systemName: "chevron.left")
-                        Text(appLocale == .arabic ? "الرئيسية" : "Home")
-                    }
-                    .foregroundColor(Color.amberAccent)
-                }
-            }
-
-            ToolbarItem(placement: .principal) {
-                Text(appLocale == .arabic ? "مسار النبي ﷺ" : "The Prophet's Path ﷺ")
-                    .font(.headline)
-                    .foregroundColor(.white)
-            }
-        }
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(Color.backgroundPrimary, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .tint(Color.amberAccent)
         .task {
             await viewModel.loadData()
         }

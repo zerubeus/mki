@@ -6,7 +6,7 @@ enum CSVParser {
     /// Parse events from CSV string
     /// - Parameter csvString: The raw CSV content
     /// - Returns: Array of HistoricalEvent
-    static func parseEvents(from csvString: String) throws -> [HistoricalEvent] {
+    nonisolated static func parseEvents(from csvString: String) throws -> [HistoricalEvent] {
         var events: [HistoricalEvent] = []
 
         // Split into lines and get headers
@@ -21,22 +21,27 @@ enum CSVParser {
         let headers = parseCSVLine(lines[0])
         let headerMap = Dictionary(uniqueKeysWithValues: headers.enumerated().map { ($1.lowercased(), $0) })
 
-        // Required columns
-        guard let idIdx = headerMap["id"],
-              let yearIdx = headerMap["year"],
+        // Required columns (support multiple naming conventions)
+        guard let idIdx = headerMap["event_id"] ?? headerMap["id"],
+              let yearIdx = headerMap["gregorian_year"] ?? headerMap["year"],
               let titleIdx = headerMap["title"],
-              let descIdx = headerMap["description"],
+              let descIdx = headerMap["details"] ?? headerMap["description"],
               let locationIdx = headerMap["location_name"] ?? headerMap["locationname"],
-              let coordIdx = headerMap["coordinates"],
-              let eraIdx = headerMap["era"],
-              let typeIdx = headerMap["event_type"] ?? headerMap["eventtype"] else {
+              let coordIdx = headerMap["geo_coordinates"] ?? headerMap["coordinates"] else {
             throw CSVParserError.missingColumns
         }
+
+        // Optional columns
+        let eraIdx = headerMap["era"]
+        let typeIdx = headerMap["event_type"] ?? headerMap["eventtype"]
 
         // Parse each data row
         for i in 1..<lines.count {
             let values = parseCSVLine(lines[i])
-            guard values.count > max(idIdx, yearIdx, titleIdx, descIdx, locationIdx, coordIdx, eraIdx, typeIdx) else {
+
+            // Ensure we have enough columns for required fields
+            let requiredMaxIdx = max(idIdx, yearIdx, titleIdx, descIdx, locationIdx, coordIdx)
+            guard values.count > requiredMaxIdx else {
                 continue // Skip malformed rows
             }
 
@@ -53,17 +58,18 @@ enum CSVParser {
                 coordinates = GeoCoordinates(lat: 21.4225, lng: 39.8262)
             }
 
-            // Parse era
-            let eraString = values[eraIdx]
-            let era = parseEra(from: eraString, year: values[yearIdx])
+            // Parse era (optional column, infer from year if not present)
+            let eraString = eraIdx.flatMap { values.count > $0 ? values[$0] : nil } ?? ""
+            let yearString = values[yearIdx]
+            let era = parseEra(from: eraString, year: yearString)
 
-            // Parse event type
-            let typeString = values[typeIdx]
+            // Parse event type (optional column, default to personal)
+            let typeString = typeIdx.flatMap { values.count > $0 ? values[$0] : nil } ?? ""
             let eventType = EventType(rawValue: typeString) ?? .personal
 
             let event = HistoricalEvent(
                 id: id,
-                year: values[yearIdx],
+                year: yearString,
                 title: values[titleIdx],
                 description: values[descIdx],
                 locationName: values[locationIdx],
@@ -78,7 +84,7 @@ enum CSVParser {
     }
 
     /// Parse a single CSV line, handling quoted fields
-    private static func parseCSVLine(_ line: String) -> [String] {
+    nonisolated private static func parseCSVLine(_ line: String) -> [String] {
         var result: [String] = []
         var current = ""
         var inQuotes = false
@@ -99,7 +105,7 @@ enum CSVParser {
     }
 
     /// Parse era from string, falling back to year-based detection
-    private static func parseEra(from string: String, year: String) -> EventEra {
+    nonisolated private static func parseEra(from string: String, year: String) -> EventEra {
         // Try direct match first
         if let era = EventEra(rawValue: string) {
             return era
@@ -120,7 +126,7 @@ enum CSVParser {
     }
 
     /// Extract the first 4-digit year from a string
-    private static func extractYear(from string: String) -> Int? {
+    nonisolated private static func extractYear(from string: String) -> Int? {
         let pattern = #"(\d{3,4})"#
         guard let range = string.range(of: pattern, options: .regularExpression) else { return nil }
         return Int(string[range])

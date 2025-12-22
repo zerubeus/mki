@@ -1,11 +1,18 @@
 import SwiftUI
 
+/// Custom button style for topic cards with press animation
+struct TopicCardButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
+            .animation(.easeInOut(duration: 0.15), value: configuration.isPressed)
+    }
+}
+
 /// A card view for a topic on the home screen
 struct TopicCardView: View {
     let topic: Topic
     let appLocale: AppLocale
-
-    @State private var isPressed = false
 
     var body: some View {
         if topic.isComingSoon {
@@ -14,7 +21,7 @@ struct TopicCardView: View {
             NavigationLink(destination: destinationView) {
                 activeCard
             }
-            .buttonStyle(PlainButtonStyle())
+            .buttonStyle(TopicCardButtonStyle())
         }
     }
 
@@ -43,7 +50,6 @@ struct TopicCardView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 64, height: 64)
-                .scaleEffect(isPressed ? 1.05 : 1.0)
 
             // Title
             Text(topic.name(for: appLocale))
@@ -64,13 +70,8 @@ struct TopicCardView: View {
         .cornerRadius(16)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(isPressed ? Color.amberAccent.opacity(0.5) : Color.borderGray, lineWidth: 1)
+                .stroke(Color.borderGray, lineWidth: 1)
         )
-        .scaleEffect(isPressed ? 0.98 : 1.0)
-        .animation(.easeInOut(duration: 0.15), value: isPressed)
-        .onLongPressGesture(minimumDuration: 0, pressing: { pressing in
-            isPressed = pressing
-        }, perform: {})
     }
 
     // MARK: - Coming Soon Card
