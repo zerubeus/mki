@@ -1,0 +1,158 @@
+import SwiftUI
+
+/// Main Seerah page with map and timeline
+struct SeerahView: View {
+    @State private var viewModel = SeerahViewModel()
+    @Environment(\.appLocale) private var appLocale
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        ZStack {
+            // Background
+            Color.backgroundPrimary.ignoresSafeArea()
+
+            if viewModel.isLoading {
+                loadingView
+            } else if let error = viewModel.error {
+                errorView(error)
+            } else {
+                mainContent
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                        Text(appLocale == .arabic ? "الرئيسية" : "Home")
+                    }
+                    .foregroundColor(.amberAccent)
+                }
+            }
+
+            ToolbarItem(placement: .principal) {
+                Text(appLocale == .arabic ? "مسار النبي ﷺ" : "The Prophet's Path ﷺ")
+                    .font(.headline)
+                    .foregroundColor(.white)
+            }
+        }
+        .task {
+            await viewModel.loadData()
+        }
+        .sheet(isPresented: $viewModel.showDetailsModal) {
+            if let event = viewModel.selectedEvent {
+                EventDetailsModalView(event: event, appLocale: appLocale)
+            }
+        }
+    }
+
+    // MARK: - Main Content
+
+    private var mainContent: some View {
+        GeometryReader { geometry in
+            ZStack {
+                // Map
+                SeerahMapView(
+                    center: $viewModel.mapCenter,
+                    zoom: $viewModel.mapZoom,
+                    events: viewModel.sortedEvents,
+                    selectedEventId: viewModel.selectedEventId,
+                    geoJSONData: viewModel.geoJSONData,
+                    onMarkerTap: { eventId in
+                        viewModel.selectEvent(eventId)
+                    }
+                )
+                .ignoresSafeArea()
+
+                VStack {
+                    // Event card overlay at top
+                    if let event = viewModel.selectedEvent, viewModel.showEventCard {
+                        EventCardView(
+                            event: event,
+                            appLocale: appLocale,
+                            onTap: {
+                                viewModel.showDetails()
+                            },
+                            onDismiss: {
+                                viewModel.dismissEventCard()
+                            }
+                        )
+                        .padding(.horizontal)
+                        .padding(.top, 8)
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                    }
+
+                    Spacer()
+
+                    // Timeline slider at bottom
+                    TimelineSliderView(
+                        events: viewModel.sortedEvents,
+                        selectedEventId: viewModel.selectedEventId,
+                        minYear: viewModel.minYear,
+                        maxYear: viewModel.maxYear,
+                        onEventSelect: { eventId in
+                            viewModel.selectEvent(eventId)
+                        },
+                        onPrevious: {
+                            viewModel.selectPreviousEvent()
+                        },
+                        onNext: {
+                            viewModel.selectNextEvent()
+                        }
+                    )
+                }
+            }
+        }
+    }
+
+    // MARK: - Loading View
+
+    private var loadingView: some View {
+        VStack(spacing: 16) {
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: .amberAccent))
+                .scaleEffect(1.5)
+
+            Text(appLocale == .arabic ? "جاري التحميل..." : "Loading...")
+                .foregroundColor(.gray)
+        }
+    }
+
+    // MARK: - Error View
+
+    private func errorView(_ error: Error) -> some View {
+        VStack(spacing: 16) {
+            Image(systemName: "exclamationmark.triangle")
+                .font(.largeTitle)
+                .foregroundColor(.red)
+
+            Text(error.localizedDescription)
+                .foregroundColor(.gray)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+
+            Button {
+                Task {
+                    await viewModel.loadData()
+                }
+            } label: {
+                Text(appLocale == .arabic ? "إعادة المحاولة" : "Retry")
+                    .foregroundColor(.amberAccent)
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 12)
+                    .background(Color.backgroundSecondary)
+                    .cornerRadius(8)
+            }
+        }
+    }
+}
+
+#Preview {
+    NavigationStack {
+        SeerahView()
+    }
+    .preferredColorScheme(.dark)
+}
