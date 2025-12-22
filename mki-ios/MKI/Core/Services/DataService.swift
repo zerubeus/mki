@@ -4,25 +4,33 @@ import Foundation
 actor DataService {
     static let shared = DataService()
 
-    private var eventsCache: [HistoricalEvent]?
+    private var eventsCache: [AppLocale: [HistoricalEvent]] = [:]
     private var geoJSONCache: Data?
 
     private init() {}
 
     /// Load Seerah events from bundled CSV
-    func loadSeerahEvents() async throws -> [HistoricalEvent] {
-        if let cached = eventsCache {
+    func loadSeerahEvents(locale: AppLocale) async throws -> [HistoricalEvent] {
+        if let cached = eventsCache[locale] {
             return cached
         }
 
-        guard let url = Bundle.main.url(forResource: "seera_events", withExtension: "csv") else {
-            throw DataError.fileNotFound("seera_events.csv")
+        let resourceName: String
+        switch locale {
+        case .french:
+            resourceName = "seera_events_fr"
+        case .arabic, .english:
+            resourceName = "seera_events"
+        }
+
+        guard let url = Bundle.main.url(forResource: resourceName, withExtension: "csv") else {
+            throw DataError.fileNotFound("\(resourceName).csv")
         }
 
         let csvString = try String(contentsOf: url, encoding: .utf8)
         let events = try CSVParser.parseEvents(from: csvString)
 
-        eventsCache = events
+        eventsCache[locale] = events
         return events
     }
 
@@ -43,7 +51,7 @@ actor DataService {
 
     /// Clear all cached data
     func clearCache() {
-        eventsCache = nil
+        eventsCache.removeAll()
         geoJSONCache = nil
     }
 }

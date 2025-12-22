@@ -31,9 +31,11 @@
 		BDF0E6522EF959A300D907BA /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62B2EF959A300D907BA /* CSVParser.swift */; };
 		BDF0E6532EF959A300D907BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63E2EF959A300D907BA /* Assets.xcassets */; };
 		BDF0E6542EF959A300D907BA /* seera_events.csv in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63B2EF959A300D907BA /* seera_events.csv */; };
+		BC6AA3BFCF014504A4109FE4 /* seera_events_fr.csv in Resources */ = {isa = PBXBuildFile; fileRef = 26B355F73D064C958BF1CDCC /* seera_events_fr.csv */; };
 		BDF0E6552EF959A300D907BA /* world_500.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63C2EF959A300D907BA /* world_500.geojson */; };
 		BDF0E6562EF959A300D907BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63E2EF959A300D907BA /* Assets.xcassets */; };
 		BDF0E6572EF959A300D907BA /* seera_events.csv in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63B2EF959A300D907BA /* seera_events.csv */; };
+		A1C39DED50CC47A083438CF4 /* seera_events_fr.csv in Resources */ = {isa = PBXBuildFile; fileRef = 26B355F73D064C958BF1CDCC /* seera_events_fr.csv */; };
 		BDF0E6582EF959A300D907BA /* world_500.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63C2EF959A300D907BA /* world_500.geojson */; };
 		BDF0E6592EF959A300D907BA /* TimelineSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */; };
 		BDF0E65A2EF959A300D907BA /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */; };
@@ -73,6 +75,7 @@
 		BDF0E67C2EF959A300D907BA /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E62B2EF959A300D907BA /* CSVParser.swift */; };
 		BDF0E67D2EF959A300D907BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63E2EF959A300D907BA /* Assets.xcassets */; };
 		BDF0E67E2EF959A300D907BA /* seera_events.csv in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63B2EF959A300D907BA /* seera_events.csv */; };
+		4144376B07E447BBB12023D6 /* seera_events_fr.csv in Resources */ = {isa = PBXBuildFile; fileRef = 26B355F73D064C958BF1CDCC /* seera_events_fr.csv */; };
 		BDF0E67F2EF959A300D907BA /* world_500.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BDF0E63C2EF959A300D907BA /* world_500.geojson */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +120,7 @@
 		BDF0E6372EF959A300D907BA /* SeerahViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeerahViewModel.swift; sourceTree = "<group>"; };
 		BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineSliderView.swift; sourceTree = "<group>"; };
 		BDF0E63B2EF959A300D907BA /* seera_events.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = seera_events.csv; sourceTree = "<group>"; };
+		26B355F73D064C958BF1CDCC /* seera_events_fr.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = seera_events_fr.csv; sourceTree = "<group>"; };
 		BDF0E63C2EF959A300D907BA /* world_500.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = world_500.geojson; sourceTree = "<group>"; };
 		BDF0E63E2EF959A300D907BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -279,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF0E63B2EF959A300D907BA /* seera_events.csv */,
+				26B355F73D064C958BF1CDCC /* seera_events_fr.csv */,
 				BDF0E63C2EF959A300D907BA /* world_500.geojson */,
 			);
 			path = Data;
@@ -429,6 +434,7 @@
 				BDE42F812EF972BA00AE05DF /* map_style.json in Resources */,
 				BDF0E6532EF959A300D907BA /* Assets.xcassets in Resources */,
 				BDF0E6542EF959A300D907BA /* seera_events.csv in Resources */,
+				BC6AA3BFCF014504A4109FE4 /* seera_events_fr.csv in Resources */,
 				BDF0E6552EF959A300D907BA /* world_500.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +446,7 @@
 				BDE42F802EF972BA00AE05DF /* map_style.json in Resources */,
 				BDF0E6562EF959A300D907BA /* Assets.xcassets in Resources */,
 				BDF0E6572EF959A300D907BA /* seera_events.csv in Resources */,
+				A1C39DED50CC47A083438CF4 /* seera_events_fr.csv in Resources */,
 				BDF0E6582EF959A300D907BA /* world_500.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +458,7 @@
 				BDE42F7F2EF972BA00AE05DF /* map_style.json in Resources */,
 				BDF0E67D2EF959A300D907BA /* Assets.xcassets in Resources */,
 				BDF0E67E2EF959A300D907BA /* seera_events.csv in Resources */,
+				4144376B07E447BBB12023D6 /* seera_events_fr.csv in Resources */,
 				BDF0E67F2EF959A300D907BA /* world_500.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,7 +34,7 @@ struct TopicCardView: View {
             SeerahView()
         default:
             // Placeholder for other topics
-            Text("Coming Soon")
+            Text(Strings.Common.comingSoon(appLocale))
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.backgroundPrimary)
@@ -109,7 +109,7 @@ struct TopicCardView: View {
         )
         .overlay(
             // Coming Soon Banner
-            Text(appLocale == .arabic ? "قريباً" : "Coming Soon")
+            Text(Strings.Common.comingSoon(appLocale))
                 .font(.caption2.weight(.bold))
                 .foregroundColor(.white)
                 .padding(.horizontal, 8)

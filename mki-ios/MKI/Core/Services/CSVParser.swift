@@ -18,7 +18,10 @@ enum CSVParser {
         }
 
         // Parse header row
-        let headers = parseCSVLine(lines[0])
+        var headers = parseCSVLine(lines[0])
+        if let firstHeader = headers.first {
+            headers[0] = firstHeader.trimmingCharacters(in: CharacterSet(charactersIn: "\u{feff}"))
+        }
         let headerMap = Dictionary(uniqueKeysWithValues: headers.enumerated().map { ($1.lowercased(), $0) })
 
         // Required columns (support multiple naming conventions)

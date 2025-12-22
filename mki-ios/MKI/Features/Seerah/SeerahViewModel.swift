@@ -67,12 +67,12 @@ class SeerahViewModel {
     // MARK: - Actions
 
     /// Load all data from bundled resources
-    func loadData() async {
+    func loadData(locale: AppLocale) async {
         isLoading = true
         error = nil
 
         do {
-            async let eventsTask = DataService.shared.loadSeerahEvents()
+            async let eventsTask = DataService.shared.loadSeerahEvents(locale: locale)
             async let geoJSONTask = DataService.shared.loadGeoJSON()
 
             let (loadedEvents, loadedGeoJSON) = try await (eventsTask, geoJSONTask)

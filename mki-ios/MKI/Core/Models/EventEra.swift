@@ -65,6 +65,30 @@ enum EventEra: String, Codable, CaseIterable, Hashable {
             return "Medinan Period"
         }
     }
+
+    /// French name
+    var frenchName: String {
+        switch self {
+        case .preProphethood:
+            return "Avant la prophétie"
+        case .meccan:
+            return "Période mecquoise"
+        case .medinan:
+            return "Période médinoise"
+        }
+    }
+
+    /// Localized name for the provided locale
+    func displayName(for locale: AppLocale) -> String {
+        switch locale {
+        case .arabic:
+            return arabicName
+        case .english:
+            return englishName
+        case .french:
+            return frenchName
+        }
+    }
 }
 
 /// Type classification for historical events
@@ -97,6 +121,60 @@ enum EventType: String, Codable, CaseIterable, Hashable {
             return "arrow.right.circle.fill"
         case .personal:
             return "person.fill"
+        }
+    }
+
+    /// Localized display name for this event type
+    func displayName(for locale: AppLocale) -> String {
+        switch locale {
+        case .arabic:
+            return arabicName
+        case .english:
+            return rawValue
+        case .french:
+            return frenchName
+        }
+    }
+
+    private var arabicName: String {
+        switch self {
+        case .birth:
+            return "الميلاد"
+        case .marriage:
+            return "الزواج"
+        case .religious:
+            return "ديني"
+        case .battle:
+            return "معركة"
+        case .treaty:
+            return "معاهدة"
+        case .death:
+            return "الوفاة"
+        case .migration:
+            return "الهجرة"
+        case .personal:
+            return "شخصي"
+        }
+    }
+
+    private var frenchName: String {
+        switch self {
+        case .birth:
+            return "Naissance"
+        case .marriage:
+            return "Mariage"
+        case .religious:
+            return "Religieux"
+        case .battle:
+            return "Bataille"
+        case .treaty:
+            return "Traité"
+        case .death:
+            return "Décès"
+        case .migration:
+            return "Migration"
+        case .personal:
+            return "Personnel"
         }
     }
 }

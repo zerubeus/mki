@@ -78,11 +78,11 @@ struct HomeHeaderView: View {
 
             // Title
             VStack(spacing: 4) {
-                Text(appLocale == .arabic ? "اعرف دينك" : "Know Your Religion")
+                Text(Strings.App.title(appLocale))
                     .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.white)
 
-                Text(appLocale == .arabic ? "معرفة إسلامية شاملة" : "Comprehensive Islamic Knowledge")
+                Text(Strings.App.subtitle(appLocale))
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
@@ -97,31 +97,19 @@ struct WelcomeSectionView: View {
     let appLocale: AppLocale
 
     private var title: String {
-        appLocale == .arabic
-            ? "مرحباً بك في موقع المعرفة الإسلامية"
-            : "Welcome to the Islamic Knowledge Website"
+        Strings.Welcome.title(appLocale)
     }
 
     private var description: String {
-        appLocale == .arabic
-            ? "هذا الموقع يهدف إلى تقديم المعرفة الإسلامية الصحيحة والموثقة من الكتاب والسنة."
-            : "This website aims to provide authentic and documented Islamic knowledge from the Quran and Sunnah."
+        Strings.Welcome.description(appLocale)
     }
 
     private var features: [(String, String)] {
-        if appLocale == .arabic {
-            return [
-                ("📚", "محتوى معتمد من الكتاب والسنة"),
-                ("🎓", "شرح مبسط ومفهوم للجميع"),
-                ("🌍", "متاح بعدة لغات")
-            ]
-        } else {
-            return [
-                ("📚", "Content based on Quran and Sunnah"),
-                ("🎓", "Simple explanations for everyone"),
-                ("🌍", "Available in multiple languages")
-            ]
-        }
+        [
+            ("📚", Strings.Welcome.feature1(appLocale)),
+            ("🎓", Strings.Welcome.feature2(appLocale)),
+            ("🌍", Strings.Welcome.feature3(appLocale))
+        ]
     }
 
     var body: some View {

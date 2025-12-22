@@ -83,7 +83,7 @@ struct EventCardView: View {
     }
 
     private var eraBadge: some View {
-        Text(appLocale == .arabic ? event.era.arabicName : event.era.englishName)
+        Text(event.era.displayName(for: appLocale))
             .font(.caption2.weight(.medium))
             .foregroundColor(.white)
             .padding(.horizontal, 8)

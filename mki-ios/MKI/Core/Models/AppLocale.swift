@@ -4,6 +4,7 @@ import SwiftUI
 enum AppLocale: String, CaseIterable {
     case arabic = "ar"
     case english = "en"
+    case french = "fr"
 
     /// The Locale for this app locale
     var locale: Locale {
@@ -12,7 +13,7 @@ enum AppLocale: String, CaseIterable {
 
     /// Layout direction for this locale
     var layoutDirection: LayoutDirection {
-        self == .arabic ? .rightToLeft : .leftToRight
+        isRTL ? .rightToLeft : .leftToRight
     }
 
     /// Display name of this locale
@@ -22,6 +23,8 @@ enum AppLocale: String, CaseIterable {
             return "العربية"
         case .english:
             return "English"
+        case .french:
+            return "Français"
         }
     }
 

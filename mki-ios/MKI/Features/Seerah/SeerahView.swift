@@ -18,14 +18,14 @@ struct SeerahView: View {
                 mainContent
             }
         }
-        .navigationTitle(appLocale == .arabic ? "مسار النبي ﷺ" : "The Prophet's Path ﷺ")
+        .navigationTitle(Strings.Seerah.title(appLocale))
         .navigationBarTitleDisplayMode(.inline)
         .toolbarColorScheme(.dark, for: .navigationBar)
         .toolbarBackground(Color.backgroundPrimary, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .tint(Color.amberAccent)
-        .task {
-            await viewModel.loadData()
+        .task(id: appLocale) {
+            await viewModel.loadData(locale: appLocale)
         }
         .sheet(isPresented: $viewModel.showDetailsModal) {
             if let event = viewModel.selectedEvent {
@@ -101,7 +101,7 @@ struct SeerahView: View {
                 .progressViewStyle(CircularProgressViewStyle(tint: Color.amberAccent))
                 .scaleEffect(1.5)
 
-            Text(appLocale == .arabic ? "جاري التحميل..." : "Loading...")
+            Text(Strings.Common.loading(appLocale))
                 .foregroundColor(.gray)
         }
     }
@@ -121,10 +121,10 @@ struct SeerahView: View {
 
             Button {
                 Task {
-                    await viewModel.loadData()
+                    await viewModel.loadData(locale: appLocale)
                 }
             } label: {
-                Text(appLocale == .arabic ? "إعادة المحاولة" : "Retry")
+                Text(Strings.Common.retry(appLocale))
                     .foregroundColor(Color.amberAccent)
                     .padding(.horizontal, 24)
                     .padding(.vertical, 12)

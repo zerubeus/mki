@@ -14,7 +14,7 @@ struct EventDetailsModalView: View {
                     // Era Badge
                     HStack {
                         if !appLocale.isRTL { Spacer() }
-                        Text(appLocale == .arabic ? event.era.arabicName : event.era.englishName)
+                        Text(event.era.displayName(for: appLocale))
                             .font(.caption.weight(.semibold))
                             .foregroundColor(.white)
                             .padding(.horizontal, 12)
@@ -34,20 +34,20 @@ struct EventDetailsModalView: View {
                     VStack(spacing: 12) {
                         metadataRow(
                             icon: "calendar",
-                            label: appLocale == .arabic ? "التاريخ" : "Date",
+                            label: Strings.Seerah.date(appLocale),
                             value: event.year
                         )
 
                         metadataRow(
                             icon: "mappin.circle.fill",
-                            label: appLocale == .arabic ? "الموقع" : "Location",
+                            label: Strings.Seerah.location(appLocale),
                             value: event.locationName
                         )
 
                         metadataRow(
                             icon: event.eventType.symbolName,
-                            label: appLocale == .arabic ? "النوع" : "Type",
-                            value: event.eventType.rawValue
+                            label: Strings.Seerah.type(appLocale),
+                            value: event.eventType.displayName(for: appLocale)
                         )
                     }
                     .padding()
@@ -55,7 +55,7 @@ struct EventDetailsModalView: View {
 
                     // Description
                     VStack(alignment: appLocale.isRTL ? .trailing : .leading, spacing: 8) {
-                        Text(appLocale == .arabic ? "التفاصيل" : "Details")
+                        Text(Strings.Seerah.details(appLocale))
                             .font(.headline)
                             .foregroundColor(Color.amberAccent)
 
