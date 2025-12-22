@@ -113,38 +113,36 @@ struct WelcomeSectionView: View {
     }
 
     var body: some View {
-        VStack(alignment: appLocale.isRTL ? .trailing : .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
             Text(title)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(.white)
-                .multilineTextAlignment(appLocale.isRTL ? .trailing : .leading)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
             Text(description)
                 .font(.body)
                 .foregroundColor(.gray)
-                .multilineTextAlignment(appLocale.isRTL ? .trailing : .leading)
+                .multilineTextAlignment(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-            VStack(alignment: appLocale.isRTL ? .trailing : .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: 12) {
                 ForEach(features, id: \.1) { icon, text in
-                    HStack(spacing: 12) {
-                        if !appLocale.isRTL {
-                            Text(icon)
-                            Text(text)
-                                .foregroundColor(.white)
-                            Spacer()
-                        } else {
-                            Spacer()
-                            Text(text)
-                                .foregroundColor(.white)
-                            Text(icon)
-                        }
-                    }
+                    featureRow(icon: icon, text: text)
                 }
             }
             .padding(.top, 8)
         }
         .padding(20)
         .cardStyle()
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func featureRow(icon: String, text: String) -> some View {
+        Text("\(icon) \(text)")
+            .foregroundColor(.white)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
