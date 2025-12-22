@@ -12,10 +12,19 @@ struct MapLibreMapView: UIViewRepresentable {
     let geoJSONData: Data?
     let onMarkerTap: (Int) -> Void
 
-    // Stamen Watercolor tiles via Stadia Maps
-    private let styleURL = URL(string: "https://tiles.stadiamaps.com/styles/stamen_watercolor.json")!
-
     func makeUIView(context: Context) -> MLNMapView {
+        // Try to load bundled style, otherwise use MapLibre demo
+        var styleURL: URL
+
+        if let bundledStyle = Bundle.main.url(forResource: "map_style", withExtension: "json") {
+            styleURL = bundledStyle
+            print("🗺️ Using bundled map_style.json: \(bundledStyle)")
+        } else {
+            // Fallback to MapLibre's demo tiles
+            styleURL = URL(string: "https://demotiles.maplibre.org/style.json")!
+            print("🗺️ Using MapLibre demo tiles (bundled style not found)")
+        }
+
         let mapView = MLNMapView(frame: .zero, styleURL: styleURL)
         mapView.delegate = context.coordinator
         mapView.setCenter(center, zoomLevel: zoom, animated: false)
@@ -23,6 +32,7 @@ struct MapLibreMapView: UIViewRepresentable {
         mapView.logoView.isHidden = true
         mapView.attributionButton.isHidden = true
 
+        print("🗺️ MapView created with style URL: \(styleURL)")
         return mapView
     }
 
@@ -67,8 +77,19 @@ class MapLibreCoordinator: NSObject, MLNMapViewDelegate {
     // MARK: - MLNMapViewDelegate
 
     func mapView(_ mapView: MLNMapView, didFinishLoading style: MLNStyle) {
+        print("✅ MapLibre style loaded: \(style.name ?? "unknown")")
+        print("📍 Style URL: \(mapView.styleURL?.absoluteString ?? "none")")
         addGeoJSONLayer(to: mapView, style: style)
         addMeccaMarker(to: mapView)
+    }
+
+    func mapViewDidFailLoadingMap(_ mapView: MLNMapView, withError error: Error) {
+        print("❌ MapLibre failed to load: \(error.localizedDescription)")
+    }
+
+    func mapView(_ mapView: MLNMapView, didFailToLoadImage imageName: String) -> UIImage? {
+        print("⚠️ MapLibre failed to load image: \(imageName)")
+        return nil
     }
 
     func mapView(_ mapView: MLNMapView, didSelect annotation: MLNAnnotation) {
@@ -126,6 +147,25 @@ class MapLibreCoordinator: NSObject, MLNMapViewDelegate {
 
     // MARK: - GeoJSON Layer
 
+    // Vintage color palette for regions (muted, historical feel)
+    private let regionColors: [UIColor] = [
+        UIColor(red: 0.90, green: 0.72, blue: 0.69, alpha: 1.0), // Dusty rose
+        UIColor(red: 0.96, green: 0.80, blue: 0.80, alpha: 1.0), // Light pink
+        UIColor(red: 0.99, green: 0.90, blue: 0.80, alpha: 1.0), // Peach
+        UIColor(red: 1.00, green: 0.95, blue: 0.80, alpha: 1.0), // Light yellow
+        UIColor(red: 0.85, green: 0.92, blue: 0.83, alpha: 1.0), // Light green
+        UIColor(red: 0.82, green: 0.88, blue: 0.89, alpha: 1.0), // Light teal
+        UIColor(red: 0.79, green: 0.85, blue: 0.97, alpha: 1.0), // Light blue
+        UIColor(red: 0.85, green: 0.82, blue: 0.91, alpha: 1.0), // Light purple
+        UIColor(red: 0.92, green: 0.82, blue: 0.86, alpha: 1.0), // Pink lavender
+        UIColor(red: 0.87, green: 0.49, blue: 0.42, alpha: 1.0), // Salmon
+        UIColor(red: 0.90, green: 0.57, blue: 0.22, alpha: 1.0), // Orange
+        UIColor(red: 0.95, green: 0.76, blue: 0.20, alpha: 1.0), // Gold
+        UIColor(red: 0.42, green: 0.66, blue: 0.31, alpha: 1.0), // Forest green
+        UIColor(red: 0.27, green: 0.51, blue: 0.56, alpha: 1.0), // Teal
+        UIColor(red: 0.24, green: 0.52, blue: 0.78, alpha: 1.0), // Blue
+    ]
+
     private func addGeoJSONLayer(to mapView: MLNMapView, style: MLNStyle) {
         guard !hasAddedGeoJSON, let geoJSONData = geoJSONData else { return }
 
@@ -135,14 +175,15 @@ class MapLibreCoordinator: NSObject, MLNMapViewDelegate {
             let source = MLNShapeSource(identifier: "territories", shape: shape)
             style.addSource(source)
 
-            // Fill layer
+            // Fill layer with vintage colors
             let fillLayer = MLNFillStyleLayer(identifier: "territories-fill", source: source)
-            fillLayer.fillColor = NSExpression(forConstantValue: UIColor.brown.withAlphaComponent(0.2))
-            fillLayer.fillOpacity = NSExpression(forConstantValue: 0.5)
+            // Use a warm brown/sepia base color for all regions
+            fillLayer.fillColor = NSExpression(forConstantValue: UIColor(red: 0.85, green: 0.75, blue: 0.65, alpha: 1.0))
+            fillLayer.fillOpacity = NSExpression(forConstantValue: 0.4)
 
-            // Border layer
+            // Border layer with vintage brown
             let borderLayer = MLNLineStyleLayer(identifier: "territories-border", source: source)
-            borderLayer.lineColor = NSExpression(forConstantValue: UIColor.brown.withAlphaComponent(0.5))
+            borderLayer.lineColor = NSExpression(forConstantValue: UIColor(red: 0.55, green: 0.27, blue: 0.07, alpha: 0.7)) // Saddle brown
             borderLayer.lineWidth = NSExpression(forConstantValue: 1.5)
 
             style.addLayer(fillLayer)

@@ -1,0 +1,21 @@
+{
+    "version": 8,
+    "name": "Stamen Watercolor",
+    "sources": {
+        "stamen": {
+            "type": "raster",
+            "tiles": [
+                "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
+            ],
+            "tileSize": 256,
+            "attribution": "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap."
+        }
+    },
+    "layers": [
+        {
+            "id": "stamen-watercolor",
+            "type": "raster",
+            "source": "stamen"
+        }
+    ]
+}

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BDE42F712EF9626200AE05DF /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = BDE42F702EF9626200AE05DF /* MapLibre */; };
+		BDE42F7F2EF972BA00AE05DF /* map_style.json in Resources */ = {isa = PBXBuildFile; fileRef = BDE42F7E2EF972BA00AE05DF /* map_style.json */; };
+		BDE42F802EF972BA00AE05DF /* map_style.json in Resources */ = {isa = PBXBuildFile; fileRef = BDE42F7E2EF972BA00AE05DF /* map_style.json */; };
+		BDE42F812EF972BA00AE05DF /* map_style.json in Resources */ = {isa = PBXBuildFile; fileRef = BDE42F7E2EF972BA00AE05DF /* map_style.json */; };
 		BDF0E6412EF959A300D907BA /* TimelineSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6382EF959A300D907BA /* TimelineSliderView.swift */; };
 		BDF0E6422EF959A300D907BA /* HistoricalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6282EF959A300D907BA /* HistoricalEvent.swift */; };
 		BDF0E6432EF959A300D907BA /* AppLocale.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF0E6262EF959A300D907BA /* AppLocale.swift */; };
@@ -91,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDE42F7E2EF972BA00AE05DF /* map_style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = map_style.json; sourceTree = "<group>"; };
 		BDF0E5C02EF958F300D907BA /* mki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF0E5CD2EF958F400D907BA /* mkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF0E5D72EF958F400D907BA /* mkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +287,7 @@
 		BDF0E63F2EF959A300D907BA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BDE42F7E2EF972BA00AE05DF /* map_style.json */,
 				BDF0E63D2EF959A300D907BA /* Data */,
 				BDF0E63E2EF959A300D907BA /* Assets.xcassets */,
 			);
@@ -392,7 +397,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BDF0E5BB2EF958F300D907BA /* Build configuration list for PBXProject "mki" */;
+			buildConfigurationList = BDF0E5BB2EF958F300D907BA /* Build configuration list for PBXProject "mki-ios" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -421,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE42F812EF972BA00AE05DF /* map_style.json in Resources */,
 				BDF0E6532EF959A300D907BA /* Assets.xcassets in Resources */,
 				BDF0E6542EF959A300D907BA /* seera_events.csv in Resources */,
 				BDF0E6552EF959A300D907BA /* world_500.geojson in Resources */,
@@ -431,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE42F802EF972BA00AE05DF /* map_style.json in Resources */,
 				BDF0E6562EF959A300D907BA /* Assets.xcassets in Resources */,
 				BDF0E6572EF959A300D907BA /* seera_events.csv in Resources */,
 				BDF0E6582EF959A300D907BA /* world_500.geojson in Resources */,
@@ -441,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE42F7F2EF972BA00AE05DF /* map_style.json in Resources */,
 				BDF0E67D2EF959A300D907BA /* Assets.xcassets in Resources */,
 				BDF0E67E2EF959A300D907BA /* seera_events.csv in Resources */,
 				BDF0E67F2EF959A300D907BA /* world_500.geojson in Resources */,
@@ -594,7 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -652,7 +660,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -734,7 +742,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GFUYTR75P2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = zrb.mkiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -756,7 +764,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GFUYTR75P2;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = zrb.mkiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -813,7 +821,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BDF0E5BB2EF958F300D907BA /* Build configuration list for PBXProject "mki" */ = {
+		BDF0E5BB2EF958F300D907BA /* Build configuration list for PBXProject "mki-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF0E5DF2EF958F400D907BA /* Debug */,

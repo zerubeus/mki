@@ -39,8 +39,8 @@ struct SeerahView: View {
     private var mainContent: some View {
         GeometryReader { geometry in
             ZStack {
-                // Map
-                SeerahMapView(
+                // Map - using MapLibre for vintage/historical style
+                MapLibreMapView(
                     center: $viewModel.mapCenter,
                     zoom: $viewModel.mapZoom,
                     events: viewModel.sortedEvents,

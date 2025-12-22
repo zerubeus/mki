@@ -42,7 +42,7 @@ struct SeerahMapView: View {
                 meccaMarker
             }
         }
-        .mapStyle(.imagery(elevation: .realistic))
+        .mapStyle(.standard)
         .onChange(of: selectedEventId) { _, _ in
             cameraPosition = .camera(
                 MapCamera(
