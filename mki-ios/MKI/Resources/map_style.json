@@ -1,21 +1,22 @@
 {
     "version": 8,
-    "name": "Stamen Watercolor",
+    "name": "ESRI Shaded Relief",
     "sources": {
-        "stamen": {
+        "esri-relief": {
             "type": "raster",
             "tiles": [
-                "https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg"
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}"
             ],
             "tileSize": 256,
-            "attribution": "Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap."
+            "maxzoom": 13,
+            "attribution": "© Esri"
         }
     },
     "layers": [
         {
-            "id": "stamen-watercolor",
+            "id": "esri-relief-tiles",
             "type": "raster",
-            "source": "stamen"
+            "source": "esri-relief"
         }
     ]
 }
