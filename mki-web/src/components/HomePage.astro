@@ -8,13 +8,14 @@ import type { translations } from "../i18n/translations";
 type TranslationObject = (typeof translations)[keyof typeof translations];
 
 interface Props {
-  locale: "ar" | "en";
+  locale: "ar" | "en" | "fr";
   arabicUrl: string;
   englishUrl: string;
+  frenchUrl: string;
   t: TranslationObject;
 }
 
-const { locale, arabicUrl, englishUrl, t } = Astro.props;
+const { locale, arabicUrl, englishUrl, frenchUrl, t } = Astro.props;
 
 const isArabic = locale === "ar";
 
@@ -49,11 +50,14 @@ const topicsData = [
   },
 ];
 
-const comingSoonText = isArabic ? "قريباً" : "Coming Soon";
+const comingSoonText = isArabic ? "قريباً" : locale === "fr" ? "Bientôt" : "Coming Soon";
 
 const getTopicLink = (topicId: string) => {
   if (isArabic) {
     return `/${topicId}`;
+  }
+  if (locale === "fr") {
+    return `/fr/${topicId}`;
   }
   return `/en/${topicId}`;
 };
@@ -84,6 +88,7 @@ const getTopicLink = (topicId: string) => {
       >
         <option value={arabicUrl} selected={locale === "ar"}>العربية</option>
         <option value={englishUrl} selected={locale === "en"}>English</option>
+        <option value={frenchUrl} selected={locale === "fr"}>Français</option>
       </select>
     </div>
   </header>

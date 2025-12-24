@@ -5,7 +5,7 @@ import type { Locale } from '../../i18n/translations';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { getTranslations } from '../../i18n/utils';
 
-const currentLocale = (Astro.currentLocale as Locale) || 'en';
+const currentLocale = (Astro.currentLocale as Locale) || 'fr';
 const arHomepageUrl = getRelativeLocaleUrl('ar', '');
 const enHomepageUrl = getRelativeLocaleUrl('en', '');
 const frHomepageUrl = getRelativeLocaleUrl('fr', '');
