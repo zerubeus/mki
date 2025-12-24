@@ -39,7 +39,7 @@ const topicsData = [
     icon: hadithIcon,
     nameKey: "hadith" as keyof TranslationObject,
     descKey: "hadithDesc" as keyof TranslationObject,
-    comingSoon: false,
+    comingSoon: locale === "fr", // Hadith available in Arabic and English only
   },
   {
     id: "history",
