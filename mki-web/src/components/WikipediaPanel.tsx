@@ -7,7 +7,7 @@ interface WikipediaPanelProps {
   regionName: string;
   isOpen: boolean;
   onClose: () => void;
-  locale: "ar" | "en";
+  locale: "ar" | "en" | "fr";
 }
 
 type LoadingState = "idle" | "loading" | "success" | "error";

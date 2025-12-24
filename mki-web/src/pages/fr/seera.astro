@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SeerahJourney from '../../components/SeerahJourney.astro';
+import type { Locale } from '../../i18n/translations';
+import { getTranslations } from '../../i18n/utils';
+
+const currentLocale = (Astro.currentLocale as Locale) || 'fr';
+const t = getTranslations(currentLocale);
+---
+
+<Layout>
+  <SeerahJourney t={t} locale={currentLocale} />
+</Layout>

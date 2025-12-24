@@ -2,7 +2,14 @@ import type { HistoricalEvent, GeoCoordinates, EventEra, EventType } from "../ty
 import { fetchAndParseCSV } from "../utils/csvParser";
 
 const R2_BASE_URL = "https://r2.mustknowislam.com";
-const SEERA_EVENTS_URL = `${R2_BASE_URL}/data/seera/seera_events.csv`;
+
+type SupportedLocale = "ar" | "en" | "fr";
+
+const SEERA_EVENTS_URLS: Record<SupportedLocale, string> = {
+  ar: `${R2_BASE_URL}/data/seera/seera_events.csv`,
+  en: `${R2_BASE_URL}/data/seera/seera_events_en.csv`,
+  fr: `${R2_BASE_URL}/data/seera/seera_events_fr.csv`,
+};
 
 interface CsvSeeraRow {
   event_id: number | string;
@@ -16,7 +23,7 @@ interface CsvSeeraRow {
   geo_coordinates: string;
 }
 
-let seeraEventsCache: HistoricalEvent[] | null = null;
+const seeraEventsCache = new Map<SupportedLocale, HistoricalEvent[]>();
 
 const DEFAULT_COORDINATES: GeoCoordinates = { lat: 21.4225, lng: 39.8262 };
 const DEFAULT_EVENT_TYPE: EventType = "Personal";
@@ -70,13 +77,15 @@ const getEraFromGregorianYear = (gregorianYear: number | null): EventEra => {
 };
 
 export async function getLocalizedEvents(
-  _locale: "ar" | "en",
+  locale: SupportedLocale = "ar",
 ): Promise<HistoricalEvent[]> {
-  if (seeraEventsCache) return seeraEventsCache;
+  const cached = seeraEventsCache.get(locale);
+  if (cached) return cached;
 
-  const result = await fetchAndParseCSV<CsvSeeraRow>(SEERA_EVENTS_URL);
+  const url = SEERA_EVENTS_URLS[locale];
+  const result = await fetchAndParseCSV<CsvSeeraRow>(url);
 
-  seeraEventsCache = result.data
+  const events = result.data
     .map((row) => {
       const id = toNumber(row.event_id);
       const gregorianYear = toNumber(row.gregorian_year);
@@ -96,7 +105,8 @@ export async function getLocalizedEvents(
     })
     .filter((event): event is HistoricalEvent => Boolean(event));
 
-  return seeraEventsCache;
+  seeraEventsCache.set(locale, events);
+  return events;
 }
 
 export const MAP_INITIAL_CENTER: [number, number] = [24.7, 39.5];

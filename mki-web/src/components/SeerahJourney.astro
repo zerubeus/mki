@@ -7,13 +7,14 @@ type TranslationObject = (typeof translations)[keyof typeof translations];
 
 interface Props {
   t: TranslationObject;
-  locale?: 'ar' | 'en';
+  locale?: 'ar' | 'en' | 'fr';
 }
 
 const { t, locale = 'en' } = Astro.props;
-const homeUrl = locale === 'ar' ? '/' : '/en/';
+const homeUrl = locale === 'ar' ? '/' : locale === 'fr' ? '/fr/' : '/en/';
 const arabicUrl = '/seera';
 const englishUrl = '/en/seera';
+const frenchUrl = '/fr/seera';
 
 // Get initial data server-side
 const events = await getLocalizedEvents(locale);
@@ -39,7 +40,7 @@ const initialEvent = sortedEvents[0] || null;
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
-        {locale === 'ar' ? 'الرئيسية' : 'Home'}
+        {locale === 'ar' ? 'الرئيسية' : locale === 'fr' ? 'Accueil' : 'Home'}
       </a>
 
       <div class="text-center">
@@ -54,6 +55,7 @@ const initialEvent = sortedEvents[0] || null;
       >
         <option value={arabicUrl} selected={locale === 'ar'}>العربية</option>
         <option value={englishUrl} selected={locale === 'en'}>English</option>
+        <option value={frenchUrl} selected={locale === 'fr'}>Français</option>
       </select>
     </div>
   </header>

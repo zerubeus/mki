@@ -10,7 +10,7 @@ import { getWikipediaRegionInfo, type WikipediaRegionInfo } from "../data/wikipe
 interface SeerahInteractivityProps {
   sortedEvents: HistoricalEvent[];
   initialEventId: number | null;
-  locale?: "ar" | "en";
+  locale?: "ar" | "en" | "fr";
 }
 
 const SeerahInteractivity: React.FC<SeerahInteractivityProps> = ({

@@ -126,6 +126,70 @@ export const translations = {
     comparison: "Comparison",
     comparisonDesc: "The meaning is correct, but the famous wording is not authenticated",
   },
+
+  fr: {
+    // Header
+    title: "Connais Ta Religion",
+    subtitle: "Connaissance Islamique Complète",
+
+    // Topics
+    aqida: "Croyance",
+    aqidaDesc: "Fondements de la foi et du monothéisme",
+    seera: "Biographie",
+    seeraDesc: "Biographie du Prophète Muhammad (PSL)",
+    tareekh: "Histoire",
+    tareekhDesc: "Histoire et civilisation islamiques",
+
+    // Description
+    welcomeTitle: "Bienvenue sur le site de Connaissance Islamique",
+    welcomeText:
+      "Ce site vise à fournir une connaissance islamique authentique et documentée à partir du Coran et de la Sunnah. Vous pouvez parcourir différents sujets pour apprendre les bases de l'Islam, de la croyance et du culte à la biographie du Prophète et à l'histoire islamique.",
+
+    // Features
+    feature1: "Contenu basé sur le Coran et la Sunnah",
+    feature2: "Explications simples pour tous",
+    feature3: "Disponible en plusieurs langues",
+
+    // Language names
+    arabic: "ar",
+    english: "en",
+
+    // Page specific translations
+    backToHome: "Retour à l'Accueil",
+
+    aqidaPageTitle: "Croyance",
+    aqidaPageDesc1:
+      "Cette section est en cours de développement. Nous travaillons à vous apporter un contenu complet sur la croyance et la théologie islamiques.",
+
+    seeraPageTitle: "Biographie Prophétique",
+    seeraPageDesc1:
+      "Cette section est en cours de développement. Nous nous efforçons de fournir des informations détaillées sur la vie du Prophète Muhammad (paix soit sur lui).",
+
+    // SeerahJourney specific translations
+    seerahJourneyTitle: "Le Parcours du Prophète ﷺ",
+    seerahJourneySubtitle: "Un Voyage Interactif à Travers la Sira",
+    seerahJourneyFooter:
+      "Données cartographiques © OpenStreetMap contributors © CartoDB. Informations sur les événements compilées à des fins éducatives.",
+    timelineTitle: "Chronologie des Événements",
+
+    // Hadith page translations
+    hadith: "Hadith",
+    hadithDesc: "Analyse de la Chaîne de Narration des Hadiths",
+    hadithPageTitle: "Analyse de la Chaîne des Hadiths",
+    hadithPageSubtitle: "Vérifier l'authenticité des hadiths et analyser les chaînes de narrateurs",
+    narratorInfo: "Informations sur le Narrateur",
+    narratorStatus: "Statut",
+    narratorBiography: "Biographie",
+    chainComparison: "Comparaison",
+    weakChain: "Chaîne Faible",
+    authenticChain: "Chaîne Authentique",
+    selectNarrator: "Sélectionnez un narrateur pour voir les détails",
+    hadithText: "Texte du Hadith",
+    chainGrade: "Grade de la Chaîne",
+    source: "Source",
+    comparison: "Comparaison",
+    comparisonDesc: "Le sens est correct, mais la formulation célèbre n'est pas authentifiée",
+  },
 } as const;
 
 export type Locale = keyof typeof translations;

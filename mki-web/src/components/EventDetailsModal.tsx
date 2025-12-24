@@ -5,7 +5,7 @@ interface EventDetailsModalProps {
   event: HistoricalEvent | null;
   isOpen: boolean;
   onClose: () => void;
-  locale: "ar" | "en";
+  locale: "ar" | "en" | "fr";
 }
 
 const getEraBadgeColors = (era: EventEra): string => {

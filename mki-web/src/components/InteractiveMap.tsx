@@ -14,7 +14,7 @@ interface InteractiveMapProps {
   center: [number, number];
   zoom: number;
   className?: string;
-  locale?: "ar" | "en";
+  locale?: "ar" | "en" | "fr";
 }
 
 // Color palette for regions - distinct colors with vintage/muted feel
