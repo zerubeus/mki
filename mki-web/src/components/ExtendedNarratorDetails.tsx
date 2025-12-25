@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
 import type { ExtendedNarrator } from '../types';
-import { getNarratorTeachers, getNarratorStudents } from '../data/hadith/csvService';
 import { statusLabels, statusHexColors } from '../data/hadith/constants';
+
+// Fetch narrator details with teachers/students from API
+async function fetchNarratorRelationships(scholarIndx: number): Promise<{ teachers: ExtendedNarrator[]; students: ExtendedNarrator[] }> {
+  const res = await fetch(`/api/narrators/${scholarIndx}?withRelationships=true`);
+  if (!res.ok) return { teachers: [], students: [] };
+  const data = await res.json();
+  return { teachers: data.teachers || [], students: data.students || [] };
+}
 
 interface ExtendedNarratorDetailsProps {
   narrator: ExtendedNarrator;
@@ -25,7 +32,7 @@ export default function ExtendedNarratorDetails({
     const loadRelationships = async () => {
       setLoading(true);
       try {
-        const [t, s] = await Promise.all([getNarratorTeachers(narrator), getNarratorStudents(narrator)]);
+        const { teachers: t, students: s } = await fetchNarratorRelationships(narrator.scholarIndx);
         setTeachers(t);
         setStudents(s);
       } catch (error) {

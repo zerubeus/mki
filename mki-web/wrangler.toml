@@ -10,10 +10,11 @@ main = "./dist/_worker.js"
 # Assets directory
 assets = { directory = "./dist" }
 
-# R2 bucket binding for hadith data
-[[r2_buckets]]
-binding = "R2_BUCKET"
-bucket_name = "mki"
+# D1 database binding for hadith/seerah data
+[[d1_databases]]
+binding = "DB"
+database_name = "mki-db"
+database_id = "3a11c23e-2d1e-4738-8f35-4fc1ce143b1e"
 
 # Environment variables (optional, can also set in dashboard)
 [vars]

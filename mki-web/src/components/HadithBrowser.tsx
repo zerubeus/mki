@@ -1,11 +1,28 @@
 import { useState, useEffect, useCallback } from "react";
-import {
-  getHadithsPaginated,
-  searchHadiths,
-  getHadithSources,
-} from "../data/hadith/csvService";
 import { sourceToSlug } from "../utils/seoHelpers";
 import type { CsvHadith } from "../types";
+
+// API functions to fetch from D1 via API routes
+async function getHadithsPaginated(page: number, perPage: number, source?: string) {
+  const params = new URLSearchParams({ page: String(page), perPage: String(perPage) });
+  if (source) params.set("source", source);
+  const res = await fetch(`/api/hadiths?${params}`);
+  if (!res.ok) throw new Error("Failed to fetch hadiths");
+  return res.json();
+}
+
+async function searchHadiths(query: string, limit: number) {
+  const params = new URLSearchParams({ q: query, limit: String(limit) });
+  const res = await fetch(`/api/hadiths/search?${params}`);
+  if (!res.ok) throw new Error("Failed to search hadiths");
+  return res.json();
+}
+
+async function getHadithSources() {
+  const res = await fetch("/api/hadiths/sources");
+  if (!res.ok) throw new Error("Failed to get sources");
+  return res.json();
+}
 
 interface HadithBrowserProps {
   locale: "ar" | "en";

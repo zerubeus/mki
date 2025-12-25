@@ -2,13 +2,29 @@ import { useState, useCallback, useMemo, useRef, useEffect } from "react";
 import mermaid from "mermaid";
 
 import type { CsvHadith, ExtendedNarrator } from "../types";
-import {
-  loadHadiths,
-  resolveChain,
-  getNarratorByIndex,
-} from "../data/hadith/csvService";
 import { statusLabels, generationLabels, statusHexColors } from "../data/hadith/constants";
 import ExtendedNarratorDetails from "./ExtendedNarratorDetails";
+
+// API helper functions
+async function fetchHadiths(page: number = 1, perPage: number = 50): Promise<{ hadiths: CsvHadith[]; total: number }> {
+  const res = await fetch(`/api/hadiths?page=${page}&perPage=${perPage}`);
+  if (!res.ok) throw new Error("Failed to fetch hadiths");
+  return res.json();
+}
+
+async function fetchResolveChain(indices: number[]): Promise<ExtendedNarrator[]> {
+  if (indices.length === 0) return [];
+  const res = await fetch(`/api/narrators/resolve?ids=${indices.join(",")}`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
+async function fetchNarratorByIndex(scholarIndx: number): Promise<ExtendedNarrator | null> {
+  const res = await fetch(`/api/narrators/${scholarIndx}?withRelationships=false`);
+  if (!res.ok) return null;
+  const data = await res.json();
+  return data.narrator;
+}
 
 interface HadithIsnadFlowProps {
   locale: "ar" | "en";
@@ -227,9 +243,9 @@ export default function HadithIsnadFlow({ locale, t }: HadithIsnadFlowProps) {
     const loadSampleHadiths = async () => {
       setLoading(true);
       try {
-        const allHadiths = await loadHadiths();
+        const { hadiths } = await fetchHadiths(1, 100);
         // Get first 5 hadiths with chain data as samples
-        const samples = allHadiths
+        const samples = hadiths
           .filter((h) => h.chainIndices.length > 0)
           .slice(0, 5);
         setSampleHadiths(samples);
@@ -252,7 +268,7 @@ export default function HadithIsnadFlow({ locale, t }: HadithIsnadFlowProps) {
       if (!selectedHadith) return;
 
       try {
-        const resolvedChain = await resolveChain(selectedHadith.chainIndices);
+        const resolvedChain = await fetchResolveChain(selectedHadith.chainIndices);
         setChain(resolvedChain);
         setSelectedNarratorIndex(null);
         setSelectedNarrator(null);
@@ -280,7 +296,7 @@ export default function HadithIsnadFlow({ locale, t }: HadithIsnadFlowProps) {
   );
 
   const handleNarratorDetailsClick = async (scholarIndx: number) => {
-    const narrator = await getNarratorByIndex(scholarIndx);
+    const narrator = await fetchNarratorByIndex(scholarIndx);
     if (narrator) {
       setSelectedNarrator(narrator);
       const index = chain.findIndex((n) => n.scholarIndx === scholarIndx);

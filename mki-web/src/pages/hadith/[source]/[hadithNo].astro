@@ -11,7 +11,7 @@ import HadithSchema from '../../../components/HadithSchema.astro';
 import HadithDetailView from '../../../components/HadithDetailView';
 import type { Locale } from '../../../i18n/translations';
 import { getTranslations } from '../../../i18n/utils';
-import { loadHadiths } from '../../../data/hadith/csvService';
+import { getHadithBySourceAndNumber } from '../../../data/hadith/d1Service';
 import {
   slugToSource,
   generateHadithTitle,
@@ -35,15 +35,14 @@ if (isNaN(hadithNumber)) {
 const currentLocale: Locale = 'ar';
 const t = getTranslations(currentLocale);
 
+// Get D1 database
+const db = Astro.locals.runtime.env.DB;
+
 // Convert slug back to source name for matching
 const sourceName = slugToSource(source);
 
-// Find the hadith
-const allHadiths = await loadHadiths();
-const hadith = allHadiths.find(
-  h => h.source.trim().toLowerCase().includes(source.toLowerCase()) &&
-       h.hadithNo === hadithNumber
-);
+// Find the hadith using D1
+const hadith = await getHadithBySourceAndNumber(db, sourceName, hadithNumber);
 
 // 404 if not found
 if (!hadith) {

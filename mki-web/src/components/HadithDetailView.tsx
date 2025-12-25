@@ -1,13 +1,28 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import mermaid from "mermaid";
-import {
-  getHadithById,
-  resolveChain,
-  getNarratorByIndex,
-} from "../data/hadith/csvService";
 import { statusLabels, generationLabels, statusHexColors } from "../data/hadith/constants";
 import type { CsvHadith, ExtendedNarrator } from "../types";
 import ExtendedNarratorDetails from "./ExtendedNarratorDetails";
+
+// API functions for D1 access
+async function getHadithById(id: string): Promise<CsvHadith | null> {
+  const res = await fetch(`/api/hadiths/${encodeURIComponent(id)}`);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+async function resolveChain(indices: number[]): Promise<ExtendedNarrator[]> {
+  if (indices.length === 0) return [];
+  const res = await fetch(`/api/narrators/resolve?ids=${indices.join(",")}`);
+  if (!res.ok) return [];
+  return res.json();
+}
+
+async function getNarratorByIndex(index: number): Promise<ExtendedNarrator | null> {
+  const res = await fetch(`/api/narrators/${index}`);
+  if (!res.ok) return null;
+  return res.json();
+}
 
 interface HadithDetailViewProps {
   locale: "ar" | "en";

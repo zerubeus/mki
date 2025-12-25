@@ -4,7 +4,7 @@ import TimelineSlider from "./TimelineSlider";
 import WikipediaPanel from "./WikipediaPanel";
 import EventDetailsModal from "./EventDetailsModal";
 import type { HistoricalEvent, EventEra } from "../types";
-import { MAP_EVENT_ZOOM } from "../data/seerahEvents";
+import { MAP_EVENT_ZOOM } from "../data/d1SeerahService";
 import { getWikipediaRegionInfo, type WikipediaRegionInfo } from "../data/wikipediaRegions";
 
 interface SeerahInteractivityProps {

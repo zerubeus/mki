@@ -1,6 +1,6 @@
 ---
 import type { translations } from '../i18n/translations.ts';
-import { getLocalizedEvents } from '../data/seerahEvents.ts';
+import { getLocalizedEvents } from '../data/d1SeerahService.ts';
 import SeerahInteractivity from './SeerahInteractivity.tsx';
 
 type TranslationObject = (typeof translations)[keyof typeof translations];
@@ -16,8 +16,11 @@ const arabicUrl = '/seera';
 const englishUrl = '/en/seera';
 const frenchUrl = '/fr/seera';
 
-// Get initial data server-side
-const events = await getLocalizedEvents(locale);
+// Get D1 database from Astro locals
+const db = Astro.locals.runtime.env.DB;
+
+// Get initial data server-side from D1
+const events = await getLocalizedEvents(db, locale);
 const sortedEvents = [...events].sort((a, b) => {
   const yearA = parseInt(a.year.match(/\d+/)?.[0] || '0');
   const yearB = parseInt(b.year.match(/\d+/)?.[0] || '0');

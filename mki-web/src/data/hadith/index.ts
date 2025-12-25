@@ -1,28 +1,32 @@
 /**
- * Hadith Dataset - CSV-based storage
+ * Hadith Dataset - D1-based storage
  *
  * This module provides typed access to hadith and narrator data
- * stored as CSV files, loaded at runtime for optimal performance.
+ * stored in Cloudflare D1 database.
  */
 
-// Re-export from CSV service
+// Re-export from D1 service
 export {
-  loadNarrators,
-  loadHadiths,
+  // Core functions that need db parameter
   getNarratorByIndex,
   getAllNarrators,
   searchNarrators,
-  resolveChain,
   getNarratorTeachers,
   getNarratorStudents,
   getHadithById,
+  getHadithByHadithId,
   searchHadiths,
   getHadithsBySource,
   getHadithsPaginated,
   getHadithSources,
+  resolveChain,
+  // Compatibility wrappers
+  setDb,
+  loadNarrators,
+  loadHadiths,
   clearCache,
   preloadData,
-} from './csvService';
+} from './d1Service';
 
 // Re-export constants
 export * from './constants';
