@@ -10,14 +10,26 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://mustknowislam.com',
   output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true
+    }
+  }),
   integrations: [react(), sitemap()],
   server: {
     host: '0.0.0.0',
     port: 4321
   },
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    ssr: {
+      external: ['react-dom/server']
+    },
+    resolve: {
+      alias: {
+        'react-dom/server': 'react-dom/server.edge'
+      }
+    }
   },
   i18n: {
     defaultLocale: 'ar',
