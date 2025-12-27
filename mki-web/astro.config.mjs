@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mustknowislam.com',
@@ -22,14 +24,18 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
-    ssr: {
-      external: ['react-dom/server']
-    },
-    resolve: {
-      alias: {
-        'react-dom/server': 'react-dom/server.edge'
+    // Only apply SSR config for production builds (Cloudflare Workers)
+    // Local dev with Node 23 can't handle react-dom/server.edge
+    ...(isProduction ? {
+      ssr: {
+        external: ['react-dom/server']
+      },
+      resolve: {
+        alias: {
+          'react-dom/server': 'react-dom/server.edge'
+        }
       }
-    }
+    } : {})
   },
   i18n: {
     defaultLocale: 'ar',
