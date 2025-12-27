@@ -37,17 +37,26 @@ const WikipediaPanel: React.FC<WikipediaPanelProps> = ({
 
       try {
         // Try to fetch in the user's locale first
-        const slug = locale === "ar" && regionInfo.wikipediaSlugAr
-          ? regionInfo.wikipediaSlugAr
-          : regionInfo.wikipediaSlug;
-        const lang = locale === "ar" && regionInfo.wikipediaSlugAr ? "ar" : "en";
+        let slug = regionInfo.wikipediaSlug;
+        let lang: "en" | "ar" | "fr" = "en";
+
+        if (locale === "ar" && regionInfo.wikipediaSlugAr) {
+          slug = regionInfo.wikipediaSlugAr;
+          lang = "ar";
+        } else if (locale === "fr" && regionInfo.wikipediaSlugFr) {
+          slug = regionInfo.wikipediaSlugFr;
+          lang = "fr";
+        } else if (locale === "fr") {
+          // For French, try to use English slug on French Wikipedia
+          lang = "fr";
+        }
 
         const data = await fetchWikipediaSummary(slug, lang);
         setSummary(data);
         setLoadingState("success");
       } catch (err) {
-        // If Arabic failed, try English as fallback
-        if (locale === "ar") {
+        // If locale-specific fetch failed, try English as fallback
+        if (locale !== "en") {
           try {
             const data = await fetchWikipediaSummary(regionInfo.wikipediaSlug, "en");
             setSummary(data);
@@ -68,17 +77,24 @@ const WikipediaPanel: React.FC<WikipediaPanelProps> = ({
   if (!isOpen) return null;
 
   const title = regionInfo
-    ? (locale === "ar" ? regionInfo.titleAr : regionInfo.titleEn)
+    ? (locale === "ar" ? regionInfo.titleAr : locale === "fr" && regionInfo.titleFr ? regionInfo.titleFr : regionInfo.titleEn)
     : regionName;
 
+  const getLocaleSlugAndLang = (): { slug: string; lang: "en" | "ar" | "fr" } => {
+    if (!regionInfo) return { slug: regionName, lang: "en" };
+    if (locale === "ar" && regionInfo.wikipediaSlugAr) {
+      return { slug: regionInfo.wikipediaSlugAr, lang: "ar" };
+    }
+    if (locale === "fr") {
+      return { slug: regionInfo.wikipediaSlugFr || regionInfo.wikipediaSlug, lang: "fr" };
+    }
+    return { slug: regionInfo.wikipediaSlug, lang: "en" };
+  };
+
+  const { slug: wikiSlug, lang: wikiLang } = getLocaleSlugAndLang();
   const wikipediaUrl = regionInfo
-    ? getWikipediaPageUrl(
-        locale === "ar" && regionInfo.wikipediaSlugAr
-          ? regionInfo.wikipediaSlugAr
-          : regionInfo.wikipediaSlug,
-        locale === "ar" && regionInfo.wikipediaSlugAr ? "ar" : "en"
-      )
-    : `https://en.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(regionName)}`;
+    ? getWikipediaPageUrl(wikiSlug, wikiLang)
+    : `https://${locale === "ar" ? "ar" : locale === "fr" ? "fr" : "en"}.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(regionName)}`;
 
   return (
     <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
@@ -159,6 +175,8 @@ const WikipediaPanel: React.FC<WikipediaPanelProps> = ({
               <p className="text-gray-400 mb-4">
                 {locale === "ar"
                   ? "لا تتوفر معلومات ويكيبيديا لهذه المنطقة"
+                  : locale === "fr"
+                  ? "Aucune information Wikipédia disponible pour cette région"
                   : "No Wikipedia information available for this region"}
               </p>
             </div>
@@ -173,7 +191,7 @@ const WikipediaPanel: React.FC<WikipediaPanelProps> = ({
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-amber-600 hover:bg-amber-500 text-white font-medium rounded-lg transition-colors"
           >
-            <span>{locale === "ar" ? "اقرأ المزيد على ويكيبيديا" : "Read more on Wikipedia"}</span>
+            <span>{locale === "ar" ? "اقرأ المزيد على ويكيبيديا" : locale === "fr" ? "En savoir plus sur Wikipédia" : "Read more on Wikipedia"}</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>

@@ -21,15 +21,7 @@ export default defineConfig({
     port: 4321
   },
   vite: {
-    plugins: [tailwindcss()],
-    ssr: {
-      external: ['react-dom/server']
-    },
-    resolve: {
-      alias: {
-        'react-dom/server': 'react-dom/server.edge'
-      }
-    }
+    plugins: [tailwindcss()]
   },
   i18n: {
     defaultLocale: 'ar',

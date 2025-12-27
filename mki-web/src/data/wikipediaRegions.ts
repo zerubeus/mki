@@ -4,8 +4,10 @@ export interface WikipediaRegionInfo {
   regionName: string;
   wikipediaSlug: string;
   wikipediaSlugAr?: string; // Arabic Wikipedia slug if different
+  wikipediaSlugFr?: string; // French Wikipedia slug if different
   titleEn: string;
   titleAr: string;
+  titleFr?: string;
   description?: string;
   alternateNames?: string[];
 }
@@ -240,6 +242,6 @@ export function getWikipediaRegionInfo(regionName: string): WikipediaRegionInfo 
 /**
  * Get Wikipedia URL for a given slug
  */
-export function getWikipediaUrl(slug: string, lang: "en" | "ar" = "en"): string {
+export function getWikipediaUrl(slug: string, lang: "en" | "ar" | "fr" = "en"): string {
   return `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(slug)}`;
 }

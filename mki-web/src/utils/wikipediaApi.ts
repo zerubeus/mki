@@ -25,6 +25,7 @@ export interface WikipediaSummary {
 
 const WIKIPEDIA_API_BASE_EN = "https://en.wikipedia.org/api/rest_v1";
 const WIKIPEDIA_API_BASE_AR = "https://ar.wikipedia.org/api/rest_v1";
+const WIKIPEDIA_API_BASE_FR = "https://fr.wikipedia.org/api/rest_v1";
 
 // Simple in-memory cache
 const summaryCache: Map<string, { data: WikipediaSummary; timestamp: number }> = new Map();
@@ -36,7 +37,7 @@ const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
  */
 export async function fetchWikipediaSummary(
   slug: string,
-  lang: "en" | "ar" = "en"
+  lang: "en" | "ar" | "fr" = "en"
 ): Promise<WikipediaSummary> {
   const cacheKey = `${lang}:${slug}`;
 
@@ -46,7 +47,7 @@ export async function fetchWikipediaSummary(
     return cached.data;
   }
 
-  const baseUrl = lang === "ar" ? WIKIPEDIA_API_BASE_AR : WIKIPEDIA_API_BASE_EN;
+  const baseUrl = lang === "ar" ? WIKIPEDIA_API_BASE_AR : lang === "fr" ? WIKIPEDIA_API_BASE_FR : WIKIPEDIA_API_BASE_EN;
   const url = `${baseUrl}/page/summary/${encodeURIComponent(slug)}`;
 
   const response = await fetch(url, {
@@ -79,7 +80,6 @@ export function clearWikipediaCache(): void {
 /**
  * Get direct Wikipedia URL for opening in new tab
  */
-export function getWikipediaPageUrl(slug: string, lang: "en" | "ar" = "en"): string {
-  const domain = lang === "ar" ? "ar.wikipedia.org" : "en.wikipedia.org";
-  return `https://${domain}/wiki/${encodeURIComponent(slug)}`;
+export function getWikipediaPageUrl(slug: string, lang: "en" | "ar" | "fr" = "en"): string {
+  return `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(slug)}`;
 }
