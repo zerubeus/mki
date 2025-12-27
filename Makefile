@@ -1,4 +1,4 @@
-.PHONY: push-data
+.PHONY: push-data start-web
 
 # Push all data from mki-datasets to R2 bucket (mki/data/)
 push-data:
@@ -9,3 +9,7 @@ push-data:
 		npx wrangler r2 object put "mki/$$dest" --file="$$file" --remote; \
 	done
 	@echo "Upload complete!"
+
+# Start mki-web development server
+start-web:
+	cd mki-web && npm run dev
